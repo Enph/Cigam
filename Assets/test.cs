@@ -7,8 +7,8 @@ public class test : MonoBehaviour {
 	void Start () {
 		//ERICS COMMENT #1
 		//eric test #2
-		//i did it
-	
+		//i did it Joeh
+		//i didnt do it Yanneh
 	}
 	
 	// Update is called once per frame
