@@ -6,7 +6,7 @@ public class Options : MonoBehaviour {
 	public string currentMenu;
 	// Use this for initialization
 	void Start () {
-		this.currentMenu = "Options";
+		this.currentMenu = "OptionsGUI";
 
 	}
 
@@ -19,7 +19,7 @@ public class Options : MonoBehaviour {
 	public void OptionsGUI () 
 	{
 		
-		GUI.Box (new Rect (Screen.width / 8, 10, 3 * Screen.width / 4, 3 * Screen.height / 4), "Options"); //a box to hold all the buttons
+		GUI.Box (new Rect (Screen.width / 8, 10, 3 * Screen.width / 4, 3 * Screen.height / 4), "Game Options"); //a box to hold all the buttons
 		
 		if (GUI.Button (new Rect (Screen.width / 4, 3 * Screen.height / 8 + 40, 3 * Screen.width / 20, Screen.height / 8), "Apply Settings"))
 		{
@@ -35,12 +35,10 @@ public class Options : MonoBehaviour {
 		if (GUI.Button (new Rect (Screen.width / 4 , 2 * Screen.height / 8 + 40, 3 * Screen.width / 20, Screen.height / 8), "Back")) 
 		{
 
-			this.currentMenu = "MainMenu";
+			this.currentMenu = "MainMenuGUI";
 			//Debug.Log("Switching Menu to: "+currentMenu);
 
 		}
-
-
 	}
 
 	public string getCurrentMenu()
