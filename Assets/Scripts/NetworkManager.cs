@@ -5,9 +5,9 @@ public class NetworkManager : MonoBehaviour {
 	private const string ServerGameName = "Enph_UniqueGameName#76842"; //This name has to be unique for the unity master server. Also needs to be changed to playername_game1 later
 	bool isRefreshing = false;
 	float refreshRequestLength = 3.0f; //Max refresh rate when pinging unity master server to retrive the game list
-	HostData[] hostData; //datastorage to hold all serverlist with ServerGameName 
+	public HostData[] hostData; //datastorage to hold all serverlist with ServerGameName 
 	
-	private void StartServer()
+	public void StartServer()
 	{
 		Network.InitializeServer(2,25002,false); //Num of players, port, nattype
 		MasterServer.RegisterHost(ServerGameName,"Player1_Game1","Description. trying to get this to work!"); //Player1_Game1 needs to be a variable later
@@ -23,7 +23,7 @@ public class NetworkManager : MonoBehaviour {
 		if( masterServerEvent == MasterServerEvent.RegistrationSucceeded)
 			Debug.Log ("Registration Successful");
 	}
-	
+
 	public IEnumerator RefreshServerList()
 	{
 		Debug.Log ("Refreshing Server List...");
@@ -47,6 +47,12 @@ public class NetworkManager : MonoBehaviour {
 		}	
 	}
 	
+	public HostData[] getHostData()
+	{
+		return this.hostData;
+	}
+
+	/*
 	public void OnGUI()
 	{
 		if(Network.isClient || Network.isServer) //Clear the screen
@@ -75,5 +81,6 @@ public class NetworkManager : MonoBehaviour {
 			}
 		}
 	}
+	*/
 }
 
