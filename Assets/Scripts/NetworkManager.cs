@@ -2,85 +2,101 @@
 using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
-	private const string ServerGameName = "Enph_UniqueGameName#76842"; //This name has to be unique for the unity master server. Also needs to be changed to playername_game1 later
-	bool isRefreshing = false;
-	float refreshRequestLength = 3.0f; //Max refresh rate when pinging unity master server to retrive the game list
-	public HostData[] hostData; //datastorage to hold all serverlist with ServerGameName 
-	
-	public void StartServer()
-	{
-		Network.InitializeServer(2,25002,false); //Num of players, port, nattype
-		MasterServer.RegisterHost(ServerGameName,"Player1_Game1","Description. trying to get this to work!"); //Player1_Game1 needs to be a variable later
-	}
-	
-	void OnServerInitialize()
-	{
-		Debug.Log("Server Initialized");
-	}
-	
-	void OnMasterServerEvent(MasterServerEvent masterServerEvent)
-	{
-		if( masterServerEvent == MasterServerEvent.RegistrationSucceeded)
-			Debug.Log ("Registration Successful");
-	}
 
-	public IEnumerator RefreshServerList()
-	{
-		Debug.Log ("Refreshing Server List...");
-		MasterServer.RequestHostList(ServerGameName);
-		float timeStart = Time.time;
-		float timeEnd = timeStart + refreshRequestLength;
+	private const string roomName = "RoomName";
+	private RoomInfo[] roomsList;
+	
+	// Use this for initialization
+	void Start () {
+		PhotonNetwork.ConnectUsingSettings("0.1");
+		PhotonNetwork.autoJoinLobby = false;
 		
-		while(Time.time < timeEnd)
-		{
-			hostData = MasterServer.PollHostList();
-			yield return new WaitForEndOfFrame(); //pause
-		}
-		
-		if(hostData == null || hostData.Length == 0)
-		{
-			Debug.Log ("No Servers have been found");
-		}
-		else
-		{
-			Debug.Log ("Number of Servers Found: " + hostData.Length);
-		}	
 	}
 	
-	public HostData[] getHostData()
-	{
-		return this.hostData;
+	// Update is called once per frame
+	void Update () {
+		
 	}
-
-	/*
-	public void OnGUI()
+	
+	void OnGUI()
 	{
-		if(Network.isClient || Network.isServer) //Clear the screen
-			return;
+		GUI.Box (new Rect (0, 0,Screen.width,Screen.height), "Lobby"); //a box to hold all the buttons
 		
-		if(GUI.Button(new Rect(100,100,250,100), "Start Server"))
-		{
-			//START SERVER
-			StartServer();
-		}
+		GUI.Box (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2),PhotonNetwork.connectionStateDetailed.ToString()); // Server list Window
+		GUILayout.BeginArea (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
 		
-		if(GUI.Button (new Rect(100,250,250,100), "Refresh Hosts"))
+		if(PhotonNetwork.GetRoomList().Length != 0)
 		{
-			//REFRESH SERVER LIST
-			StartCoroutine("RefreshServerList");
-		}
-		
-		if(hostData != null)
-		{
-			for(int i =0;i<hostData.Length;i++)
+			for (int i = 0; i < roomsList.Length; i++)
 			{
-				if(GUI.Button(new Rect(Screen.width / 2,65f + (30f * i),300f,30f),hostData[i].gameName))
+				if (GUI.Button(new Rect(10, 10 + (10 * i), 100, 50), "Join " + roomsList[i].name))
 				{
-					Network.Connect(hostData[i]);
+					GUI.Label (new Rect(0,0,100,100),roomsList[i].name);
+					GUI.Label( new Rect(10, 10, 100, 100) ,"Stat A");//Label Current players in the room networkManager.roomsList[i].playerCount.ToString()
+					GUI.Label( new Rect(40, 10, 100, 100) ,"Stat B"); //Label Max players per room networkManager.roomsList[i].maxPlayers.ToString
+					GUI.Label( new Rect(70, 10, 100, 100) ,"Stat C"); //Label If game can be joined networkManager.roomsList[i].open.ToString
 				}
 			}
 		}
+		else
+		{
+			GUI.Label(new Rect(0, 0, 250, 100), "No Games Found");
+		}
+		GUILayout.EndArea();
+		
+		if (GUI.Button (new Rect (10,10,200,50), "Host Game"))
+		{
+			//Launch Server and then refresh the room list
+			PhotonNetwork.CreateRoom(roomName + System.Guid.NewGuid().ToString("N"),true,true,2);
+			OnReceivedRoomListUpdate();
+		}
+		
+		//JOIN A SELECTED GAME
+		else if (GUI.Button (new Rect (10,60,200,50), "Join Game")) 
+		{
+			//Network.Connect(NetworkManager.hostData[networkManager.getHostData()]);
+			Debug.Log("Joining game...");
+		}
+		//REFRESH SERVER LIST
+		else if (GUI.Button (new Rect (10,110,200,50), "Refresh List"))
+		{
+			//Refresh the room list
+			OnReceivedRoomListUpdate();
+			
+		}
+		
+		else if (GUI.Button (new Rect (10,160,200,50), "Deck Builder")) 
+		{
+			//Deck Builder page
+			Debug.Log ("Loading Deck Builder scene...");
+			Application.LoadLevel("DeckBuilder");
+		}
+		
+		else if (GUI.Button (new Rect (10,210,200,50), "Back")) 
+		{
+			//back to main menu
+			Application.LoadLevel("MainMenu");
+		}
+		else
+		{
+			//Debug.Log ("GameLobbyGUI did not load anything");
+		}
+		
+		
 	}
-	*/
+	
+	void OnReceivedRoomListUpdate()
+	{
+		roomsList = PhotonNetwork.GetRoomList();
+	}
+	
+	
+	void OnJoinedRoom()
+	{
+		Debug.Log("Connected to Room: ");
+		Debug.Log ("Loading GamePhase Scene");
+		PhotonNetwork.LoadLevel("GamePhase");
+		
+	}
 }
 
