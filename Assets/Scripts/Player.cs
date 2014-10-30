@@ -1,13 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour
+public class Player : Photon.MonoBehaviour
 {
 	public float speed = 10f;
+	public GameObject camera;
+	private Vector3 SpawnPosition;
+	public Transform creation;
+
+
+	void start()
+	{
+		//camera = (GameObject) GameObject.FindWithTag("MainCamera");
+	}
 	
+	public void spawnPlayer(string playerCamera)
+	{
+		this.camera = GameObject.Find(playerCamera);
+	}
+
 	void Update()
 	{
-		InputMovement();
+		if (photonView.isMine)
+			InputMovement();
 	}
 	
 	void InputMovement()
@@ -23,5 +38,13 @@ public class Player : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.A))
 			rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
+	}
+
+	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	{
+		if (stream.isWriting)
+			stream.SendNext(rigidbody.position);
+		else
+			rigidbody.position = (Vector3)stream.ReceiveNext();
 	}
 }
