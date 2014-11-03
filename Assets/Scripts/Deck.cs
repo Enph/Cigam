@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using System;
 namespace AssemblyCSharp
 {
 		public class Deck
@@ -24,6 +25,18 @@ namespace AssemblyCSharp
 			}
 			
 			public void shuffle(){
+				Random rand = new Random();
+				Card temp = new Card();
+				int index;
+				for(int i = 0; i < playerDeck.Count - 1; i++){ 
+				/*found online, not best best algo for shuffling
+				  because Random() sucks, but it'll do*/
+					index = rand.Next (0, playerDeck.Count);
+					temp = playerDeck[i];
+					playerDeck[i] = playerDeck[index];
+					playerDeck[index] = temp;
+				}
+				
 
 			}
 
