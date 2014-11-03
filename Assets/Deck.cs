@@ -1,12 +1,12 @@
 
-using System;
+using System.Collections.Generic;
 namespace AssemblyCSharp
 {
 		public class Deck
 		{
-			private Card[] playerDeck;
-			private Card[] playerGrave;
-			private Card[] playerExile;
+			private List<Card> playerDeck;
+			private List<Card> playerGrave;
+			private List<Card> playerExile;
 			private int deckSize;
 			private int numLeft;
 			private int topCard;
@@ -15,10 +15,6 @@ namespace AssemblyCSharp
 			{
 				this.deckSize = size;
 				this.numLeft = deckSize;
-				this.topCard = 0;
-				this.playerDeck = new Card[deckSize];
-				this.playerGrave = new Card[deckSize];
-				this.playerExile = new Card[deckSize];
 			}
 			
 			public void shuffle(){
@@ -26,9 +22,6 @@ namespace AssemblyCSharp
 			}
 
 			public Card draw(){
-				Card theDraw = playerDeck [topCard];
-				topCard ++;
-				return theDraw;
 				
 
 			}
