@@ -3,20 +3,32 @@ using System.Collections;
 
 public class Player : Photon.MonoBehaviour
 {
+	public Player player;
 	public float speed = 10f;
-	public GameObject camera;
-	private Vector3 SpawnPosition;
+	public Vector3 SpawnPosition;
 	public Transform creation;
+	public string playerName;
 
 
 	void start()
 	{
+		this.player = new Player();
 		//camera = (GameObject) GameObject.FindWithTag("MainCamera");
+		this.SpawnPosition.x = 0;
+		this.SpawnPosition.y = 0;
+		this.SpawnPosition.z = 0;
 	}
-	
-	public void spawnPlayer(string playerCamera)
+
+	public void SetPosition(float x, float y, float z)
 	{
-		this.camera = GameObject.Find(playerCamera);
+		this.SpawnPosition.x = x;
+		this.SpawnPosition.y = y;
+		this.SpawnPosition.z = z;
+	}
+
+	public void SetCameraPosition()
+	{
+
 	}
 
 	void Update()
