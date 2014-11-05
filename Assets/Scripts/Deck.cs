@@ -57,7 +57,7 @@ namespace AssemblyCSharp
 			}
 
 			public void toDeckBottom(Card cardObject){
-				playerDeck.Add(cardObject)
+				playerDeck.Add(cardObject);
 			}
 			
 		}
