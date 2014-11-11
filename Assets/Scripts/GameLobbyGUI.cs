@@ -9,7 +9,7 @@ public class GameLobbyGUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		PhotonNetwork.ConnectUsingSettings("0.1");
-		PhotonNetwork.autoJoinLobby = false;
+		//PhotonNetwork.autoJoinLobby = false;
 
 	}
 	

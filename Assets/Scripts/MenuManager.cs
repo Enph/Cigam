@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour {
 
 	void OnGUI()
 	{
-		if(this.currentMenu == "MainMenuGUI")
+		if(this.currentMenu == "MainMenuGUI") //Start Options Quit menu display
 		{
 			MainMenuGUI();
 		}
@@ -27,9 +27,9 @@ public class MenuManager : MonoBehaviour {
 		{
 			OptionsGUI();
 		}
-		else if(this.currentMenu == "GameLobbyGUI")
+		else if(this.currentMenu == "GameLobbyGUI") //switches scene
 		{
-			Application.LoadLevel("GameLobby");
+			SwitchLevel("GamePhase");
 		}
 		else
 		{
@@ -82,35 +82,17 @@ public class MenuManager : MonoBehaviour {
 			Debug.Log("Switching Menu to: "+currentMenu);	
 		}
 	}
-	public void MainMenu()
+
+	public void SwitchLevel (string level)
 	{
-		//JOIN A SELECTED GAME
-		if (GUI.Button (new Rect (10,50,200,50), "Join Game")) 
-		{
-			Debug.Log("Joining game...");
-
-		}
-		//REFRESH SERVER LIST
-		else if (GUI.Button (new Rect (10,100,200,50), "Refresh List")) 
-		{
-			//Refresh the room list
-			//StartCoroutine(networkManager.RefreshServerList());
-		}
-
-		else if (GUI.Button (new Rect (10,150,200,50), "Deck Builder")) 
-		{
-			//Deck Builder page
-			Debug.Log ("Loading Deck Builder scene...");
-		}
-
-		else if (GUI.Button (new Rect (10,200,200,50), "Back")) 
-		{
-			//back to main menu
-			this.currentMenu = "MainMenuGUI";
-		}
-		else
-		{
-			//Debug.Log ("GameLobbyGUI did not load anything");
-		}
+		StartCoroutine (DoSwitchLevel(level));
+	}
+	
+	IEnumerator DoSwitchLevel (string level)
+	{
+		PhotonNetwork.Disconnect ();
+		while (PhotonNetwork.connected)
+			yield return null;
+		Application.LoadLevel(level);
 	}
 }

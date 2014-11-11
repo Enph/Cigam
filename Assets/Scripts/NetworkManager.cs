@@ -3,27 +3,20 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
 
-	public string roomName = "RoomName";
-	private RoomInfo[] roomsList;
-	public GameObject PlayerPrefab;
-	public Player player;
+	public string roomName = "GameName #";
 	public bool NetworkMenu;
-
+	public Camera standbyCamera;
+	public Player[] player;
 
 	// Use this for initialization
 	void Start () {
 		PhotonNetwork.logLevel = PhotonLogLevel.Full;
 		PhotonNetwork.ConnectUsingSettings("0.1");
-		this.player = new Player();
+		player = GameObject.FindObjectsOfType<Player>();
+		//GameManager gameManager = go.GetComponent<GameManager>();
 		this.NetworkMenu = true;
 	}
-
-	void Awake()
-	{
-		//NetworkManager networkManager = new NetworkManager();
-		NetworkManager.DontDestroyOnLoad(this);
-	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		
@@ -76,42 +69,80 @@ public class NetworkManager : MonoBehaviour {
 			else if (GUI.Button (new Rect (10,110,200,50), "Refresh List"))
 			{
 				//Refresh the room list
-				OnReceivedRoomListUpdate();
-				
+				OnReceivedRoomListUpdate();				
 			}
 			
 			else if (GUI.Button (new Rect (10,160,200,50), "Deck Builder")) 
 			{
 				//Deck Builder page
+				this.NetworkMenu = false;
 				Debug.Log ("Loading Deck Builder scene...");
-				Application.LoadLevel("DeckBuilder");
+				SwitchLevel("DeckBuilder");
 			}
 			
 			else if (GUI.Button (new Rect (10,210,200,50), "Back")) 
 			{
 				//back to main menu
-				Application.LoadLevel("MainMenu");
+				this.NetworkMenu = false;
+				SwitchLevel("MainMenu");
 			}
 			else
 			{
 				//Debug.Log ("GameLobbyGUI did not load anything");
 			}
-		}
+		} //END NETWORK MENU
 		else
 		{
 			//do not display
 		}
 	}
 	
-	void OnReceivedRoomListUpdate()
+	public RoomInfo[] OnReceivedRoomListUpdate()
 	{
-		roomsList = PhotonNetwork.GetRoomList();
+		return PhotonNetwork.GetRoomList();
 	}
 
 	void OnJoinedRoom()
 	{
-		PhotonNetwork.Instantiate(PlayerPrefab.name, Vector3.up * 5, Quaternion.identity, 0);
-		PhotonNetwork.LoadLevel("GamePhase");
+		this.NetworkMenu = false;
+		SpawnMyPlayer();
 	}
+
+
+	void SpawnMyPlayer()
+	{
+
+		if(player == null)
+		{
+			Debug.Log("Spawning Error");
+			return;
+		}
+
+		Player myPlayer;
+
+		if(PhotonNetwork.countOfPlayersInRooms <1)
+		{
+			myPlayer = player[0]; //player1 spawn
+		}
+		else
+			myPlayer = player[1]; //player2 spawn
+
+		PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
+		//standbyCamera.enabled = false;
+	}
+
+	public void SwitchLevel (string level)
+	{
+		StartCoroutine (DoSwitchLevel(level));
+	}
+	
+	IEnumerator DoSwitchLevel (string level)
+	{
+		PhotonNetwork.Disconnect();
+		while (PhotonNetwork.connected)
+			yield return null;
+		Application.LoadLevel(level);
+	}
+
 }
 
