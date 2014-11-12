@@ -26,7 +26,6 @@ public class CardTester : Photon.MonoBehaviour {
 	void OnMouseUp(){
 		state++;
 		switch(state){
-<<<<<<< HEAD
 		case 1:
 			tag = "Up";
 			break;
@@ -34,8 +33,7 @@ public class CardTester : Photon.MonoBehaviour {
 			tag = "Down";
 			state = 0;
 			break;
-=======
-			case 1:
+			/*case 1:
 				cardMan.tapCard();
 				//cardMan.showBack();
 				cardMan.showFront();
@@ -44,8 +42,7 @@ public class CardTester : Photon.MonoBehaviour {
 				cardMan.untapCard();
 				cardMan.showFront();
 				state = 0;
-				break;
->>>>>>> origin/master
+				break;*/
 		}
 	}
 	

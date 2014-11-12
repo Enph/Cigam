@@ -136,7 +136,7 @@ public class NetworkManager : MonoBehaviour {
 
 		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
 		((MonoBehaviour)myPlayerGO.GetComponent("Player")).enabled = true;
-<<<<<<< HEAD
+
 //<<<<<< Updated upstream
 		//standbyCamera.enabled = false;
 //=======
@@ -144,15 +144,11 @@ public class NetworkManager : MonoBehaviour {
 		//standbyCamera.SetActive = false;
 //>>>>>>> Stashed changes
 	}
-=======
+
 
 		//standbyCamera.enabled = false;
->>>>>>> origin/master
-
-
 		//standbyCamera.SetActive = false;
 
-	}
 	
 	public void SwitchLevel (string level)
 	{
