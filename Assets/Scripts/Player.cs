@@ -8,6 +8,8 @@ public class Player : Photon.MonoBehaviour
 	int opponentsHealth;
 	int teamId;
 
+	
+
 	public float player_Xcoord, player_Ycoord, player_Zcoord;
 
 	void start()

@@ -28,7 +28,6 @@ public class NetworkManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 	
 	void OnGUI()
@@ -128,7 +127,6 @@ public class NetworkManager : MonoBehaviour {
 		{
 			myPlayer = player[0]; //player1 spawn
 			PhotonNetwork.Instantiate("Card", oneCard, Quaternion.identity, 0);
-			
 		}
 		else{
 			myPlayer = player[1]; //player2 spawn
@@ -145,9 +143,7 @@ public class NetworkManager : MonoBehaviour {
 		//standbyCamera.SetActive = false;
 
 	}
-
-
-
+	
 	public void SwitchLevel (string level)
 	{
 		StartCoroutine (DoSwitchLevel(level));
