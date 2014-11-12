@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CardManager : MonoBehaviour {
+public class CardManager : Photon.MonoBehaviour {
 	public int cardNum;
 	
 	public string cardName;
