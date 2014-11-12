@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		this.currentMenu = "MainMenuGUI";	
+		this.currentMenu = "MainMenuGUI";
 	}
 	
 	// Update is called once per frame
@@ -79,7 +79,7 @@ public class MenuManager : MonoBehaviour {
 		if (GUI.Button (new Rect (Screen.width / 4 , 2 * Screen.height / 8 + 40, 3 * Screen.width / 20, Screen.height / 8), "Back")) 
 		{
 			this.currentMenu = "MainMenuGUI";
-			Debug.Log("Switching Menu to: "+currentMenu);	
+			Debug.Log("Switching Menu to: "+currentMenu);
 		}
 	}
 

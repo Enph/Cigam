@@ -3,7 +3,11 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
 
-	public string roomName = "GameName #";
+	//GET OTHER SCRIPTS
+	public GameManager[] gameManager;
+
+
+	public string roomName = "Eric's Testing #";
 	public bool NetworkMenu;
 	public Camera standbyCamera;
 	public Player[] player;
@@ -13,7 +17,7 @@ public class NetworkManager : MonoBehaviour {
 		PhotonNetwork.logLevel = PhotonLogLevel.Full;
 		PhotonNetwork.ConnectUsingSettings("0.1");
 		player = GameObject.FindObjectsOfType<Player>();
-		//GameManager gameManager = go.GetComponent<GameManager>();
+		gameManager = GameObject.FindObjectsOfType<GameManager>();
 		this.NetworkMenu = true;
 	}
 	
@@ -29,16 +33,14 @@ public class NetworkManager : MonoBehaviour {
 			GUI.Box (new Rect (0, 0,Screen.width,Screen.height), "Lobby"); //a box to hold all the buttons	
 			GUI.Box (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2),PhotonNetwork.connectionStateDetailed.ToString()); // Server list Window
 			
-			GUILayout.BeginArea (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
+			GUILayout.BeginArea (new Rect (Screen.width /2 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
 			
 			if(PhotonNetwork.GetRoomList().Length != 0)
 			{
 				int index = 0;
 				foreach (RoomInfo game in PhotonNetwork.GetRoomList())
 				{
-					//GUI.Label(new Rect(10, 10 + (10 * i), 100, 50), "Join " + roomsList[i].name);	
-					//GUILayout.Label(game.name + " " + game.playerCount + "/" + game.maxPlayers);
-					if(GUI.Button(new Rect(10, 10 + (10 * index), Screen.width/3 - 10, 50),this.roomName + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
+					if(GUI.Button(new Rect(10 + (Screen.width /3 - 10), 10 + (Screen.height/3 - 10 * index), Screen.width/3 - 10, 50),this.roomName + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
 					{
 						this.NetworkMenu = false; // Turn off Network GUI
 						PhotonNetwork.JoinRoom(game.name);
@@ -56,7 +58,7 @@ public class NetworkManager : MonoBehaviour {
 			{
 				//Launch Server and then refresh the room list
 				this.NetworkMenu = false; // Turn off Network GUI
-				PhotonNetwork.CreateRoom(roomName + System.Guid.NewGuid().ToString("N"),true,true,3);
+				PhotonNetwork.CreateRoom(roomName + System.Guid.NewGuid().ToString("N"),true,true,2);
 				OnReceivedRoomListUpdate();
 			}
 			
@@ -94,6 +96,7 @@ public class NetworkManager : MonoBehaviour {
 		else
 		{
 			//do not display
+			gameManager[0].showConnectionState = true;
 		}
 	}
 	
@@ -105,6 +108,7 @@ public class NetworkManager : MonoBehaviour {
 	void OnJoinedRoom()
 	{
 		this.NetworkMenu = false;
+		gameManager[0].showEnterPlayerName = true;
 		SpawnMyPlayer();
 	}
 
@@ -130,6 +134,8 @@ public class NetworkManager : MonoBehaviour {
 		PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
 		//standbyCamera.enabled = false;
 	}
+
+
 
 	public void SwitchLevel (string level)
 	{
