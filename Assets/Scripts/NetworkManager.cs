@@ -132,16 +132,12 @@ public class NetworkManager : MonoBehaviour {
 		}
 		else{
 			myPlayer = player[1]; //player2 spawn
-<<<<<<< HEAD
 			PhotonNetwork.Instantiate("Card", twoCard, rotTwo, 0); 
 		}
 		PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
-=======
 
 		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
 		((MonoBehaviour)myPlayerGO.GetComponent("Player")).enabled = true;
-
->>>>>>> origin/master
 		//standbyCamera.enabled = false;
 	}
 
