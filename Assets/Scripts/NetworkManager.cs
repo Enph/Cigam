@@ -11,6 +11,7 @@ public class NetworkManager : MonoBehaviour {
 	public bool NetworkMenu;
 	public Camera standbyCamera;
 	public Player[] player;
+	public Vector3 cent;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class NetworkManager : MonoBehaviour {
 		player = GameObject.FindObjectsOfType<Player>();
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 		this.NetworkMenu = true;
+		cent = new Vector3(0.0f, 1.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -127,6 +129,8 @@ public class NetworkManager : MonoBehaviour {
 		if(PhotonNetwork.countOfPlayersInRooms <1)
 		{
 			myPlayer = player[0]; //player1 spawn
+			PhotonNetwork.Instantiate("Card", cent, Quaternion.identity, 0);
+			
 		}
 		else
 			myPlayer = player[1]; //player2 spawn

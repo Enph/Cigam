@@ -3,9 +3,9 @@ using System.Collections;
 
 public class CardManager : MonoBehaviour {
 	public int cardNum;
-
+	
 	public Texture[] fronts;
-
+	
 	public Texture background;
 
 	public void showBack(){
@@ -21,6 +21,7 @@ public class CardManager : MonoBehaviour {
 	public void hideCard(){
 		renderer.enabled = false;
 	}
+
 	// Use this for initialization
 	void Start () {
 		showFront();
