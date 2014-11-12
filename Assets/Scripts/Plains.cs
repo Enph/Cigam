@@ -1,21 +1,21 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class CardTester : Photon.MonoBehaviour {
+public class Plains : Photon.MonoBehaviour{
 
 	public int state = 0;
 	CardManager cardMan;
 	// Use this for initialization
 	void Start () {
 		cardMan = GetComponent<CardManager>();
-		cardMan.cardName = "nissaworldwaker";
+		cardMan.cardName = "plains";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
-
+	
 	void OnMouseUp(){
 		state++;
 		
