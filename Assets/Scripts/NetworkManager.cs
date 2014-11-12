@@ -11,8 +11,9 @@ public class NetworkManager : MonoBehaviour {
 	public bool NetworkMenu;
 	public Camera standbyCamera;
 	public Player[] player;
-	public Vector3 cent;
-
+	public Vector3 oneCard;
+	public Vector3 twoCard;
+	public Quaternion rotTwo;
 	// Use this for initialization
 	void Start () {
 		PhotonNetwork.logLevel = PhotonLogLevel.Full;
@@ -20,7 +21,9 @@ public class NetworkManager : MonoBehaviour {
 		player = GameObject.FindObjectsOfType<Player>();
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 		this.NetworkMenu = true;
-		cent = new Vector3(0.0f, 1.0f, 0.0f);
+		oneCard = new Vector3(0.0f, 1.0f, 2.0f);
+		twoCard = new Vector3(0.0f, 1.0f, -2.0f);
+		rotTwo = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -129,12 +132,13 @@ public class NetworkManager : MonoBehaviour {
 		if(PhotonNetwork.countOfPlayersInRooms <1)
 		{
 			myPlayer = player[0]; //player1 spawn
-			PhotonNetwork.Instantiate("Card", cent, Quaternion.identity, 0);
+			PhotonNetwork.Instantiate("Card", oneCard, Quaternion.identity, 0);
 			
 		}
-		else
+		else{
 			myPlayer = player[1]; //player2 spawn
-
+			PhotonNetwork.Instantiate("Card", twoCard, rotTwo, 0); 
+		}
 		PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
 		//standbyCamera.enabled = false;
 	}

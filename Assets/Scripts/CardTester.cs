@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CardTester : MonoBehaviour {
+public class CardTester : Photon.MonoBehaviour {
 	public int state = 0;
 	CardManager cardMan;
 	// Use this for initialization
@@ -22,7 +22,7 @@ public class CardTester : MonoBehaviour {
 				cardMan.showBack();
 				break;
 			case 2:
-				cardMan.showFront ();
+				cardMan.showFront();
 				state = 0;
 				break;
 			/*case 3:
