@@ -11,8 +11,11 @@ using System.Collections;
 
 public class GameManager : Photon.MonoBehaviour {
 
+	//Class objects
 	public NetworkManager[] networkManager;
 	public Player[] player;
+
+	//something
 
 
 	//If statements when to display menus
@@ -43,9 +46,6 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.Label("Ping: " + PhotonNetwork.GetPing());
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
 			GUILayout.Label ("Player Name:" + player[0].getPlayerName());
-			GUILayout.Label("Player Coord:" + "[" + player[0].player_Xcoord + "," +player[0].player_Ycoord.ToString() + "," + player[0].player_Zcoord.ToString() + "]");
-
-
 		}
 		if(showEnterPlayerName == true)
 		{
@@ -62,6 +62,8 @@ public class GameManager : Photon.MonoBehaviour {
 		}
 
 
+
+
 		//BACK TO MAIN MENU
 		if(Input.GetKey(KeyCode.Escape))
 		{
@@ -69,5 +71,12 @@ public class GameManager : Photon.MonoBehaviour {
 			Application.LoadLevel("MainMenu");
 		}
 		
+	}
+
+
+
+	public void SpawnMyDeck()
+	{
+
 	}
 }

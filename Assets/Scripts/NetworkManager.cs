@@ -35,14 +35,15 @@ public class NetworkManager : MonoBehaviour {
 			GUI.Box (new Rect (0, 0,Screen.width,Screen.height), "Lobby"); //a box to hold all the buttons	
 			GUI.Box (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2),PhotonNetwork.connectionStateDetailed.ToString()); // Server list Window
 			
-			GUILayout.BeginArea (new Rect (Screen.width /2 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
-			
+			GUILayout.BeginArea (new Rect (Screen.width * 0.10f , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
+
 			if(PhotonNetwork.GetRoomList().Length != 0)
 			{
-				int index = 0;
+				int index = 1;
 				foreach (RoomInfo game in PhotonNetwork.GetRoomList())
 				{
-					if(GUI.Button(new Rect(10 + (Screen.width /3 - 10), 10 + (Screen.height/3 - 10 * index), Screen.width/3 - 10, 50),this.roomName + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
+
+					if(GUI.Button(new Rect(10,10+(index *50), Screen.width/3 - 10, 50),this.roomName + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
 					{
 						this.NetworkMenu = false; // Turn off Network GUI
 						PhotonNetwork.JoinRoom(game.name);
@@ -62,12 +63,6 @@ public class NetworkManager : MonoBehaviour {
 				this.NetworkMenu = false; // Turn off Network GUI
 				PhotonNetwork.CreateRoom(roomName + System.Guid.NewGuid().ToString("N"),true,true,2);
 				OnReceivedRoomListUpdate();
-			}
-			
-			//JOIN A SELECTED GAME
-			else if (GUI.Button (new Rect (10,60,200,50), "Join Game")) 
-			{
-				Debug.Log("Joining game...");
 			}
 			//REFRESH SERVER LIST
 			else if (GUI.Button (new Rect (10,110,200,50), "Refresh List"))
@@ -135,7 +130,9 @@ public class NetworkManager : MonoBehaviour {
 		else
 			myPlayer = player[1]; //player2 spawn
 
-		PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
+		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
+		((MonoBehaviour)myPlayerGO.GetComponent("Player")).enabled = true;
+
 		//standbyCamera.enabled = false;
 	}
 
