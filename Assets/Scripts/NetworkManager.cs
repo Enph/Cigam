@@ -9,7 +9,7 @@ public class NetworkManager : MonoBehaviour {
 
 	public string roomName = "Eric's Testing #";
 	public bool NetworkMenu;
-	public Camera standbyCamera;
+	public GameObject standbyCamera;
 	public Player[] player;
 	public Vector3 oneCard;
 	public Vector3 twoCard;
@@ -138,7 +138,12 @@ public class NetworkManager : MonoBehaviour {
 
 		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
 		((MonoBehaviour)myPlayerGO.GetComponent("Player")).enabled = true;
+<<<<<<< Updated upstream
 		//standbyCamera.enabled = false;
+=======
+
+		//standbyCamera.SetActive = false;
+>>>>>>> Stashed changes
 	}
 
 
