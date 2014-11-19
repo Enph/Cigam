@@ -5,8 +5,6 @@ Project("{38A3F28A-6304-97BF-41EC-AD99EDCA934A}") = "Cigam", "Assembly-CSharp.cs
 EndProject
 Project("{38A3F28A-6304-97BF-41EC-AD99EDCA934A}") = "Cigam", "Assembly-CSharp-Editor.csproj", "{5641C18F-5F07-0281-9104-1DB527D1A4B3}"
 EndProject
-Project("{38A3F28A-6304-97BF-41EC-AD99EDCA934A}") = "Cigam", "Assembly-UnityScript-firstpass.unityproj", "{DA5BA588-0EC8-F5C8-F1D8-492950946556}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,15 +19,11 @@ Global
 		{5641C18F-5F07-0281-9104-1DB527D1A4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5641C18F-5F07-0281-9104-1DB527D1A4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5641C18F-5F07-0281-9104-1DB527D1A4B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA5BA588-0EC8-F5C8-F1D8-492950946556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA5BA588-0EC8-F5C8-F1D8-492950946556}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA5BA588-0EC8-F5C8-F1D8-492950946556}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA5BA588-0EC8-F5C8-F1D8-492950946556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																					GlobalSection(MonoDevelopProperties) = preSolution
 =======
 <<<<<<< Updated upstream
 																																																																																														GlobalSection(MonoDevelopProperties) = preSolution

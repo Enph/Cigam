@@ -5,24 +5,32 @@ public class NetworkManager : MonoBehaviour {
 
 	//GET OTHER SCRIPTS
 	public GameManager[] gameManager;
+	public VectorManager[] vectorManager;
+	public DebugDev[] debugDev;
 
 
-	public string roomName = "Eric's Testing #";
+	public string roomName = "GameName#";
 	public bool NetworkMenu;
 	public GameObject standbyCamera;
 	public Player[] player;
+
+
 	public Vector3 oneCard;
 	public Vector3 twoCard;
 	public Quaternion rotTwo;
 	// Use this for initialization
 	void Start () {
-		PhotonNetwork.logLevel = PhotonLogLevel.Full;
+		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
+		this.roomName = "GameName";
 		PhotonNetwork.ConnectUsingSettings("0.1");
 		player = GameObject.FindObjectsOfType<Player>();
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		vectorManager = GameObject.FindObjectsOfType<VectorManager>();
+		debugDev = GameObject.FindObjectsOfType<DebugDev>();
+
 		this.NetworkMenu = true;
-		oneCard = new Vector3(0.0f, 1.0f, 2.0f);
-		twoCard = new Vector3(0.0f, 1.0f, -2.0f);
+		oneCard = new Vector3(0.0f, 1.0f, 4.0f);
+		twoCard = new Vector3(0.0f, 1.0f, -4.0f);
 		rotTwo = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
 	}
 	
@@ -37,15 +45,14 @@ public class NetworkManager : MonoBehaviour {
 			GUI.Box (new Rect (0, 0,Screen.width,Screen.height), "Lobby"); //a box to hold all the buttons	
 			GUI.Box (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2),PhotonNetwork.connectionStateDetailed.ToString()); // Server list Window
 			
-			GUILayout.BeginArea (new Rect (Screen.width * 0.10f , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
+			GUILayout.BeginArea (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
 
 			if(PhotonNetwork.GetRoomList().Length != 0)
 			{
 				int index = 1;
 				foreach (RoomInfo game in PhotonNetwork.GetRoomList())
 				{
-
-					if(GUI.Button(new Rect(10,10+(index *50), Screen.width/3 - 10, 50),this.roomName + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
+					if(GUI.Button(new Rect(10,10+(index *50), Screen.width*0.65f , 50),this.roomName + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
 					{
 						this.NetworkMenu = false; // Turn off Network GUI
 						PhotonNetwork.JoinRoom(game.name);
@@ -108,7 +115,10 @@ public class NetworkManager : MonoBehaviour {
 	{
 		this.NetworkMenu = false;
 		gameManager[0].showEnterPlayerName = true;
+		debugDev[0].showDebugMenu = true;
+
 		SpawnMyPlayer();
+
 	}
 
 
@@ -125,26 +135,26 @@ public class NetworkManager : MonoBehaviour {
 
 		if(PhotonNetwork.countOfPlayersInRooms <1)
 		{
+			Debug.Log("Player 1 Room Entered");
 			myPlayer = player[0]; //player1 spawn
+			myPlayer.transform.position = vectorManager[0].player1Spawn;
+			myPlayer.transform.rotation = vectorManager[0].player1Rotation;
 			PhotonNetwork.Instantiate("Card", oneCard, Quaternion.identity, 0);
 		}
 		else{
 			myPlayer = player[1]; //player2 spawn
+			//myPlayer.transform.position = vectorManager[0].player2Spawn;
+			//myPlayer.transform.rotation = vectorManager[0].player2Rotation;
 			PhotonNetwork.Instantiate("Card", twoCard, rotTwo, 0); 
 		}
 		PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
+		Debug.Log ("x: "+myPlayer.transform.position.x + " y "+myPlayer.transform.position.y+ " z "+myPlayer.transform.position.z);
+		Debug.Log ("rx: "+myPlayer.transform.rotation.x + " ry "+myPlayer.transform.rotation.y+ " rz "+myPlayer.transform.rotation.z + " rw "+myPlayer.transform.rotation.w);
+
 
 		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
 		((MonoBehaviour)myPlayerGO.GetComponent("Player")).enabled = true;
-
-//<<<<<< Updated upstream
-		//standbyCamera.enabled = false;
-//=======
-
-		//standbyCamera.SetActive = false;
-//>>>>>>> Stashed changes
 	}
-
 
 		//standbyCamera.enabled = false;
 		//standbyCamera.SetActive = false;

@@ -6,6 +6,8 @@ public class Player : Photon.MonoBehaviour
 	string playerName;
 	int playerHealth;
 	int opponentsHealth;
+	int cardsInHand;
+	int cardsInDeck;
 	int teamId;
 
 	
