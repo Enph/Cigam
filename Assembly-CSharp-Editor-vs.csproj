@@ -66,10 +66,13 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
+<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
       <Project>{AD5C1F3A-0D3D-B5CD-3928-AA44728E8A32}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+=======
+>>>>>>> FETCH_HEAD
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
