@@ -10,6 +10,8 @@ public class Player : Photon.MonoBehaviour
 	int cardsInDeck;
 	int teamId;
 
+
+	Camera playerCamera;
 	
 
 	public float player_Xcoord, player_Ycoord, player_Zcoord;
@@ -23,21 +25,10 @@ public class Player : Photon.MonoBehaviour
 
 	}
 
-
 	void Update()
 	{
-		/*
-		if(photonView.isMine)
-		{
-			//do nothing
-		}
-		else
-		{
 
-		}
-		*/
 	}
-
 
 	void OnPhotonSerialView(PhotonStream stream , PhotonMessageInfo info)
 	{
@@ -50,7 +41,6 @@ public class Player : Photon.MonoBehaviour
 		{
 			//this is player 2 stuff
 			this.opponentsHealth = (int) stream.ReceiveNext();
-
 		}
 	}
 

@@ -11,13 +11,8 @@ public class NetworkManager : MonoBehaviour {
 
 	public string roomName = "GameName#";
 	public bool NetworkMenu;
-	public GameObject standbyCamera;
 	public Player[] player;
-
-
-	public Vector3 oneCard;
-	public Vector3 twoCard;
-	public Quaternion rotTwo;
+		
 	// Use this for initialization
 	void Start () {
 		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
@@ -29,9 +24,6 @@ public class NetworkManager : MonoBehaviour {
 		debugDev = GameObject.FindObjectsOfType<DebugDev>();
 
 		this.NetworkMenu = true;
-		oneCard = new Vector3(0.0f, 1.0f, 4.0f);
-		twoCard = new Vector3(0.0f, 1.0f, -4.0f);
-		rotTwo = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -132,39 +124,13 @@ public class NetworkManager : MonoBehaviour {
 		}
 
 		Player myPlayer;
+		Debug.Log("Player 1 Room Entered");
 
-		if(PhotonNetwork.countOfPlayersInRooms <1)
-		{
-			Debug.Log("Player 1 Room Entered");
-			myPlayer = player[0]; //player1 spawn
-			myPlayer.transform.position = vectorManager[0].player1Spawn;
-			myPlayer.transform.rotation = vectorManager[0].player1Rotation;
-			PhotonNetwork.Instantiate("Card", oneCard, Quaternion.identity, 0);
-		}
-		else{
-			myPlayer = player[1]; //player2 spawn
-			//myPlayer.transform.position = vectorManager[0].player2Spawn;
-			//myPlayer.transform.rotation = vectorManager[0].player2Rotation;
-			PhotonNetwork.Instantiate("Card", twoCard, rotTwo, 0); 
-		}
-		PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
-		Debug.Log ("x: "+myPlayer.transform.position.x + " y "+myPlayer.transform.position.y+ " z "+myPlayer.transform.position.z);
-		Debug.Log ("rx: "+myPlayer.transform.rotation.x + " ry "+myPlayer.transform.rotation.y+ " rz "+myPlayer.transform.rotation.z + " rw "+myPlayer.transform.rotation.w);
+		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", vectorManager[0].player1Spawn, vectorManager[0].player1Rotation, 0);
+		//Debug.Log ("x: "+myPlayer.transform.position.x + " y "+myPlayer.transform.position.y+ " z "+myPlayer.transform.position.z);
+		//Debug.Log ("rx: "+myPlayer.transform.rotation.x + " ry "+myPlayer.transform.rotation.y+ " rz "+myPlayer.transform.rotation.z + " rw "+myPlayer.transform.rotation.w);
 
-
-		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", myPlayer.transform.position, myPlayer.transform.rotation, 0);
-		((MonoBehaviour)myPlayerGO.GetComponent("Player")).enabled = true;
-
-
-		//standbyCamera.enabled = false;
-		//standbyCamera.SetActive = false;
 	}
-
-		//standbyCamera.enabled = false;
-
-
-		//standbyCamera.enabled = false;
-		//standbyCamera.SetActive = false;
 
 	
 	public void SwitchLevel (string level)

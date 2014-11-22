@@ -17,16 +17,9 @@ public class GameManager : Photon.MonoBehaviour {
 	public LandSpawnCoordScript[] LandSpawn;
 	public BattleCardSpawnScript[] BattleSpawn;
 
-
-	//something
-
-
 	//If statements when to display menus
 	public bool showConnectionState = false;
 	public bool showEnterPlayerName = false;
-
-
-
 	public string enterPlayerName;
 	
 	// Use this for initialization
@@ -45,13 +38,12 @@ public class GameManager : Photon.MonoBehaviour {
 	
 	void OnGUI()
 	{
-
 		if(showConnectionState == true)
 		{
 			GUILayout.Label("Connection State: "+PhotonNetwork.connectionStateDetailed.ToString());
 			GUILayout.Label("Ping: " + PhotonNetwork.GetPing());
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
-			GUILayout.Label ("Player Name:" + player[0].getPlayerName());
+//			GUILayout.Label ("Player Name:" + player[0].getPlayerName());
 		}
 		if(showEnterPlayerName == true)
 		{
