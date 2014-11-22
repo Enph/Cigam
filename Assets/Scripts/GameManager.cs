@@ -16,7 +16,6 @@ public class GameManager : Photon.MonoBehaviour {
 	public Player[] player;
 	public LandSpawnCoordScript[] LandSpawn;
 	public BattleCardSpawnScript[] BattleSpawn;
-	public CardManager[] cardManager;
 
 
 	//something

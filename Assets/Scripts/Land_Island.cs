@@ -7,6 +7,7 @@ public class Land_Island : Photon.MonoBehaviour {
 	public string cardName;	
 	public Texture front;
 	public Texture background;
+	public Texture backgroundTapped;
 
 
 	public int state = 0;
