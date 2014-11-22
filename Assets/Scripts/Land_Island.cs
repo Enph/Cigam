@@ -20,7 +20,7 @@ public class Land_Island : Photon.MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		tag = "untap";
 
 	}
 	
@@ -45,16 +45,32 @@ public class Land_Island : Photon.MonoBehaviour {
 	
 	public void tapCard(){
 		renderer.enabled = true;
-		this.transform.RotateAround(transform.position,axis,90);
+		this.transform.RotateAround(transform.position,axis, 90);
 	}
 	
 	public void untapCard(){
 		renderer.enabled = true;
-		this.transform.RotateAround(transform.position,axis,-90);
+		this.transform.RotateAround(transform.position,axis, -90);
+		
 	}
 	
 	public void setCardName(string name){
 		this.cardName=name;
+	}
+
+	void OnMouseUp(){
+		
+		switch(state){
+			case 0:
+				tapCard ();
+				state = 1;
+				break;
+			case 1:	
+				untapCard ();
+				state = 0;
+				break;
+		}
+
 	}
 
 }

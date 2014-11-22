@@ -13,7 +13,7 @@ public class VectorManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.player1Spawn = new Vector3(0.0f,40.0f,0.0f);
+		this.player1Spawn = new Vector3(0.0f,45.0f,0.0f);
 		this.player1Rotation.eulerAngles = new Vector3(90,0,0); //rotate 90 degrees on x-axis
 	}
 	

@@ -1,0 +1,76 @@
+Initialize engine version: 4.5.0f6 (fd4616464986)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     0 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Cigam\CigamNov22_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Cigam\CigamNov22_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Cigam\CigamNov22_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Cigam\CigamNov22_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Cigam\CigamNov22_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading D:\Cigam\CigamNov22_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.066 seconds
+desktop: 1920x1080 60Hz; virtual: 1280x720 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: D:\Cigam\CigamNov22_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Cigam\CigamNov22_Data\Managed\System.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 0.221285 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 443.
+Total: 0.491015 ms (FindLiveObjects: 0.012726 ms CreateObjectMapping: 0.006568 ms MarkObjects: 0.139996 ms  DeleteObjects: 0.032843 ms)
+
+UnloadTime: 0.511542 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 439.
+Total: 0.426559 ms (FindLiveObjects: 0.013137 ms CreateObjectMapping: 0.006568 ms MarkObjects: 0.141228 ms  DeleteObjects: 0.002463 ms)
+
+Player 1 Room Entered
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1783)
+
