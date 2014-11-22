@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\GameLobbyGUI.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\LandSpawnCoordScript.cs" />
+     <Compile Include="Assets\Scripts\Land_Island.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Oreskos_Swiftclaw.cs" />

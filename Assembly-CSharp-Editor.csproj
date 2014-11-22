@@ -66,17 +66,6 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
-<<<<<<< HEAD
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{AD5C1F3A-0D3D-B5CD-3928-AA44728E8A32}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
-=======
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{DA5BA588-0EC8-F5C8-F1D8-492950946556}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
->>>>>>> FETCH_HEAD
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

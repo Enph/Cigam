@@ -16,6 +16,7 @@ public class GameManager : Photon.MonoBehaviour {
 	public Player[] player;
 	public LandSpawnCoordScript[] LandSpawn;
 	public BattleCardSpawnScript[] BattleSpawn;
+	public CardManager[] cardManager;
 
 
 	//something
@@ -35,7 +36,6 @@ public class GameManager : Photon.MonoBehaviour {
 		this.player = GameObject.FindObjectsOfType<Player>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
-
 
 	}
 	
@@ -121,6 +121,30 @@ public class GameManager : Photon.MonoBehaviour {
 				Debug.Log("All card spots in use");
 			}
 		}
+	}
+
+	public void SpawnLandIsland()
+	{
+		Debug.Log ("Spawning Island Card");
+
+
+		for(int i=0;i<LandSpawn.Length;i++)
+		{
+			if(LandSpawn[i].spawnInUse == false)
+			{
+				LandSpawn[i].spawnInUse = true;
+				LandSpawnCoordScript myCards = LandSpawn[i];
+				Debug.Log ("x: "+myCards.transform.position.x + " y "+myCards.transform.position.y + " z "+myCards.transform.position.z);
+
+				GameObject Land_Island = PhotonNetwork.Instantiate("Land_Island", myCards.transform.position, myCards.transform.rotation, 0); 
+				break;
+			}
+			else
+			{
+				Debug.Log("All Land card spots in use");
+			}
+		}
+
 	}
 
 

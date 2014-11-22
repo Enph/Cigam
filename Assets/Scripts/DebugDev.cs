@@ -38,6 +38,10 @@ public class DebugDev : MonoBehaviour {
 			{
 				gameManager[0].SpawnCardsOnAttackField();
 			}
+			else if (GUI.Button (new Rect (10,260,200,50), "Spawn Island")) 
+			{
+				gameManager[0].SpawnLandIsland();
+			}
 		}
 	}
 	
