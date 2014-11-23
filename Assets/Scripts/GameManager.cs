@@ -21,13 +21,23 @@ public class GameManager : Photon.MonoBehaviour {
 	public bool showConnectionState = false;
 	public bool showEnterPlayerName = false;
 	public string enterPlayerName;
-	
+
+	//Players Pre-Defined Decks
+	public string[] deck_Red_White = new string[60];
+	public string[] deck_Red = new string[60];
+
+
+
 	// Use this for initialization
 	void Start () {
 		this.networkManager = GameObject.FindObjectsOfType<NetworkManager>();
 		this.player = GameObject.FindObjectsOfType<Player>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+
+		Generate_Red_WhiteDeck();
+		GenerateRedDeck();
+
 
 	}
 	
@@ -60,9 +70,6 @@ public class GameManager : Photon.MonoBehaviour {
 			}
 			GUILayout.EndArea();
 		}
-
-
-
 
 		//BACK TO MAIN MENU
 		if(Input.GetKey(KeyCode.Escape))
@@ -116,35 +123,73 @@ public class GameManager : Photon.MonoBehaviour {
 		}
 	}
 
-	public void SpawnLandIsland()
+	public void SpawnLandIsland(int teamID)
 	{
 		Debug.Log ("Spawning Island Card");
+		LandSpawnCoordScript myCards;
 
-
-		for(int i=0;i<LandSpawn.Length;i++)
+		if(teamID ==0)
 		{
-			if(LandSpawn[i].spawnInUse == false)
+			for(int i=0;i<LandSpawn.Length;i++)
 			{
-				LandSpawn[i].spawnInUse = true;
-				LandSpawnCoordScript myCards = LandSpawn[i];
-				Debug.Log ("x: "+myCards.transform.position.x + " y "+myCards.transform.position.y + " z "+myCards.transform.position.z);
+				if(LandSpawn[i].spawnInUse == false && LandSpawn[i].teamId == teamID)
+				{
+					LandSpawn[i].spawnInUse = true;
+					myCards = LandSpawn[i];
+					Debug.Log ("x: "+myCards.transform.position.x + " y "+myCards.transform.position.y + " z "+myCards.transform.position.z);
 
-				GameObject Land_Island = PhotonNetwork.Instantiate("Land_Island", myCards.transform.position, Quaternion.identity, 0); 
-				break;
+					PhotonNetwork.Instantiate("Land_Island", myCards.transform.position, myCards.transform.rotation, 0); 
+					break;
+				}
+				else
+				{
+					Debug.Log("All Land card spots in use");
+				}
 			}
-			else
+		}
+		else if(teamID==1)
+		{
+			for(int i=0;i<LandSpawn.Length;i++)
 			{
-				Debug.Log("All Land card spots in use");
+				if(LandSpawn[i].spawnInUse == false && LandSpawn[i].teamId == teamID) //spawn only on one side of the board
+				{
+					LandSpawn[i].spawnInUse = true;
+					myCards = LandSpawn[i];
+					Debug.Log ("x: "+myCards.transform.position.x + " y "+myCards.transform.position.y + " z "+myCards.transform.position.z);
+					
+					GameObject Land_Island = PhotonNetwork.Instantiate("Land_Island", myCards.transform.position, myCards.transform.rotation, 0); 
+					break;
+				}
+				else
+				{
+					Debug.Log("All Land card spots in use");
+				}
 			}
 		}
 
 	}
-
-
-
-
-	public void SpawnMyDeck()
+	
+	public void Generate_Red_WhiteDeck()
 	{
+		//Insert 24 lands
+		for(int i=0;i<24;i++)
+		{
+			deck_Red_White[i] = "Land_Island";
+		}
+		//insert randomly other nonland cards
+		for(int i=0;i<36;i++)
+		{
 
+		}
 	}
+
+	public void GenerateRedDeck()
+	{
+		//Insert 24 lands
+		for(int i=0;i<24;i++)
+		{
+			deck_Red[i] = "Land_Mountain";
+		}
+	}
+
 }

@@ -18,7 +18,7 @@ public class NetworkManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
-		this.roomName = "niggah";
+		this.roomName = "random";
 		PhotonNetwork.ConnectUsingSettings("0.1");
 		player = GameObject.FindObjectsOfType<Player>();
 		gameManager = GameObject.FindObjectsOfType<GameManager>();

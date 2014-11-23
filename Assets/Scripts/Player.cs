@@ -3,21 +3,30 @@ using System.Collections;
 
 public class Player : Photon.MonoBehaviour
 {
+	public GameManager[] gameManager;
+
+
 	string playerName;
 	int playerHealth;
 	int opponentsHealth;
-	int cardsInHand;
-	int cardsInDeck;
 	int teamId;
 	public Texture[] currentZoom;
 	public Land_Island[] myIsland;
 
+	public string[] playerDeck;
+	public Texture[] MyHandOfCardsTexture;
+
+	
 	void start()
 	{
-		//int teamId = 0;
 		this.playerName = "Default_Player# "+Random.Range(0,10);
 		this.playerHealth = 20;
 		this.opponentsHealth = 20;
+
+		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		playerDeck = gameManager[0].deck_Red_White; //get randomly generated deck of 60 cards
+		DealInitialHand(); //Deal the player 7 cards
+
 	}
 
 	void Update()
@@ -43,6 +52,7 @@ public class Player : Photon.MonoBehaviour
 		}
 	}
 
+
 	public string getPlayerName()
 	{
 		return this.playerName;
@@ -52,7 +62,7 @@ public class Player : Photon.MonoBehaviour
 	{
 		this.playerName = name;
 	}
-	
+
 	void OnGUI(){
 		DisplayZoomCard ();
 	}
@@ -65,5 +75,16 @@ public class Player : Photon.MonoBehaviour
 		}
 	}
 
+	void DealInitialHand()
+	{
+		MyHandOfCardsTexture = new Texture[7];
 
+
+/*		for(int i=0;i<MyHandOfCardsTexture;i++)
+		{
+			//MyHandOfCardsTexture[i] = 
+			GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.2f + (i+100), Screen.width / 4f, Screen.height / 3f), MyHandOfCardsTexture[i]);
+
+		}*/
+	}
 }

@@ -40,7 +40,11 @@ public class DebugDev : MonoBehaviour {
 			}
 			else if (GUI.Button (new Rect (10,260,200,50), "Spawn Island")) 
 			{
-				gameManager[0].SpawnLandIsland();
+				gameManager[0].SpawnLandIsland(0);
+			}
+			else if (GUI.Button (new Rect (10,300,200,50), "Spawn Opponents Island")) 
+			{
+				gameManager[0].SpawnLandIsland(1);
 			}
 		}
 	}
