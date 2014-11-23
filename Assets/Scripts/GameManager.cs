@@ -3,7 +3,7 @@ using System.Collections;
 
 
 /*This class will take care of all the game logic as well as the board game logic
- * 
+ * spawn land is land?
  * 
  * 
  * 
@@ -37,7 +37,8 @@ public class GameManager : Photon.MonoBehaviour {
 
 		Generate_Red_WhiteDeck();
 		GenerateRedDeck();
-
+		Shuffle();
+		Shuffle();
 
 	}
 	
@@ -103,13 +104,10 @@ public class GameManager : Photon.MonoBehaviour {
 	public void SpawnCardsOnAttackField()
 	{
 		Debug.Log ("Spawning Creature Card");
-	//	((MonoBehaviour)myPlayerGO.GetComponent("Oreskos_Swiftclaw")).enabled = true;
-
 		for(int i=0;i<LandSpawn.Length;i++)
 		{
 			if(BattleSpawn[i].spawnInUse == false)
 			{
-
 				BattleSpawn[i].spawnInUse = true;
 				BattleCardSpawnScript myCards = BattleSpawn[i];
 				Debug.Log ("x: "+myCards.transform.position.x + " y "+myCards.transform.position.y + " z "+myCards.transform.position.z);
@@ -168,79 +166,82 @@ public class GameManager : Photon.MonoBehaviour {
 		}
 
 	}
+
+	void SpawnCardOnBoard(string cardName)
+	{
+
+
+	}
+
 	
 	public void Generate_Red_WhiteDeck()
 	{
+		Debug.Log ("Generate Red White Decks");
 		//Insert 24 lands
-		for(int i=0;i<24;i++)
-		{
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Mountain";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Plains";
-			deck_Red_White[i] = "Land_Plains";
-		}
-		//insert randomly other nonland cards
-		for(int i = 24;i<60;i++)
-		{
-			
-			deck_Red_White[i] = "Creature_Geistofthemoors";
-			deck_Red_White[i] = "Creature_Geistofthemoors";
-			deck_Red_White[i] = "Creature_Krenkosenforcer";
-			deck_Red_White[i] = "Creature_Krenkosenforcer";
-			deck_Red_White[i] = "Creature_Monasteryswiftspear";
-			deck_Red_White[i] = "Creature_Monasteryswiftspear";
-			deck_Red_White[i] = "Creature_Monasteryswiftspear";
-			deck_Red_White[i] = "Creature_Monasteryswiftspear";
-			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
-			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
-			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
-			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
-			deck_Red_White[i] = "Creature_Serraangel";
-			deck_Red_White[i] = "Creature_Soulmender";
-			deck_Red_White[i] = "Creature_Serraangel";
-			deck_Red_White[i] = "Creature_Soulmender";
-			deck_Red_White[i] = "Creature_Sungracepegasus";
-			deck_Red_White[i] = "Creature_Sungracepegasus";
-			deck_Red_White[i] = "Creature_Sungracepegasus";
-			deck_Red_White[i] = "Creature_Sungracepegasus";
-			deck_Red_White[i] = "Creature_Thunderinggiant";
-			deck_Red_White[i] = "Creature_Thunderinggiant";
-			deck_Red_White[i] = "Instant_Divineverdict";
-			deck_Red_White[i] = "Instant_Inspiredcharge";
-			deck_Red_White[i] = "Instant_Divineverdict";
-			deck_Red_White[i] = "Instant_Inspiredcharge";
-			deck_Red_White[i] = "Instant_Lightningstrike";
-			deck_Red_White[i] = "Instant_Raisethealarm";
-			deck_Red_White[i] = "Instant_Lightningstrike";
-			deck_Red_White[i] = "Instant_Raisethealarm";
-			deck_Red_White[i] = "Instant_Lightningstrike";
-			deck_Red_White[i] = "Instant_Raisethealarm";
-			deck_Red_White[i] = "Instant_Lightningstrike";
-			deck_Red_White[i] = "Instant_Raisethealarm";
-			deck_Red_White[i] = "Sorcery_Lavaaxe";
-			deck_Red_White[i] = "Sorcery_Lavaaxe";
-			
-		}
+			deck_Red_White[0] = "Land_Plains";
+			deck_Red_White[1] = "Land_Mountain";
+			deck_Red_White[2] = "Land_Plains";
+			deck_Red_White[3] = "Land_Mountain";
+			deck_Red_White[4] = "Land_Plains";
+			deck_Red_White[5] = "Land_Mountain";
+			deck_Red_White[6] = "Land_Plains";
+			deck_Red_White[7] = "Land_Mountain";
+			deck_Red_White[8] = "Land_Plains";
+			deck_Red_White[9] = "Land_Mountain";
+			deck_Red_White[10] = "Land_Plains";
+			deck_Red_White[11] = "Land_Mountain";
+			deck_Red_White[12] = "Land_Plains";
+			deck_Red_White[13] = "Land_Mountain";
+			deck_Red_White[14] = "Land_Plains";
+			deck_Red_White[15] = "Land_Mountain";
+			deck_Red_White[16] = "Land_Plains";
+			deck_Red_White[17] = "Land_Mountain";
+			deck_Red_White[18] = "Land_Plains";
+			deck_Red_White[19] = "Land_Mountain";
+			deck_Red_White[20] = "Land_Plains";
+			deck_Red_White[21] = "Land_Plains";
+			deck_Red_White[22] = "Land_Plains";
+			deck_Red_White[23] = "Land_Plains";
+
+		//insert randomly other nonland cards	
+			deck_Red_White[24] = "Creature_Geistofthemoors";
+			deck_Red_White[25] = "Creature_Geistofthemoors";
+			deck_Red_White[26] = "Creature_Krenkosenforcer";
+			deck_Red_White[27] = "Creature_Krenkosenforcer";
+			deck_Red_White[28] = "Creature_Monasteryswiftspear";
+			deck_Red_White[29] = "Creature_Monasteryswiftspear";
+			deck_Red_White[30] = "Creature_Monasteryswiftspear";
+			deck_Red_White[31] = "Creature_Monasteryswiftspear";
+			deck_Red_White[32] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[33] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[34] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[35] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[36] = "Creature_Serraangel";
+			deck_Red_White[37] = "Creature_Soulmender";
+			deck_Red_White[38] = "Creature_Serraangel";
+			deck_Red_White[39] = "Creature_Soulmender";
+			deck_Red_White[40] = "Creature_Sungracepegasus";
+			deck_Red_White[41] = "Creature_Sungracepegasus";
+			deck_Red_White[42] = "Creature_Sungracepegasus";
+			deck_Red_White[43] = "Creature_Sungracepegasus";
+			deck_Red_White[44] = "Creature_Thunderinggiant";
+			deck_Red_White[45] = "Creature_Thunderinggiant";
+			deck_Red_White[46] = "Instant_Divineverdict";
+			deck_Red_White[47] = "Instant_Inspiredcharge";
+			deck_Red_White[48] = "Instant_Divineverdict";
+			deck_Red_White[49] = "Instant_Inspiredcharge";
+			deck_Red_White[50] = "Instant_Lightningstrike";
+			deck_Red_White[51] = "Instant_Raisethealarm";
+			deck_Red_White[52] = "Instant_Lightningstrike";
+			deck_Red_White[53] = "Instant_Raisethealarm";
+			deck_Red_White[54] = "Instant_Lightningstrike";
+			deck_Red_White[55] = "Instant_Raisethealarm";
+			deck_Red_White[56] = "Instant_Lightningstrike";
+			deck_Red_White[57] = "Instant_Raisethealarm";
+			deck_Red_White[58] = "Sorcery_Lavaaxe";
+			deck_Red_White[59] = "Sorcery_Lavaaxe";
+		Debug.Log("Deck Size: "+deck_Red_White.Length);
+
 	}
 
 	public void GenerateRedDeck()
@@ -255,9 +256,9 @@ public class GameManager : Photon.MonoBehaviour {
 	public void Shuffle()
 	{
 		System.Random random = new System.Random();
-		for(int i = 59;i>-1;--1){
+		for(int i = 59;i>-1;i--){
 			int j = random.Next(0,59);
-			int temp = deck_Red_White[j];
+			string temp = deck_Red_White[j];
 			deck_Red_White[j] = deck_Red_White[i];
 			deck_Red_White[i] = temp;
 		}

@@ -9,7 +9,20 @@ public class Creature_Thunderinggiant : MonoBehaviour {
 	public Texture background;
 	public Texture tapped;
 	public Texture currentText;
-	
+	public bool summoning_sickness = false;
+	public bool flying = false;
+	public bool intimidate = false;
+	public bool haste = true;
+	public bool vigilance = false;
+	public bool lifelink = false;
+	public int power = 4;
+	public int toughness = 3;
+	public int no_color_mana = 3;
+	public int white_mana = 0;
+	public int red_mana = 2;
+	public int black_mana = 0;
+	public int blue_mana = 0;
+	public int green_mana = 0;
 	
 	public int state = 0;
 	string tag;

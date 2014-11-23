@@ -8,6 +8,12 @@ public class Instant_Divineverdict : MonoBehaviour {
 	public Texture background;
 	public Texture tapped;
 	public Texture currentText;
+	public int no_color_mana = 3;
+	public int white_mana = 1;
+	public int red_mana = 0;
+	public int black_mana = 0;
+	public int blue_mana = 0;
+	public int green_mana = 0;
 	
 	
 	public int state = 0;

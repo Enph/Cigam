@@ -14,6 +14,7 @@ public class NetworkManager : MonoBehaviour {
 	public Player[] player;
 		
 	public static int playerWhoIsIt;
+	GameObject myPlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -126,7 +127,7 @@ public class NetworkManager : MonoBehaviour {
 			return;
 		}
 
-		Player myPlayer;
+		//Player myPlayer;
 		//myPlayer.setPlayerName = PhotonNetwork.player.ID;
 		Vector3 spawnPosition = vectorManager[0].player1Spawn;
 		Quaternion spawnRotation = vectorManager[0].player1Rotation;
@@ -138,10 +139,10 @@ public class NetworkManager : MonoBehaviour {
 		}
 
 		//GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
-		PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
+		myPlayer = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
 		Debug.Log("Player 1 Room Entered");
-
-
+		player[0].DealInitialCardsInHand();
+		player[0].showPlayersHandCard = true;
 	}
 
 	

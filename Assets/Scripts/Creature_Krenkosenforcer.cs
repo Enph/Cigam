@@ -9,7 +9,20 @@ public class Creature_Krenkosenforcer : MonoBehaviour {
 	public Texture background;
 	public Texture tapped;
 	public Texture currentText;
-	
+	public bool summoning_sickness = true;
+	public bool flying = false;
+	public bool intimidate = true;
+	public bool haste = false;
+	public bool vigilance = false;
+	public bool lifelink = false;
+	public int power = 2;
+	public int toughness = 2;
+	public int no_color_mana = 1;
+	public int white_mana = 0;
+	public int red_mana = 2;
+	public int black_mana = 0;
+	public int blue_mana = 0;
+	public int green_mana = 0;
 	
 	public int state = 0;
 	string tag;

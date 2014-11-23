@@ -3,13 +3,22 @@ using System.Collections;
 
 public class Instant_Lightningstrike : MonoBehaviour {
 
+	public GameManager[] gameManager;
+	public Player[] player;
+
 	public int cardNum;
 	public string cardName;	
 	public Texture front;
 	public Texture background;
 	public Texture tapped;
 	public Texture currentText;
-	
+	public int no_color_mana = 1;
+	public int white_mana = 0;
+	public int red_mana = 1;
+	public int black_mana = 0;
+	public int blue_mana = 0;
+	public int green_mana = 0;
+	public bool show_options = true;
 	
 	public int state = 0;
 	string tag;
@@ -22,12 +31,32 @@ public class Instant_Lightningstrike : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.gameManager = GameObject.FindObjectsOfType<GameManager>();
+		this.player = Player.FindObjectsOfType<Player>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	
+	void OnGUI(){
+		float position = 0;
+		if(show_options==true){
+			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
+				if(gameManager[0].BattleSpawn[i].teamId == 1 && gameManager[0].BattleSpawn[i].spawnInUse == true){
+					if (GUI.Button (new Rect (0,position,100,50), gameManager[0].BattleSpawn[i].card_name))
+					{
+						
+					}
+					position=position-50;
+				}
+			}
+			if (GUI.Button (new Rect (0,position,100,50), "Opponent"))
+			{
+				
+			}
+		}
 	}
 	
 	public void showBack(){
