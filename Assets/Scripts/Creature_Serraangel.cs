@@ -9,7 +9,20 @@ public class Creature_Serraangel : MonoBehaviour {
 	public Texture background;
 	public Texture tapped;
 	public Texture currentText;
-	
+	public bool summoning_sickness = true;
+	public bool flying = true;
+	public bool intimidate = false;
+	public bool haste = false;
+	public bool vigilance = true;
+	public bool lifelink = false;
+	public int power = 4;
+	public int toughness = 4;
+	public int no_color_mana = 3;
+	public int white_mana = 2;
+	public int red_mana = 0;
+	public int black_mana = 0;
+	public int blue_mana = 0;
+	public int green_mana = 0;
 	
 	public int state = 0;
 	string tag;

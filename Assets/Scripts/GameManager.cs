@@ -255,9 +255,9 @@ public class GameManager : Photon.MonoBehaviour {
 	public void Shuffle()
 	{
 		System.Random random = new System.Random();
-		for(int i = 59;i>-1;--1){
+		for(int i = 59;i>-1;i--){
 			int j = random.Next(0,59);
-			int temp = deck_Red_White[j];
+			string temp = deck_Red_White[j];
 			deck_Red_White[j] = deck_Red_White[i];
 			deck_Red_White[i] = temp;
 		}

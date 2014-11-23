@@ -9,7 +9,12 @@ public class Instant_Raisethealarm : MonoBehaviour {
 	public Texture background;
 	public Texture tapped;
 	public Texture currentText;
-	
+	public int no_color_mana = 1;
+	public int white_mana = 1;
+	public int red_mana = 0;
+	public int black_mana = 0;
+	public int blue_mana = 0;
+	public int green_mana = 0;
 	
 	public int state = 0;
 	string tag;

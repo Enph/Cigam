@@ -7,6 +7,7 @@ public class BattleCardSpawnScript : MonoBehaviour {
 	public bool spawnInUse;
 	public Vector3 myCoordinates;
 	public Quaternion myRotations;
+	public string card_name;
 	
 	// Use this for initialization
 	void Start () {
