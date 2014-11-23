@@ -9,14 +9,16 @@ public class NetworkManager : MonoBehaviour {
 	public DebugDev[] debugDev;
 
 
-	public string roomName = "GameName#";
+	public string roomName;
 	public bool NetworkMenu;
 	public Player[] player;
 		
+	public static int playerWhoIsIt;
+
 	// Use this for initialization
 	void Start () {
 		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
-		this.roomName = "GameName";
+		this.roomName = "niggah";
 		PhotonNetwork.ConnectUsingSettings("0.1");
 		player = GameObject.FindObjectsOfType<Player>();
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
@@ -44,7 +46,7 @@ public class NetworkManager : MonoBehaviour {
 				int index = 1;
 				foreach (RoomInfo game in PhotonNetwork.GetRoomList())
 				{
-					if(GUI.Button(new Rect(10,10+(index *50), Screen.width*0.65f , 50),this.roomName + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
+					if(GUI.Button(new Rect(10,10+(index *50), Screen.width*0.65f , 50),game.name + " \t\tPlayers:" + game.playerCount + "/" + game.maxPlayers + "\t\t Ping: "+PhotonNetwork.GetPing()))
 					{
 						this.NetworkMenu = false; // Turn off Network GUI
 						PhotonNetwork.JoinRoom(game.name);
@@ -108,6 +110,8 @@ public class NetworkManager : MonoBehaviour {
 		this.NetworkMenu = false;
 		gameManager[0].showEnterPlayerName = true;
 		debugDev[0].showDebugMenu = true;
+		playerWhoIsIt = PhotonNetwork.player.ID;
+
 
 		SpawnMyPlayer();
 
@@ -116,7 +120,6 @@ public class NetworkManager : MonoBehaviour {
 
 	void SpawnMyPlayer()
 	{
-
 		if(player == null)
 		{
 			Debug.Log("Spawning Error");
@@ -124,11 +127,20 @@ public class NetworkManager : MonoBehaviour {
 		}
 
 		Player myPlayer;
+		//myPlayer.setPlayerName = PhotonNetwork.player.ID;
+		Vector3 spawnPosition = vectorManager[0].player1Spawn;
+		Quaternion spawnRotation = vectorManager[0].player1Rotation;
+
+		if(PhotonNetwork.player.ID == 1)
+		{
+			spawnPosition = vectorManager[0].player2Spawn;
+			spawnRotation = vectorManager[0].player2Rotation;
+		}
+
+		//GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
+		PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
 		Debug.Log("Player 1 Room Entered");
 
-		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", vectorManager[0].player1Spawn, vectorManager[0].player1Rotation, 0);
-		//Debug.Log ("x: "+myPlayer.transform.position.x + " y "+myPlayer.transform.position.y+ " z "+myPlayer.transform.position.z);
-		//Debug.Log ("rx: "+myPlayer.transform.rotation.x + " ry "+myPlayer.transform.rotation.y+ " rz "+myPlayer.transform.rotation.z + " rw "+myPlayer.transform.rotation.w);
 
 	}
 
