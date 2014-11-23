@@ -1,20 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\GameManager.cs" Line="268" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="268" Column="1" />
-      <File FileName="Assets\Scripts\Creature_Geistofthemoors.cs" Line="98" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="129" Column="1" />
-      <File FileName="Assets\Scripts\Land_Island.cs" Line="83" Column="33" />
-=======
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player.cs" Line="116" Column="3" />
-      <File FileName="Assets/Scripts/NetworkManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DebugDev.cs" Line="1" Column="1" />
->>>>>>> origin/master
+      <File FileName="Assets\Scripts\GameManager.cs" Line="227" Column="26" />
+      <File FileName="Assets\Scripts\Instant_Lightningstrike.cs" Line="51" Column="7" />
+      <File FileName="Assets\Scripts\BattleCardSpawnScript.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="134" Column="43" />
+      <File FileName="Assets\Scripts\LandSpawnCoordScript.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

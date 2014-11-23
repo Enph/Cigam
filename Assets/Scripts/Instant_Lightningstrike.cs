@@ -47,6 +47,7 @@ public class Instant_Lightningstrike : MonoBehaviour {
 				if(gameManager[0].BattleSpawn[i].teamId == 1 && gameManager[0].BattleSpawn[i].spawnInUse == true){
 					if (GUI.Button (new Rect (0,position,100,50), gameManager[0].BattleSpawn[i].card_name))
 					{
+						//object target = GameObject.FindObjectsOfType<Land_Island>();
 						
 					}
 					position=position-50;

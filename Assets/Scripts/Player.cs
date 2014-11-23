@@ -14,7 +14,8 @@ public class Player : Photon.MonoBehaviour
 	public bool showPlayersHandCard;
 	public Texture[] currentZoom;
 	public Land_Island[] myIsland;
-
+	public BattleCardSpawnScript[] BattleSpawn;
+	public LandSpawnCoordScript[] LandSpawn;
 	public string[] playerDeck;
 	public string[] playerCardHand;
 	public Texture[] MyHandOfCardsTextures;
@@ -22,7 +23,8 @@ public class Player : Photon.MonoBehaviour
 	
 	void start()
 	{
-
+		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 	}
 
 	void Awake()
@@ -36,6 +38,7 @@ public class Player : Photon.MonoBehaviour
 		this.playerDeck = new string[60];
 		this.playerCardHand = new string[7];
 		this.MyHandOfCardsTextures = new Texture[60];
+		this.teamId = PhotonNetwork.player.ID;
 		
 		
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
@@ -121,7 +124,89 @@ public class Player : Photon.MonoBehaviour
 		//Debug.Log("CardsInHand");
 		for(int i = 0; i < playerCardHand.Length; i++){
 			if(playerCardHand[i] != null){
-				if(GUI.Button(new Rect(Screen.width * 0.02f+(i*100),Screen.height * 0.75f,100,120),MyHandOfCardsTextures[i]));
+				if(GUI.Button(new Rect(Screen.width * 0.02f+(i*100),Screen.height * 0.75f,100,120),MyHandOfCardsTextures[i])){
+					LandSpawnCoordScript myLandCards;
+					BattleCardSpawnScript myBattleCards;
+					
+					if(this.teamId == 0)
+					{
+						if(playerCardHand[i].Substring(0,4)=="Land"){
+							for(int j=0;j<LandSpawn.Length;j++)
+							{
+								if(LandSpawn[j].spawnInUse == false && LandSpawn[j].teamId == this.teamId)
+								{
+									LandSpawn[j].spawnInUse = true;
+									LandSpawn[j].card_name = playerCardHand[i];
+									myLandCards = LandSpawn[j];
+									
+									PhotonNetwork.Instantiate(LandSpawn[j].card_name, myLandCards.transform.position, myLandCards.transform.rotation, 0); 
+									break;
+								}
+								else
+								{
+									Debug.Log("All Land card spots in use");
+								}
+							}
+						}
+						else{
+							for(int j=0;j<BattleSpawn.Length;j++)
+							{
+								if(BattleSpawn[j].spawnInUse == false && BattleSpawn[j].teamId == this.teamId)
+								{
+									BattleSpawn[j].spawnInUse = true;
+									BattleSpawn[j].card_name = playerCardHand[i];
+									myBattleCards = BattleSpawn[j];
+									
+									PhotonNetwork.Instantiate(BattleSpawn[j].card_name, myBattleCards.transform.position, myBattleCards.transform.rotation, 0); 
+									break;
+								}
+								else
+								{
+									Debug.Log("All Land card spots in use");
+								}
+							}
+						}
+					}
+					else if(this.teamId == 1)
+					{
+						if(playerCardHand[i].Substring(0,4)=="Land"){
+							for(int j=0;j<LandSpawn.Length;j++)
+							{
+								if(LandSpawn[j].spawnInUse == false && LandSpawn[j].teamId == this.teamId)
+								{
+									LandSpawn[j].spawnInUse = true;
+									LandSpawn[j].card_name = playerCardHand[i];
+									myLandCards = LandSpawn[j];
+									
+									PhotonNetwork.Instantiate(LandSpawn[j].card_name, myLandCards.transform.position, myLandCards.transform.rotation, 0); 
+									break;
+								}
+								else
+								{
+									Debug.Log("All Land card spots in use");
+								}
+							}
+						}
+						else{
+							for(int j=0;j<BattleSpawn.Length;j++)
+							{
+								if(BattleSpawn[j].spawnInUse == false && BattleSpawn[j].teamId == this.teamId)
+								{
+									BattleSpawn[j].spawnInUse = true;
+									BattleSpawn[j].card_name = playerCardHand[i];
+									myBattleCards = BattleSpawn[j];
+									
+									PhotonNetwork.Instantiate(BattleSpawn[j].card_name, myBattleCards.transform.position, myBattleCards.transform.rotation, 0); 
+									break;
+								}
+								else
+								{
+									Debug.Log("All Land card spots in use");
+								}
+							}
+						}
+					}
+				}
 			}
 			else
 			{
