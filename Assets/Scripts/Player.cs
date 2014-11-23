@@ -34,7 +34,8 @@ public class Player : Photon.MonoBehaviour
 		this.deckSize = playerDeck.Length;
 		this.showPlayersHandCard = false;
 		this.playerDeck = new string[60];
-		this.playerCardHand = new string[6];
+		this.playerCardHand = new string[7];
+		this.MyHandOfCardsTextures = new Texture[60];
 		
 		
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
@@ -99,13 +100,15 @@ public class Player : Photon.MonoBehaviour
 
 
 		int j=0;
-		Debug.Log("got here"+playerDeck.Length);
-		for(int i=playerDeck.Length-1;i>=playerDeck.Length-8;i--)
+		for(int i=playerDeck.Length-1;i>=playerDeck.Length-7;i--)
 		{
-			string textureToLoad = "Textures/"+playerDeck[i];
-			Debug.Log("FileName: "+textureToLoad);
+			string textureToLoad = "CardPictures/"+playerDeck[i].ToString();
+			//Debug.Log("FileName: "+textureToLoad);
 
-			MyHandOfCardsTextures[j] = Resources.Load("Textures/" + textureToLoad.ToString()) as Texture; //Give the texturename of the card taken out of the deck
+			Texture tex = Resources.Load(textureToLoad) as Texture ;
+			Debug.Log (tex);
+
+			MyHandOfCardsTextures[j] = tex; //Give the texturename of the card taken out of the deck
 			playerCardHand[j] = playerDeck[i]; // give the name of the card taken from the deck
 			j++;
 			this.deckSize--;
@@ -113,10 +116,12 @@ public class Player : Photon.MonoBehaviour
 	}
 	public void displayCardsInHand()
 	{
+
+
 		//Debug.Log("CardsInHand");
 		for(int i = 0; i < playerCardHand.Length; i++){
 			if(playerCardHand[i] != null){
-				GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.2f + (i+50), Screen.width / 4.0f, Screen.height / 3.0f), MyHandOfCardsTextures[i]);
+				if(GUI.Button(new Rect(Screen.width * 0.02f+(i*100),Screen.height * 0.75f,100,120),MyHandOfCardsTextures[i]));
 			}
 			else
 			{
