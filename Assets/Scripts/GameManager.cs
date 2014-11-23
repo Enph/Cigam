@@ -3,7 +3,7 @@ using System.Collections;
 
 
 /*This class will take care of all the game logic as well as the board game logic
- * 
+ * spawn land is land?
  * 
  * 
  * 
@@ -103,13 +103,10 @@ public class GameManager : Photon.MonoBehaviour {
 	public void SpawnCardsOnAttackField()
 	{
 		Debug.Log ("Spawning Creature Card");
-	//	((MonoBehaviour)myPlayerGO.GetComponent("Oreskos_Swiftclaw")).enabled = true;
-
 		for(int i=0;i<LandSpawn.Length;i++)
 		{
 			if(BattleSpawn[i].spawnInUse == false)
 			{
-
 				BattleSpawn[i].spawnInUse = true;
 				BattleCardSpawnScript myCards = BattleSpawn[i];
 				Debug.Log ("x: "+myCards.transform.position.x + " y "+myCards.transform.position.y + " z "+myCards.transform.position.z);
@@ -168,6 +165,13 @@ public class GameManager : Photon.MonoBehaviour {
 		}
 
 	}
+
+	void SpawnCardOnBoard(string cardName)
+	{
+
+
+	}
+
 	
 	public void Generate_Red_WhiteDeck()
 	{
