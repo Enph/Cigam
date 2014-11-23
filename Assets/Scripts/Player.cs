@@ -12,12 +12,16 @@ public class Player : Photon.MonoBehaviour
 	int teamId;
 	int deckSize;
 	public bool showPlayersHandCard;
-	public Texture[] currentZoom;
+	public string lastTooltip = " ";
+	public Texture[] islandZoom;
+	public Texture[] handZoom;
 	public Land_Island[] myIsland;
+	
 
 	public string[] playerDeck;
 	public string[] playerCardHand;
 	public Texture[] MyHandOfCardsTextures;
+	public Texture[] currentZoom;
 
 	
 	void start()
@@ -36,17 +40,25 @@ public class Player : Photon.MonoBehaviour
 		this.playerDeck = new string[60];
 		this.playerCardHand = new string[7];
 		this.MyHandOfCardsTextures = new Texture[60];
-		
+		this.handZoom = new Texture[7];
 		
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 	}
 
 	void Update()
 	{
+		int currentPos = 0; //position of the currentZoom array
 		myIsland = GameObject.FindObjectsOfType<Land_Island>(); //get all the islands
-		currentZoom = new Texture[myIsland.Length]; //reinitalize the array of current Textures (This can be kept, but size will increase by every type of card)
-		for(int i = 0; i < myIsland.Length; i++){ // cycle through the islands, will have to do for every type of card
-			currentZoom[i] = myIsland[i].currentText; // insert into current texures
+		currentZoom = new Texture[myIsland.Length + MyHandOfCardsTextures.Length]; //reinitalize the array of current Textures (This can be kept, but size will increase by every type of card)
+		// cycle through the islands, will have to do for every type of card
+
+		for(int i = 0; i < myIsland.Length; i++){
+			currentZoom[currentPos] = myIsland[i].currentText; // insert into current texures
+			currentPos++;
+		}
+		for(int j = 0; j < handZoom.Length; j++){
+			currentZoom[currentPos] = handZoom[j];
+			currentPos++; 
 		}
 	}
 
@@ -77,20 +89,23 @@ public class Player : Photon.MonoBehaviour
 
 	void OnGUI(){
 		DisplayZoomCard();
-		if(showPlayersHandCard == true)
-			displayCardsInHand();
-	}
+		displayCardsInHand ();
 
-	void DisplayZoomCard(){
+	}
+	
+
+
+void DisplayZoomCard(){
 
 		for(int i = 0; i < currentZoom.Length; i++){
 			if(currentZoom[i] != null){ //if the current texture is not null, display on screen. the only not null texture will be the one hovered over.
 				GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.6f, Screen.width / 4f, Screen.height / 3f), currentZoom[i]);
 			}
 		}
+
 	}
 
-	public void DealInitialCardsInHand()
+public void DealInitialCardsInHand()
 	{
 
 		for(int i=0;i<gameManager[0].deck_Red_White.Length;i++)
@@ -116,18 +131,22 @@ public class Player : Photon.MonoBehaviour
 	}
 	public void displayCardsInHand()
 	{
-
-
 		//Debug.Log("CardsInHand");
 		for(int i = 0; i < playerCardHand.Length; i++){
 			if(playerCardHand[i] != null){
-				if(GUI.Button(new Rect(Screen.width * 0.02f+(i*100),Screen.height * 0.75f,100,120),MyHandOfCardsTextures[i]));
-			}
-			else
-			{
-				Debug.Log("playerCardHand is null");
+				GUILayout.BeginArea(new Rect(Screen.width * 0.025f+(i*100),Screen.height * 0.75f,100,120));
+				GUILayout.Button(new GUIContent(MyHandOfCardsTextures[i], "MouseOverHand"));
+				if (Event.current.type == EventType.Repaint && GUILayoutUtility.GetLastRect().Contains(Event.current.mousePosition)) {
+					handZoom[i] = MyHandOfCardsTextures[i];
+					//lastTooltip = GUI.tooltip;
+				}
+				else handZoom[i] = null;
+				GUILayout.EndArea();
 			}
 		}
+		
+		
+		
 	}
-	
+
 }

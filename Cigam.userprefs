@@ -1,20 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\GameManager.cs" Line="268" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="268" Column="1" />
-      <File FileName="Assets\Scripts\Creature_Geistofthemoors.cs" Line="98" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="129" Column="1" />
-      <File FileName="Assets\Scripts\Land_Island.cs" Line="83" Column="33" />
-=======
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player.cs" Line="116" Column="3" />
-      <File FileName="Assets/Scripts/NetworkManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DebugDev.cs" Line="1" Column="1" />
->>>>>>> origin/master
+      <File FileName="Assets\Scripts\Player.cs" Line="143" Column="32" />
+      <File FileName="Assets\Scripts\Land_Island.cs" Line="73" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
