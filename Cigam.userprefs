@@ -1,31 +1,8 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BattleCardSpawnScript.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Instant_Divineverdict.cs" Line="12" Column="27" />
-      <File FileName="Assets\Scripts\Instant_Inspiredcharge.cs" Line="13" Column="25" />
-      <File FileName="Assets\Scripts\Instant_Lightningstrike.cs" Line="57" Column="5" />
-      <File FileName="Assets\Scripts\Instant_Raisethealarm.cs" Line="13" Column="27" />
-      <File FileName="Assets\Scripts\Sorcery_Lavaaxe.cs" Line="14" Column="25" />
-      <File FileName="Assets\Scripts\BattleCardSpawnScript.cs" Line="10" Column="26" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="246" Column="19" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.cs" Line="254" Column="2" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
-    <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="143" Column="46" />
-      <File FileName="Assets/Scripts/Player.cs" Line="73" Column="25" />
-      <File FileName="Assets/Scripts/BattleCardSpawnScript.cs" Line="6" Column="19" />
-      <File FileName="Assets/Scripts/DebugDev.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/NetworkManager.cs" Line="17" Column="22" />
->>>>>>> Stashed changes
->>>>>>> origin/master
+      <File FileName="Assets\Scripts\GameManager.cs" Line="265" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
