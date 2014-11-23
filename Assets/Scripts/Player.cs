@@ -7,14 +7,16 @@ public class Player : Photon.MonoBehaviour
 
 
 	string playerName;
-	int playerHealth;
+	public int playerHealth;
 	int opponentsHealth;
 	int teamId;
+	int deckSize;
 	public Texture[] currentZoom;
 	public Land_Island[] myIsland;
 
 	public string[] playerDeck;
-	public Texture[] MyHandOfCardsTexture;
+	public string[] playerCardHand;
+	public Texture[] MyHandOfCardsTextures;
 
 	
 	void start()
@@ -25,8 +27,9 @@ public class Player : Photon.MonoBehaviour
 
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 		playerDeck = gameManager[0].deck_Red_White; //get randomly generated deck of 60 cards
-		DealInitialHand(); //Deal the player 7 cards
+		DealInitialCardsInHand();
 
+		this.deckSize = playerDeck.Length;
 	}
 
 	void Update()
@@ -68,6 +71,7 @@ public class Player : Photon.MonoBehaviour
 	}
 
 	void DisplayZoomCard(){
+
 		for(int i = 0; i < currentZoom.Length; i++){
 			if(currentZoom[i] != null){
 				GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.6f, Screen.width / 4f, Screen.height / 3f), currentZoom[i]);
@@ -75,16 +79,25 @@ public class Player : Photon.MonoBehaviour
 		}
 	}
 
-	void DealInitialHand()
+	void DealInitialCardsInHand()
 	{
-		MyHandOfCardsTexture = new Texture[7];
-
-
-/*		for(int i=0;i<MyHandOfCardsTexture;i++)
+		int j=0;
+		for(int i=playerDeck.Length-1;i>playerDeck.Length-8;i--)
 		{
-			//MyHandOfCardsTexture[i] = 
-			GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.2f + (i+100), Screen.width / 4f, Screen.height / 3f), MyHandOfCardsTexture[i]);
-
-		}*/
+			string textureToLoad = "/Textures/"+playerDeck[i];
+			MyHandOfCardsTextures[j] = (Texture2D)Resources.LoadAssetAtPath(textureToLoad, typeof(Texture2D)); //Give the texturename of the card taken out of the deck
+			playerCardHand[j] = playerDeck[i]; // give the name of the card taken from the deck
+			j++;
+			this.deckSize--;
+		}
 	}
+	void displayCardsInHand()
+	{
+		for(int i = 0; i < playerCardHand.Length; i++){
+			if(playerCardHand[i] != null){
+				GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.2f + (i+50), Screen.width / 4f, Screen.height / 3f), MyHandOfCardsTextures[i]);
+			}
+		}
+	}
+	
 }
