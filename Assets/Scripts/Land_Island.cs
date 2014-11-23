@@ -60,7 +60,7 @@ public class Land_Island : Photon.MonoBehaviour {
 	}
 
 	void OnMouseUp(){
-		
+		//if mouse is clicked, tap or untap card
 		switch(state){
 			case 0:
 				tapCard ();
@@ -75,12 +75,12 @@ public class Land_Island : Photon.MonoBehaviour {
 	}
 	
 	void OnMouseOver(){
-		currentText = renderer.material.mainTexture;
+		currentText = renderer.material.mainTexture; //if mouse is hovered over set currentText to the maintexure (usally front of the card)
 		Debug.Log ("I am selected");
 	}
 	
 	void OnMouseExit(){
-		currentText = null;
+		currentText = null; //if mouse leaves object set currentText to null
 	}
 	
 

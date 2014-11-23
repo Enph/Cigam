@@ -31,10 +31,10 @@ public class Player : Photon.MonoBehaviour
 
 	void Update()
 	{
-		myIsland = GameObject.FindObjectsOfType<Land_Island>();
-		currentZoom = new Texture[myIsland.Length];
-		for(int i = 0; i < myIsland.Length; i++){
-			currentZoom[i] = myIsland[i].currentText;
+		myIsland = GameObject.FindObjectsOfType<Land_Island>(); //get all the islands
+		currentZoom = new Texture[myIsland.Length]; //reinitalize the array of current Textures (This can be kept, but size will increase by every type of card)
+		for(int i = 0; i < myIsland.Length; i++){ // cycle through the islands, will have to do for every type of card
+			currentZoom[i] = myIsland[i].currentText; // insert into current texures
 		}
 	}
 
@@ -69,7 +69,7 @@ public class Player : Photon.MonoBehaviour
 
 	void DisplayZoomCard(){
 		for(int i = 0; i < currentZoom.Length; i++){
-			if(currentZoom[i] != null){
+			if(currentZoom[i] != null){ //if the current texture is not null, display on screen. the only not null texture will be the one hovered over.
 				GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.6f, Screen.width / 4f, Screen.height / 3f), currentZoom[i]);
 			}
 		}
