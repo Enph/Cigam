@@ -92,22 +92,39 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
      <Compile Include="Assets\Scripts\BattleCardSpawnScript.cs" />
+     <Compile Include="Assets\Scripts\Creature_Geistofthemoors.cs" />
+     <Compile Include="Assets\Scripts\Creature_Krenkosenforcer.cs" />
+     <Compile Include="Assets\Scripts\Creature_Monasteryswiftspear.cs" />
+     <Compile Include="Assets\Scripts\Creature_Oreskosswiftclaw.cs" />
+     <Compile Include="Assets\Scripts\Creature_Serraangel.cs" />
+     <Compile Include="Assets\Scripts\Creature_Soulmender.cs" />
+     <Compile Include="Assets\Scripts\Creature_Sungracepegasus.cs" />
+     <Compile Include="Assets\Scripts\Creature_Thunderinggiant.cs" />
      <Compile Include="Assets\Scripts\DebugDev.cs" />
      <Compile Include="Assets\Scripts\DeckBuilder.cs" />
      <Compile Include="Assets\Scripts\GameLobbyGUI.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Instant_Divineverdict.cs" />
+     <Compile Include="Assets\Scripts\Instant_Inspiredcharge.cs" />
+     <Compile Include="Assets\Scripts\Instant_Lightningstrike.cs" />
+     <Compile Include="Assets\Scripts\Instant_Raisethealarm.cs" />
      <Compile Include="Assets\Scripts\LandSpawnCoordScript.cs" />
+     <Compile Include="Assets\Scripts\Land_Forest.cs" />
      <Compile Include="Assets\Scripts\Land_Island.cs" />
+     <Compile Include="Assets\Scripts\Land_Mountain.cs" />
+     <Compile Include="Assets\Scripts\Land_Plains.cs" />
+     <Compile Include="Assets\Scripts\Land_Swamp.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Sorcery_Lavaaxe.cs" />
      <Compile Include="Assets\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\VectorManager.cs" />
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Photon3Unity3D">
- <HintPath>D:/Cigam/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Yannis/Documents/GitHub/Cigam/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
