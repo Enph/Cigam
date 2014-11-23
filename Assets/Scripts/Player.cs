@@ -9,13 +9,7 @@ public class Player : Photon.MonoBehaviour
 	int cardsInHand;
 	int cardsInDeck;
 	int teamId;
-
-
-	Camera playerCamera;
 	
-
-	public float player_Xcoord, player_Ycoord, player_Zcoord;
-
 	void start()
 	{
 		//int teamId = 0;

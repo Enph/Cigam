@@ -43,7 +43,9 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.Label("Connection State: "+PhotonNetwork.connectionStateDetailed.ToString());
 			GUILayout.Label("Ping: " + PhotonNetwork.GetPing());
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
-//			GUILayout.Label ("Player Name:" + player[0].getPlayerName());
+			//GUILayout.Label ("Player Name:" + player[0].getPlayerName());
+			GUILayout.Label ("Player Name:" + PhotonNetwork.player.ID);
+
 		}
 		if(showEnterPlayerName == true)
 		{
