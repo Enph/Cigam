@@ -174,12 +174,72 @@ public class GameManager : Photon.MonoBehaviour {
 		//Insert 24 lands
 		for(int i=0;i<24;i++)
 		{
-			deck_Red_White[i] = "Land_Island";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Mountain";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Plains";
+			deck_Red_White[i] = "Land_Plains";
 		}
 		//insert randomly other nonland cards
-		for(int i=0;i<36;i++)
+		for(int i = 24;i<60;i++)
 		{
-
+			
+			deck_Red_White[i] = "Creature_Geistofthemoors";
+			deck_Red_White[i] = "Creature_Geistofthemoors";
+			deck_Red_White[i] = "Creature_Krenkosenforcer";
+			deck_Red_White[i] = "Creature_Krenkosenforcer";
+			deck_Red_White[i] = "Creature_Monasteryswiftspear";
+			deck_Red_White[i] = "Creature_Monasteryswiftspear";
+			deck_Red_White[i] = "Creature_Monasteryswiftspear";
+			deck_Red_White[i] = "Creature_Monasteryswiftspear";
+			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[i] = "Creature_Oreskosswiftclaw";
+			deck_Red_White[i] = "Creature_Serraangel";
+			deck_Red_White[i] = "Creature_Soulmender";
+			deck_Red_White[i] = "Creature_Serraangel";
+			deck_Red_White[i] = "Creature_Soulmender";
+			deck_Red_White[i] = "Creature_Sungracepegasus";
+			deck_Red_White[i] = "Creature_Sungracepegasus";
+			deck_Red_White[i] = "Creature_Sungracepegasus";
+			deck_Red_White[i] = "Creature_Sungracepegasus";
+			deck_Red_White[i] = "Creature_Thunderinggiant";
+			deck_Red_White[i] = "Creature_Thunderinggiant";
+			deck_Red_White[i] = "Instant_Divineverdict";
+			deck_Red_White[i] = "Instant_Inspiredcharge";
+			deck_Red_White[i] = "Instant_Divineverdict";
+			deck_Red_White[i] = "Instant_Inspiredcharge";
+			deck_Red_White[i] = "Instant_Lightningstrike";
+			deck_Red_White[i] = "Instant_Raisethealarm";
+			deck_Red_White[i] = "Instant_Lightningstrike";
+			deck_Red_White[i] = "Instant_Raisethealarm";
+			deck_Red_White[i] = "Instant_Lightningstrike";
+			deck_Red_White[i] = "Instant_Raisethealarm";
+			deck_Red_White[i] = "Instant_Lightningstrike";
+			deck_Red_White[i] = "Instant_Raisethealarm";
+			deck_Red_White[i] = "Sorcery_Lavaaxe";
+			deck_Red_White[i] = "Sorcery_Lavaaxe";
+			
 		}
 	}
 
@@ -189,6 +249,17 @@ public class GameManager : Photon.MonoBehaviour {
 		for(int i=0;i<24;i++)
 		{
 			deck_Red[i] = "Land_Mountain";
+		}
+	}
+	
+	public void Shuffle()
+	{
+		System.Random random = new System.Random();
+		for(int i = 59;i>-1;--1){
+			int j = random.Next(0,59);
+			int temp = deck_Red_White[j];
+			deck_Red_White[j] = deck_Red_White[i];
+			deck_Red_White[i] = temp;
 		}
 	}
 
