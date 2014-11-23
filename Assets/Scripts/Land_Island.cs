@@ -76,7 +76,7 @@ public class Land_Island : Photon.MonoBehaviour {
 	
 	void OnMouseOver(){
 		currentText = renderer.material.mainTexture;
-		Debug.Log ("I am selected");
+		//Debug.Log ("I am selected");
 	}
 	
 	void OnMouseExit(){

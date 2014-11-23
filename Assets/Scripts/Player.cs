@@ -11,6 +11,7 @@ public class Player : Photon.MonoBehaviour
 	int opponentsHealth;
 	int teamId;
 	int deckSize;
+	public bool showPlayersHandCard;
 	public Texture[] currentZoom;
 	public Land_Island[] myIsland;
 
@@ -21,15 +22,22 @@ public class Player : Photon.MonoBehaviour
 	
 	void start()
 	{
+
+	}
+
+	void Awake()
+	{
+		Debug.Log("PlayerScript Start");
 		this.playerName = "Default_Player# "+Random.Range(0,10);
 		this.playerHealth = 20;
 		this.opponentsHealth = 20;
-
-		gameManager = GameObject.FindObjectsOfType<GameManager>();
-		playerDeck = gameManager[0].deck_Red_White; //get randomly generated deck of 60 cards
-		DealInitialCardsInHand();
-
 		this.deckSize = playerDeck.Length;
+		this.showPlayersHandCard = false;
+		this.playerDeck = new string[60];
+		this.playerCardHand = new string[6];
+		
+		
+		gameManager = GameObject.FindObjectsOfType<GameManager>();
 	}
 
 	void Update()
@@ -67,7 +75,9 @@ public class Player : Photon.MonoBehaviour
 	}
 
 	void OnGUI(){
-		DisplayZoomCard ();
+		DisplayZoomCard();
+		if(showPlayersHandCard == true)
+			displayCardsInHand();
 	}
 
 	void DisplayZoomCard(){
@@ -79,23 +89,38 @@ public class Player : Photon.MonoBehaviour
 		}
 	}
 
-	void DealInitialCardsInHand()
+	public void DealInitialCardsInHand()
 	{
-		int j=0;
-		for(int i=playerDeck.Length-1;i>playerDeck.Length-8;i--)
+
+		for(int i=0;i<gameManager[0].deck_Red_White.Length;i++)
 		{
-			string textureToLoad = "/Textures/"+playerDeck[i];
-			MyHandOfCardsTextures[j] = (Texture2D)Resources.LoadAssetAtPath(textureToLoad, typeof(Texture2D)); //Give the texturename of the card taken out of the deck
+			playerDeck[i] = gameManager[0].deck_Red_White[i];
+		}
+
+
+		int j=0;
+		Debug.Log("got here"+playerDeck.Length);
+		for(int i=playerDeck.Length-1;i>=playerDeck.Length-8;i--)
+		{
+			string textureToLoad = "Textures/"+playerDeck[i];
+			Debug.Log("FileName: "+textureToLoad);
+
+			MyHandOfCardsTextures[j] = Resources.Load("Textures/" + textureToLoad.ToString()) as Texture; //Give the texturename of the card taken out of the deck
 			playerCardHand[j] = playerDeck[i]; // give the name of the card taken from the deck
 			j++;
 			this.deckSize--;
 		}
 	}
-	void displayCardsInHand()
+	public void displayCardsInHand()
 	{
+		//Debug.Log("CardsInHand");
 		for(int i = 0; i < playerCardHand.Length; i++){
 			if(playerCardHand[i] != null){
-				GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.2f + (i+50), Screen.width / 4f, Screen.height / 3f), MyHandOfCardsTextures[i]);
+				GUI.Box (new Rect(Screen.width * 0.74f, Screen.height * 0.2f + (i+50), Screen.width / 4.0f, Screen.height / 3.0f), MyHandOfCardsTextures[i]);
+			}
+			else
+			{
+				Debug.Log("playerCardHand is null");
 			}
 		}
 	}

@@ -141,8 +141,8 @@ public class NetworkManager : MonoBehaviour {
 		//GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
 		myPlayer = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
 		Debug.Log("Player 1 Room Entered");
-
-
+		player[0].DealInitialCardsInHand();
+		player[0].showPlayersHandCard = true;
 	}
 
 	

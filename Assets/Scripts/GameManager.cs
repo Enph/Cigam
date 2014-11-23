@@ -37,7 +37,8 @@ public class GameManager : Photon.MonoBehaviour {
 
 		Generate_Red_WhiteDeck();
 		GenerateRedDeck();
-
+		Shuffle();
+		Shuffle();
 
 	}
 	
@@ -175,6 +176,7 @@ public class GameManager : Photon.MonoBehaviour {
 	
 	public void Generate_Red_WhiteDeck()
 	{
+		Debug.Log ("Generate Red White Decks");
 		//Insert 24 lands
 			deck_Red_White[0] = "Land_Plains";
 			deck_Red_White[1] = "Land_Mountain";
@@ -238,6 +240,7 @@ public class GameManager : Photon.MonoBehaviour {
 			deck_Red_White[57] = "Instant_Raisethealarm";
 			deck_Red_White[58] = "Sorcery_Lavaaxe";
 			deck_Red_White[59] = "Sorcery_Lavaaxe";
+		Debug.Log("Deck Size: "+deck_Red_White.Length);
 
 	}
 
