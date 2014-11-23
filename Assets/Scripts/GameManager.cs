@@ -129,7 +129,7 @@ public class GameManager : Photon.MonoBehaviour {
 				LandSpawnCoordScript myCards = LandSpawn[i];
 				Debug.Log ("x: "+myCards.transform.position.x + " y "+myCards.transform.position.y + " z "+myCards.transform.position.z);
 
-				GameObject Land_Island = PhotonNetwork.Instantiate("Land_Island", myCards.transform.position, myCards.transform.rotation, 0); 
+				GameObject Land_Island = PhotonNetwork.Instantiate("Land_Island", myCards.transform.position, Quaternion.identity, 0); 
 				break;
 			}
 			else

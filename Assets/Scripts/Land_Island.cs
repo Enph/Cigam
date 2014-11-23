@@ -8,7 +8,8 @@ public class Land_Island : Photon.MonoBehaviour {
 	public Texture front;
 	public Texture background;
 	public Texture tapped;
-
+	public Texture currentText;
+	
 
 	public int state = 0;
 	string tag;
@@ -72,5 +73,15 @@ public class Land_Island : Photon.MonoBehaviour {
 		}
 
 	}
+	
+	void OnMouseOver(){
+		currentText = renderer.material.mainTexture;
+		Debug.Log ("I am selected");
+	}
+	
+	void OnMouseExit(){
+		currentText = null;
+	}
+	
 
 }
