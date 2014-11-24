@@ -146,6 +146,9 @@ public class NetworkManager : MonoBehaviour {
 
 		Debug.Log("Player 1 Room Entered");
 
+		player[0].DealInitialCardsInHand();
+		player[0].showPlayersHandCard = true;
+
 		gameManager[0].player1Turn = true;
 		gameManager[0].player2Turn = false;
 	}

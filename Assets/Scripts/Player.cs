@@ -6,7 +6,7 @@ public class Player : Photon.MonoBehaviour
 	public GameManager[] gameManager;
 
 
-	string playerName;
+	public string playerName;
 	public int playerHealth;
 	int opponentsHealth;
 	public int teamId;
@@ -52,15 +52,12 @@ public class Player : Photon.MonoBehaviour
 	
 	void start()
 	{
-<<<<<<< HEAD
-		
-=======
+
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 
 
->>>>>>> origin/master
 	}
 
 	void Awake()
@@ -76,15 +73,12 @@ public class Player : Photon.MonoBehaviour
 		this.playerCardHand = new string[7];
 		this.MyHandOfCardsTextures = new Texture[60];
 		this.teamId = PhotonNetwork.player.ID;
-<<<<<<< HEAD
 		Debug.Log("Awake Team id = "+this.teamId);
 		
-=======
->>>>>>> origin/master
+
 		this.handZoom = new Texture[7];
 		this.phaseNames = new string[7]{"Untap","UpKeep","Draw","Main1","Battle","Main2","End"};
 
-<<<<<<< HEAD
 
 		if(PhotonNetwork.player.ID == 1)
 			this.myTurn = true;
@@ -94,18 +88,15 @@ public class Player : Photon.MonoBehaviour
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
-=======
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 		PhotonNetwork.sendRate = 20; //send rate: 20 times per second 
 		PhotonNetwork.sendRateOnSerialize = 10; //10 time per second
-		DealInitialCardsInHand();
-		showPlayersHandCard = true;
->>>>>>> origin/master
+
 	}
 
 	void Update()
 	{	
-		Debug.Log("Update Team id = "+this.teamId);
+		//Debug.Log("Update Team id = "+this.teamId);
 		int currentPos = 0; //position of the currentZoom array
 		myIsland = GameObject.FindObjectsOfType<Land_Island>(); //get all the islands
 		myDivine = GameObject.FindObjectsOfType<Instant_Divineverdict>();
@@ -387,7 +378,6 @@ public void displayCardsInHand()
 				else handZoom[i] = null;
 			}
 		}
-<<<<<<< Updated upstream
 	}	
 	
 	
@@ -404,9 +394,8 @@ public void displayCardsInHand()
 			showInitialGamephase = false;
 		}
 */
-=======
+
 	}
->>>>>>> Stashed changes
 
 
 	[RPC]
@@ -421,13 +410,11 @@ public void displayCardsInHand()
 
 			}
 		}
-<<<<<<< Updated upstream
-=======
+
 	}
 
 	public void setPhaseMessage(string phaseName)
 	{
 		this.gamePhase = phaseName;
->>>>>>> Stashed changes
 	}
 }

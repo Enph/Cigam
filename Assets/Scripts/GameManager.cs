@@ -70,7 +70,7 @@ public class GameManager : Photon.MonoBehaviour {
 			enterPlayerName = GUI.TextField(new Rect(10, 20, 200, 20), enterPlayerName, 25);
 			if (GUI.Button (new Rect (10,50,200,50), "OK"))
 			{
-				//player[0].setPlayerName(enterPlayerName);
+				player[0].setPlayerName(enterPlayerName);
 				this.showEnterPlayerName = true; //turn off enter player name GUI
 				this.showConnectionState = true; //turn on Main game UI
 			}
