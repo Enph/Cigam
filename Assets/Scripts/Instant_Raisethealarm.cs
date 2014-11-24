@@ -27,7 +27,7 @@ public class Instant_Raisethealarm : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Instant_Raisethealarm";
 	}
 	
 	// Update is called once per frame

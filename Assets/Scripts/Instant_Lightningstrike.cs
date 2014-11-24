@@ -33,6 +33,7 @@ public class Instant_Lightningstrike : MonoBehaviour {
 		tag = "untap";
 		this.gameManager = GameObject.FindObjectsOfType<GameManager>();
 		this.player = Player.FindObjectsOfType<Player>();
+		this.cardName = "Instant_Lightningstrike";
 	}
 	
 	// Update is called once per frame
@@ -42,20 +43,20 @@ public class Instant_Lightningstrike : MonoBehaviour {
 	
 	void OnGUI(){
 		float position = 0;
+		int targets = 1;
 		if(show_options==true){
-			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
-				if(gameManager[0].BattleSpawn[i].teamId == 1 && gameManager[0].BattleSpawn[i].spawnInUse == true){
-					if (GUI.Button (new Rect (0,position,100,50), gameManager[0].BattleSpawn[i].card_name))
-					{
-						//object target = GameObject.FindObjectsOfType<Land_Island>();
-						
-					}
-					position=position-50;
-				}
-			}
-			if (GUI.Button (new Rect (0,position,100,50), "Opponent"))
+			if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f,100,50), "Opponent"))
 			{
-				
+				Debug.Log("Target Player");
+			}
+			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
+				if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Instant" && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Sorcery"){
+					if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f+(targets*50),100,50), gameManager[0].BattleSpawn[i].card_name))
+					{
+						Debug.Log("Target "+gameManager[0].BattleSpawn[i].card_name);	
+					}
+					targets++;
+				}
 			}
 		}
 	}

@@ -26,7 +26,7 @@ public class Instant_Inspiredcharge : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Instant_Inspiredcharge";
 	}
 	
 	// Update is called once per frame

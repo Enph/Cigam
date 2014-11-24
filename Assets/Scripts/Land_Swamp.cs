@@ -22,7 +22,7 @@ public class Land_Swamp : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Land_Swamp";
 	}
 	
 	// Update is called once per frame

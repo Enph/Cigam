@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NetworkManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Instant_Lightningstrike.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="94" Column="3" />
-      <File FileName="Assets/Scripts/NetworkManager.cs" Line="149" Column="35" />
+      <File FileName="Assets\Scripts\Player.cs" Line="411" Column="5" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="180" Column="1" />
+      <File FileName="Assets\Scripts\Instant_Lightningstrike.cs" Line="46" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

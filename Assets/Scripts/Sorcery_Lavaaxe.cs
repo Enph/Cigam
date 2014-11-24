@@ -27,7 +27,7 @@ public class Sorcery_Lavaaxe : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Sorcery_Lavaaxe";
 	}
 	
 	// Update is called once per frame

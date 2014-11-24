@@ -30,16 +30,7 @@ public class DebugDev : MonoBehaviour {
 		if(showDebugMenu == true)
 		{
 			
-			if (GUI.Button (new Rect (10,160,200,50), "Spawn Land"))
-			{
-			}
-			else if (GUI.Button (new Rect (10,210,200,50), "Spawn Creature")) 
-			{
-			}
-			else if (GUI.Button (new Rect (10,260,200,50), "Spawn Island")) 
-			{
-			}
-			else if (GUI.Button (new Rect (10,300,200,50), "Whats my name?")) 
+			if (GUI.Button (new Rect (10,300,200,50), "Whats my name?")) 
 			{
 				Debug.Log (PhotonNetwork.playerName);
 			}

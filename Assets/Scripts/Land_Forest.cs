@@ -22,7 +22,7 @@ public class Land_Forest : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Land_Forest";
 	}
 	
 	// Update is called once per frame

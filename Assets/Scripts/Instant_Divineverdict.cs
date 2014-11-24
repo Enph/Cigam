@@ -27,7 +27,7 @@ public class Instant_Divineverdict : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Instant_Divineverdict";
 	}
 	
 	// Update is called once per frame

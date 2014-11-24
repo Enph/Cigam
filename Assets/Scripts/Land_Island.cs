@@ -22,7 +22,7 @@ public class Land_Island : Photon.MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-
+		this.cardName = "Land_Island";
 	}
 	
 	// Update is called once per frame

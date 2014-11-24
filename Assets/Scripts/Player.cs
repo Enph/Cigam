@@ -236,7 +236,7 @@ public class Player : Photon.MonoBehaviour
 	
 
 
-void DisplayZoomCard(){
+	void DisplayZoomCard(){
 
 		for(int i = 0; i < currentZoom.Length; i++){
 			if(currentZoom[i] != null){ //if the current texture is not null, display on screen. the only not null texture will be the one hovered over.
@@ -246,7 +246,7 @@ void DisplayZoomCard(){
 
 	}
 
-public void DealInitialCardsInHand()
+	public void DealInitialCardsInHand()
 	{
 
 		for(int i=0;i<gameManager[0].deck_Red_White.Length;i++)
@@ -271,7 +271,7 @@ public void DealInitialCardsInHand()
 		}
 	}
 
-public void displayCardsInHand()
+	public void displayCardsInHand()
 	{
 		//Debug.Log("CardsInHand");
 		this.teamId = PhotonNetwork.player.ID;
