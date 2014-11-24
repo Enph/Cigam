@@ -34,7 +34,7 @@ public class Creature_Geistofthemoors : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Creature_Geistofthemoors";
 	}
 	
 	// Update is called once per frame

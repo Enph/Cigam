@@ -40,7 +40,10 @@ public class MenuManager : MonoBehaviour {
 	public void MainMenuGUI()
 	{
 		//create a menu
-		GUI.Box (new Rect (0, 0,Screen.width,Screen.height), "CIGAM"); //a box to hold all the buttons
+		GUIStyle style = new GUIStyle ();
+		style.richText = true;
+		style.fontSize = 40;
+		GUI.Box (new Rect (Screen.width * 0.45f, 0,Screen.width,Screen.height), "<color=white>CIGAM</color>",style); //a box to hold all the buttons
 		
 		if (GUI.Button (new Rect (Screen.width / 8, Screen.height / 8 + 10, 3 * Screen.width / 4, Screen.height / 8), "Start Game"))
 		{

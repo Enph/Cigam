@@ -35,7 +35,7 @@ public class Creature_Oreskosswiftclaw : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Creature_Oreskosswiftclaw";
 	}
 	
 	// Update is called once per frame

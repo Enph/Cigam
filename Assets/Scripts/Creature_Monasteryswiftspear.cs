@@ -35,7 +35,7 @@ public class Creature_Monasteryswiftspear : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Creature_Monasteryswiftspear";
 	}
 	
 	// Update is called once per frame

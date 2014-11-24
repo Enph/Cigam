@@ -1,9 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\Player.cs" Line="138" Column="80" />
       <File FileName="Assets\Scripts\Land_Island.cs" Line="73" Column="4" />
+=======
+      <File FileName="Assets/Scripts/Land_Island.cs" Line="84" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="259" Column="80" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="59" Column="6" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -35,7 +35,7 @@ public class Creature_Soulmender : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
-		
+		this.cardName = "Creature_Soulmender";
 	}
 	
 	// Update is called once per frame

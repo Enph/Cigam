@@ -35,6 +35,7 @@ public class Creature_Krenkosenforcer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		tag = "untap";
+		this.cardName = "Creature_Krenkosenforcer";
 		
 	}
 	

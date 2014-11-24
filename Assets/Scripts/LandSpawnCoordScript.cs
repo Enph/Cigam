@@ -7,6 +7,7 @@ public class LandSpawnCoordScript : MonoBehaviour {
 	public bool spawnInUse; //flag to tell the system if the gameobject has a card already spawned on it
 	public Vector3 myCoordinates;
 	public Quaternion myRotations;
+	public string card_name;
 
 	// Use this for initialization
 	void Start () {

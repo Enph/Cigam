@@ -39,7 +39,7 @@ public class NetworkManager : MonoBehaviour {
 		{
 			GUI.Box (new Rect (0, 0,Screen.width,Screen.height), "Lobby"); //a box to hold all the buttons	
 			GUI.Box (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2),PhotonNetwork.connectionStateDetailed.ToString()); // Server list Window
-			
+
 			GUILayout.BeginArea (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
 
 			if(PhotonNetwork.GetRoomList().Length != 0)
@@ -138,7 +138,6 @@ public class NetworkManager : MonoBehaviour {
 			spawnRotation = vectorManager[0].player2Rotation;
 		}
 
-		//GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
 		myPlayer = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
 		Debug.Log("Player 1 Room Entered");
 		player[0].DealInitialCardsInHand();
