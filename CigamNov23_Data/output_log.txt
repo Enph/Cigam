@@ -12,7 +12,7 @@ Platform assembly: D:\Cigam\CigamNov23_Data\Managed\Assembly-CSharp.dll (this me
 Loading D:\Cigam\CigamNov23_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: D:\Cigam\CigamNov23_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading D:\Cigam\CigamNov23_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.157 seconds
+- Completed reload, in  0.146 seconds
 desktop: 1920x1080 60Hz; virtual: 1280x720 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -30,7 +30,7 @@ Can't execute Disconnect() while not connected. Nothing changed. State: PeerCrea
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-UnloadTime: 0.394536 ms
+UnloadTime: 0.426970 ms
 PlayerScript Start
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -42,9 +42,9 @@ PlayerScript Start
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 460.
-Total: 1.037455 ms (FindLiveObjects: 0.043107 ms CreateObjectMapping: 0.015190 ms MarkObjects: 0.257824 ms  DeleteObjects: 0.066919 ms)
+Total: 1.073993 ms (FindLiveObjects: 0.042697 ms CreateObjectMapping: 0.014779 ms MarkObjects: 0.259876 ms  DeleteObjects: 0.067329 ms)
 
-UnloadTime: 0.819864 ms
+UnloadTime: 0.865024 ms
 PlayerScript Start
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -56,7 +56,7 @@ PlayerScript Start
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 456.
-Total: 0.921680 ms (FindLiveObjects: 0.027917 ms CreateObjectMapping: 0.015600 ms MarkObjects: 0.281225 ms  DeleteObjects: 0.005337 ms)
+Total: 0.930302 ms (FindLiveObjects: 0.028327 ms CreateObjectMapping: 0.015190 ms MarkObjects: 0.261108 ms  DeleteObjects: 0.005337 ms)
 
 Generate Red White Decks
  
@@ -90,7 +90,11 @@ Player 1 Room Entered
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Instant_Lightningstrike (UnityEngine.Texture2D)
+Instant_Raisethealarm (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Creature_Monasteryswiftspear (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -98,23 +102,99 @@ Land_Plains (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Instant_Inspiredcharge (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Creature_Sungracepegasus (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 Instant_Lightningstrike (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Land_Mountain (UnityEngine.Texture2D)
+Creature_Monasteryswiftspear (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Land_Plains (UnityEngine.Texture2D)
+Card In Hand Clicked
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Creature_Geistofthemoors (UnityEngine.Texture2D)
+1
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card In Hand Clicked
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 

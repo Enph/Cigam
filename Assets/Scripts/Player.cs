@@ -163,15 +163,23 @@ public void DealInitialCardsInHand()
 			this.deckSize--;
 		}
 	}
-	public void displayCardsInHand()
+
+public void displayCardsInHand()
 	{
 		//Debug.Log("CardsInHand");
+		this.teamId = PhotonNetwork.player.ID;
 		for(int i = 0; i < playerCardHand.Length; i++){
 			if(playerCardHand[i] != null){
-				if(GUI.Button(new Rect(Screen.width * 0.02f+(i*100),Screen.height * 0.75f,100,120),MyHandOfCardsTextures[i])){
+				Rect myRect = new Rect(Screen.width * 0.025f+(i*100),Screen.height * 0.75f,100,120);
+				//GUILayout.BeginArea(new Rect(Screen.width * 0.025f+(i*100),Screen.height * 0.75f,100,120));
+				if(GUI.Button(myRect, MyHandOfCardsTextures[i])){	
+					Debug.Log ("Card In Hand Clicked");
+					Debug.Log (teamId);
+				
 					LandSpawnCoordScript myLandCards;
 					BattleCardSpawnScript myBattleCards;
 					
+
 					if(this.teamId == 0)
 					{
 						if(playerCardHand[i].Substring(0,4)=="Land"){
@@ -251,21 +259,18 @@ public void DealInitialCardsInHand()
 						}
 					}
 				}
-			}
-			else
-			{
-				//Debug.Log("playerCardHand is null");
-				GUILayout.BeginArea(new Rect(Screen.width * 0.025f+(i*100),Screen.height * 0.75f,100,120));
-				GUILayout.Button(new GUIContent(MyHandOfCardsTextures[i], "MouseOverHand"));
-				if (Event.current.type == EventType.Repaint && GUILayoutUtility.GetLastRect().Contains(Event.current.mousePosition)) {
+				if(myRect.Contains(Event.current.mousePosition)){
 					handZoom[i] = MyHandOfCardsTextures[i];
-					//lastTooltip = GUI.tooltip;
 				}
 				else handZoom[i] = null;
-				GUILayout.EndArea();
 			}
 		}
-	}
+	}	
+	
+	
+	
+	
+
 	
 	public void displayPhases()
 	{
@@ -284,6 +289,5 @@ public void DealInitialCardsInHand()
 				this.gameState = "Player: "+PhotonNetwork.player.ID+" Phase: "+phaseNames[i].ToString(); //Tell the game state
 			}
 		}
-
 	}
 }
