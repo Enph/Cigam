@@ -9,8 +9,8 @@ public class Player : Photon.MonoBehaviour
 	string playerName;
 	public int playerHealth;
 	int opponentsHealth;
-	int teamId;
-	int deckSize;
+	public int teamId;
+	public int deckSize;
 	public bool showPlayersHandCard;
 	public string lastTooltip = " ";
 	public Texture[] islandZoom;
@@ -19,8 +19,6 @@ public class Player : Photon.MonoBehaviour
 	public BattleCardSpawnScript[] BattleSpawn;
 	public LandSpawnCoordScript[] LandSpawn;
 
-	
-
 	public string[] playerDeck;
 	public string[] playerCardHand;
 	public Texture[] MyHandOfCardsTextures;
@@ -28,13 +26,16 @@ public class Player : Photon.MonoBehaviour
 	public bool myTurn;
 
 	public string[] phaseNames;
-	public string gameState;
 	public bool showInitialGamephase;
+	public string gamePhase ;
 	
 	void start()
 	{
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
+		gameManager = GameObject.FindObjectsOfType<GameManager>();
+
+
 	}
 
 	void Awake()
@@ -45,25 +46,19 @@ public class Player : Photon.MonoBehaviour
 		this.opponentsHealth = 20;
 		this.showInitialGamephase = true;
 		this.deckSize = playerDeck.Length;
-		this.showPlayersHandCard = false;
+		//this.showPlayersHandCard = false;
 		this.playerDeck = new string[60];
 		this.playerCardHand = new string[7];
 		this.MyHandOfCardsTextures = new Texture[60];
-
 		this.teamId = PhotonNetwork.player.ID;
-		
 		this.handZoom = new Texture[7];
-
 		this.phaseNames = new string[7]{"Untap","UpKeep","Draw","Main1","Battle","Main2","End"};
 
-
-		if(PhotonNetwork.player.ID == 1)
-			this.myTurn = true;
-		else
-			this.myTurn = false;
-
-
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		PhotonNetwork.sendRate = 20; //send rate: 20 times per second 
+		PhotonNetwork.sendRateOnSerialize = 10; //10 time per second
+		DealInitialCardsInHand();
+		showPlayersHandCard = true;
 	}
 
 	void Update()
@@ -82,19 +77,19 @@ public class Player : Photon.MonoBehaviour
 			currentPos++; 
 		}
 
+
+
 	}
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
-		if(stream.isWriting)
+		if(stream.isWriting == true)
 		{
-			//This is our player stuff
-			stream.SendNext (this.gameState);
+			stream.SendNext(gamePhase);
 		}
 		else
 		{
-			//this is player 2 stuff
-			this.gameState = (string) stream.ReceiveNext();
+			gamePhase = (string)stream.ReceiveNext();
 		}
 	}
 
@@ -116,13 +111,13 @@ public class Player : Photon.MonoBehaviour
 		if(showPlayersHandCard == true)
 		{
 			displayCardsInHand();
-			displayPhases();
+			ChoosePhases();
 		}
 
 		GUIStyle style = new GUIStyle ();
 		style.richText = true;
 		style.fontSize = 30;
-		GUI.Label(new Rect(Screen.width * 0.65f,Screen.height * 0.02f,200,100),"<color=white>"+gameState.ToString()+"</color>",style);
+		GUI.Label(new Rect(Screen.width * 0.65f,Screen.height * 0.02f,200,100),"<color=white>"+gamePhase.ToString()+"</color>",style);
 
 
 	}
@@ -265,6 +260,7 @@ public void displayCardsInHand()
 				else handZoom[i] = null;
 			}
 		}
+<<<<<<< Updated upstream
 	}	
 	
 	
@@ -281,13 +277,30 @@ public void displayCardsInHand()
 			showInitialGamephase = false;
 		}
 */
+=======
+	}
+>>>>>>> Stashed changes
 
+
+	[RPC]
+	public void ChoosePhases()
+	{
 		for(int i = 0; i<this.phaseNames.Length; i++)
 		{
 			if(GUI.Button(new Rect(Screen.width * 0.80f,Screen.height * 0.10f+(i*50),100,50),phaseNames[i]))
 			{
-				this.gameState = "Player: "+PhotonNetwork.player.ID+" Phase: "+phaseNames[i].ToString(); //Tell the game state
+				gamePhase = "Player: "+PhotonNetwork.player.ID+" Phase: "+phaseNames[i];
+				Debug.Log(gamePhase);
+
 			}
 		}
+<<<<<<< Updated upstream
+=======
+	}
+
+	public void setPhaseMessage(string phaseName)
+	{
+		this.gamePhase = phaseName;
+>>>>>>> Stashed changes
 	}
 }
