@@ -33,8 +33,7 @@ public class Player : Photon.MonoBehaviour
 	
 	void start()
 	{
-		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
-		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
+		
 	}
 
 	void Awake()
@@ -51,6 +50,7 @@ public class Player : Photon.MonoBehaviour
 		this.MyHandOfCardsTextures = new Texture[60];
 
 		this.teamId = PhotonNetwork.player.ID;
+		Debug.Log("Awake Team id = "+this.teamId);
 		
 		this.handZoom = new Texture[7];
 
@@ -62,12 +62,14 @@ public class Player : Photon.MonoBehaviour
 		else
 			this.myTurn = false;
 
-
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 	}
 
 	void Update()
-	{
+	{	
+		Debug.Log("Update Team id = "+this.teamId);
 		int currentPos = 0; //position of the currentZoom array
 		myIsland = GameObject.FindObjectsOfType<Land_Island>(); //get all the islands
 		currentZoom = new Texture[myIsland.Length + MyHandOfCardsTextures.Length]; //reinitalize the array of current Textures (This can be kept, but size will increase by every type of card)
@@ -166,14 +168,19 @@ public void DealInitialCardsInHand()
 	public void displayCardsInHand()
 	{
 		//Debug.Log("CardsInHand");
+		this.teamId = PhotonNetwork.player.ID;
+		
 		for(int i = 0; i < playerCardHand.Length; i++){
 			if(playerCardHand[i] != null){
 				if(GUI.Button(new Rect(Screen.width * 0.02f+(i*100),Screen.height * 0.75f,100,120),MyHandOfCardsTextures[i])){
+					Debug.Log("Card Pressed");
+					Debug.Log("Team id = "+this.teamId);
 					LandSpawnCoordScript myLandCards;
 					BattleCardSpawnScript myBattleCards;
 					
-					if(this.teamId == 0)
+					if(this.teamId == 1)
 					{
+						Debug.Log("Team id = "+this.teamId);
 						if(playerCardHand[i].Substring(0,4)=="Land"){
 							for(int j=0;j<LandSpawn.Length;j++)
 							{
@@ -184,6 +191,7 @@ public void DealInitialCardsInHand()
 									myLandCards = LandSpawn[j];
 									
 									PhotonNetwork.Instantiate(LandSpawn[j].card_name, myLandCards.transform.position, myLandCards.transform.rotation, 0); 
+									Debug.Log("Play a "+LandSpawn[j].card_name);
 									break;
 								}
 								else
@@ -202,17 +210,19 @@ public void DealInitialCardsInHand()
 									myBattleCards = BattleSpawn[j];
 									
 									PhotonNetwork.Instantiate(BattleSpawn[j].card_name, myBattleCards.transform.position, myBattleCards.transform.rotation, 0); 
+									Debug.Log("Play a "+BattleSpawn[j].card_name);
 									break;
 								}
 								else
 								{
-									Debug.Log("All Land card spots in use");
+									Debug.Log("All Creature card spots in use");
 								}
 							}
 						}
 					}
-					else if(this.teamId == 1)
+					else if(this.teamId == 2)
 					{
+						Debug.Log("Team id = "+this.teamId);
 						if(playerCardHand[i].Substring(0,4)=="Land"){
 							for(int j=0;j<LandSpawn.Length;j++)
 							{
@@ -223,6 +233,7 @@ public void DealInitialCardsInHand()
 									myLandCards = LandSpawn[j];
 									
 									PhotonNetwork.Instantiate(LandSpawn[j].card_name, myLandCards.transform.position, myLandCards.transform.rotation, 0); 
+									Debug.Log("Play a "+LandSpawn[j].card_name);
 									break;
 								}
 								else
@@ -241,11 +252,12 @@ public void DealInitialCardsInHand()
 									myBattleCards = BattleSpawn[j];
 									
 									PhotonNetwork.Instantiate(BattleSpawn[j].card_name, myBattleCards.transform.position, myBattleCards.transform.rotation, 0); 
+									Debug.Log("Play a "+BattleSpawn[j].card_name);
 									break;
 								}
 								else
 								{
-									Debug.Log("All Land card spots in use");
+									Debug.Log("All Creature card spots in use");
 								}
 							}
 						}
