@@ -16,18 +16,20 @@ public class Player : Photon.MonoBehaviour
 	public Texture[] islandZoom;
 	public Texture[] handZoom;
 	public Land_Island[] myIsland;
-<<<<<<< HEAD
 	public BattleCardSpawnScript[] BattleSpawn;
 	public LandSpawnCoordScript[] LandSpawn;
-=======
+
 	
 
->>>>>>> origin/master
 	public string[] playerDeck;
 	public string[] playerCardHand;
 	public Texture[] MyHandOfCardsTextures;
 	public Texture[] currentZoom;
+	public bool myTurn;
 
+	public string[] phaseNames;
+	public string gameState;
+	public bool showInitialGamephase;
 	
 	void start()
 	{
@@ -41,18 +43,26 @@ public class Player : Photon.MonoBehaviour
 		this.playerName = "Default_Player# "+Random.Range(0,10);
 		this.playerHealth = 20;
 		this.opponentsHealth = 20;
+		this.showInitialGamephase = true;
 		this.deckSize = playerDeck.Length;
 		this.showPlayersHandCard = false;
 		this.playerDeck = new string[60];
 		this.playerCardHand = new string[7];
 		this.MyHandOfCardsTextures = new Texture[60];
-<<<<<<< HEAD
+
 		this.teamId = PhotonNetwork.player.ID;
 		
-=======
 		this.handZoom = new Texture[7];
->>>>>>> origin/master
-		
+
+		this.phaseNames = new string[7]{"Untap","UpKeep","Draw","Main1","Battle","Main2","End"};
+
+
+		if(PhotonNetwork.player.ID == 1)
+			this.myTurn = true;
+		else
+			this.myTurn = false;
+
+
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 	}
 
@@ -71,19 +81,20 @@ public class Player : Photon.MonoBehaviour
 			currentZoom[currentPos] = handZoom[j];
 			currentPos++; 
 		}
+
 	}
 
-	void OnPhotonSerialView(PhotonStream stream , PhotonMessageInfo info)
+	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if(stream.isWriting)
 		{
 			//This is our player stuff
-			stream.SendNext(playerHealth);
+			stream.SendNext (this.gameState);
 		}
 		else
 		{
 			//this is player 2 stuff
-			this.opponentsHealth = (int) stream.ReceiveNext();
+			this.gameState = (string) stream.ReceiveNext();
 		}
 	}
 
@@ -99,8 +110,20 @@ public class Player : Photon.MonoBehaviour
 	}
 
 	void OnGUI(){
+
 		DisplayZoomCard();
 		displayCardsInHand ();
+		if(showPlayersHandCard == true)
+		{
+			displayCardsInHand();
+			displayPhases();
+		}
+
+		GUIStyle style = new GUIStyle ();
+		style.richText = true;
+		style.fontSize = 30;
+		GUI.Label(new Rect(Screen.width * 0.65f,Screen.height * 0.02f,200,100),"<color=white>"+gameState.ToString()+"</color>",style);
+
 
 	}
 	
@@ -145,7 +168,6 @@ public void DealInitialCardsInHand()
 		//Debug.Log("CardsInHand");
 		for(int i = 0; i < playerCardHand.Length; i++){
 			if(playerCardHand[i] != null){
-<<<<<<< HEAD
 				if(GUI.Button(new Rect(Screen.width * 0.02f+(i*100),Screen.height * 0.75f,100,120),MyHandOfCardsTextures[i])){
 					LandSpawnCoordScript myLandCards;
 					BattleCardSpawnScript myBattleCards;
@@ -232,8 +254,7 @@ public void DealInitialCardsInHand()
 			}
 			else
 			{
-				Debug.Log("playerCardHand is null");
-=======
+				//Debug.Log("playerCardHand is null");
 				GUILayout.BeginArea(new Rect(Screen.width * 0.025f+(i*100),Screen.height * 0.75f,100,120));
 				GUILayout.Button(new GUIContent(MyHandOfCardsTextures[i], "MouseOverHand"));
 				if (Event.current.type == EventType.Repaint && GUILayoutUtility.GetLastRect().Contains(Event.current.mousePosition)) {
@@ -242,12 +263,27 @@ public void DealInitialCardsInHand()
 				}
 				else handZoom[i] = null;
 				GUILayout.EndArea();
->>>>>>> origin/master
 			}
 		}
-		
-		
-		
 	}
+	
+	public void displayPhases()
+	{
+		/*
+		if(showInitialGamephase) //this only needs to be called once to show the game state when the game first gets initalized
+		{
+			this.gameState ="Player: "+PhotonNetwork.player.ID+" Phase: "+phaseNames[0].ToString();
+			showInitialGamephase = false;
+		}
+*/
 
+		for(int i = 0; i<this.phaseNames.Length; i++)
+		{
+			if(GUI.Button(new Rect(Screen.width * 0.80f,Screen.height * 0.10f+(i*50),100,50),phaseNames[i]))
+			{
+				this.gameState = "Player: "+PhotonNetwork.player.ID+" Phase: "+phaseNames[i].ToString(); //Tell the game state
+			}
+		}
+
+	}
 }

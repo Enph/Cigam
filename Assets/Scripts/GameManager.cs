@@ -56,6 +56,7 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
 			//GUILayout.Label ("Player Name:" + player[0].getPlayerName());
 			GUILayout.Label ("Player Name:" + PhotonNetwork.player.ID);
+			//GUILayout.Label ("Game Name:" +PhotonNetwork.room.name);
 
 		}
 		if(showEnterPlayerName == true)

@@ -79,6 +79,8 @@ public class Land_Island : Photon.MonoBehaviour {
 		currentText = renderer.material.mainTexture; //if mouse is hovered over set currentText to the maintexure (usally front of the card)
 		Debug.Log ("I am selected");
 
+		currentText = renderer.material.mainTexture; //if mouse is hovered over set currentText to the maintexure (usally front of the card)
+		Debug.Log ("I am selected");
 		currentText = renderer.material.mainTexture;
 		//Debug.Log ("I am selected");
 	}
