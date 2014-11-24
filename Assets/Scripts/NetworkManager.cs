@@ -16,6 +16,7 @@ public class NetworkManager : MonoBehaviour {
 	public static int playerWhoIsIt;
 	GameObject myPlayer;
 
+
 	// Use this for initialization
 	void Start () {
 		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
@@ -32,7 +33,9 @@ public class NetworkManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	}
-	
+
+
+
 	void OnGUI()
 	{
 		if(NetworkMenu == true)
@@ -138,10 +141,13 @@ public class NetworkManager : MonoBehaviour {
 			spawnRotation = vectorManager[0].player2Rotation;
 		}
 
-		myPlayer = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
+		//myPlayer = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
+		PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
+
 		Debug.Log("Player 1 Room Entered");
-		player[0].DealInitialCardsInHand();
-		player[0].showPlayersHandCard = true;
+
+		gameManager[0].player1Turn = true;
+		gameManager[0].player2Turn = false;
 	}
 
 	

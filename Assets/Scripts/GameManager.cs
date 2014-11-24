@@ -26,6 +26,10 @@ public class GameManager : Photon.MonoBehaviour {
 	public string[] deck_Red_White = new string[60];
 	public string[] deck_Red = new string[60];
 
+	//Whose Turn is it to play
+	public bool player1Turn;
+	public bool player2Turn; //this is first set in the network manager spawnMyPlayer function
+
 
 
 	// Use this for initialization
@@ -56,7 +60,7 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
 			//GUILayout.Label ("Player Name:" + player[0].getPlayerName());
 			GUILayout.Label ("Player Name:" + PhotonNetwork.player.ID);
-			//GUILayout.Label ("Game Name:" +PhotonNetwork.room.name);
+//			GUILayout.Label ("Game Name:" +PhotonNetwork.room.name);
 
 		}
 		if(showEnterPlayerName == true)
@@ -66,8 +70,8 @@ public class GameManager : Photon.MonoBehaviour {
 			enterPlayerName = GUI.TextField(new Rect(10, 20, 200, 20), enterPlayerName, 25);
 			if (GUI.Button (new Rect (10,50,200,50), "OK"))
 			{
-				player[0].setPlayerName(enterPlayerName);
-				this.showEnterPlayerName = false; //turn off enter player name GUI
+				//player[0].setPlayerName(enterPlayerName);
+				this.showEnterPlayerName = true; //turn off enter player name GUI
 				this.showConnectionState = true; //turn on Main game UI
 			}
 			GUILayout.EndArea();
