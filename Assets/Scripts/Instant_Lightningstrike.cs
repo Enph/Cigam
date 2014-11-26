@@ -5,6 +5,7 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 
 	public GameManager[] gameManager;
 	public Player[] player;
+	public GameObject[] target;
 
 	public int cardNum;
 	public string cardName;	
@@ -34,6 +35,7 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 		this.gameManager = GameObject.FindObjectsOfType<GameManager>();
 		this.player = Player.FindObjectsOfType<Player>();
 		this.cardName = "Instant_Lightningstrike";
+		this.target = GameObject.FindGameObjectsWithTag("Creature");
 	}
 	
 	// Update is called once per frame
@@ -45,14 +47,8 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 	void OnGUI(){
 		int targets = 1;
 		//Gets all the creature cards on the board
-		GameObject[] target = GameObject.FindGameObjectsWithTag("Creature");
 		int thisCardPosition = 0;
 		if(show_options==true){
-			if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f,100,50), "Opponent"))
-			{
-				Debug.Log("Target Player");
-				//damage player
-			}
 			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
 				Debug.Log(gameManager[0].BattleSpawn.Length);
 				//check that the spot on the board is in use and its only a creature
@@ -95,6 +91,14 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 					}
 					targets++;
 				}
+			}
+			if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f,100,50), "Opponent"))
+			{
+				Debug.Log("Target Player");
+				//damage player
+				gameManager[0].BattleSpawn[thisCardPosition].spawnInUse = false;
+				gameManager[0].BattleSpawn[thisCardPosition].card_name = "";
+				this.Die();
 			}
 		}
 	}
