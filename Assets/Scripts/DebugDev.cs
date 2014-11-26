@@ -14,19 +14,19 @@ public class DebugDev : Photon.MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		networkManager = GameObject.FindObjectsOfType<NetworkManager>();
-		vectorManager = GameObject.FindObjectsOfType<VectorManager>();
-		gameManager = GameObject.FindObjectsOfType<GameManager>();
 
-		if(GameObject.FindObjectsOfType<Player>() != null)
-			player = GameObject.FindObjectsOfType<Player>();
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		
+		networkManager = GameObject.FindObjectsOfType<NetworkManager>();
+		vectorManager = GameObject.FindObjectsOfType<VectorManager>();
+		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		player = GameObject.FindObjectsOfType<Player>();
+
+
 	}
 	
 	void OnGUI()
@@ -37,15 +37,28 @@ public class DebugDev : Photon.MonoBehaviour {
 			
 			if (GUI.Button (new Rect (10,300,200,50), "reduce HP")) 
 			{
-				//player[0].playerHealth--;
-				player[0].TakeDamage(1);
-				Debug.Log (player[0].playerHealth);
+
+
+				PhotonView pv = player[0].GetComponent<PhotonView>();
+				if(pv == null)
+					Debug.Log("Take Damage pv error");
+				else
+					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.All,1 );
+
+
+				Debug.Log (player[0].teamId);
+				Debug.Log (player[1].teamId);
+
 			}
 
 			if (GUI.Button (new Rect (10,350,200,50), "reduce HP Op")) 
 			{
-				//player[0].playerHealth--;
-				Debug.Log (player[1].playerHealth);
+				PhotonView pv = player[1].GetComponent<PhotonView>();
+				if(pv == null)
+					Debug.Log("Take Damage pv error OP");
+				else
+					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.All, 1);
+				//Debug.Log (player[0].playerHealth);
 			}
 		}
 	}
