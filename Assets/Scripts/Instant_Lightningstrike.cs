@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Instant_Lightningstrike : MonoBehaviour {
+public class Instant_Lightningstrike : Photon.MonoBehaviour {
 
 	public GameManager[] gameManager;
 	public Player[] player;
@@ -54,6 +54,7 @@ public class Instant_Lightningstrike : MonoBehaviour {
 				//damage player
 			}
 			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
+				Debug.Log(gameManager[0].BattleSpawn.Length);
 				//check that the spot on the board is in use and its only a creature
 				if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name == "Instant_Lightningstrike"){
 					thisCardPosition = i;

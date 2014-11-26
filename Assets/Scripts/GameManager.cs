@@ -17,9 +17,10 @@ public class GameManager : Photon.MonoBehaviour {
 	public LandSpawnCoordScript[] LandSpawn;
 	public BattleCardSpawnScript[] BattleSpawn;
 
-	//If statements when to display menus
+	//If statements when to display GUImenus
 	public bool showConnectionState = false;
 	public bool showEnterPlayerName = false;
+	public bool showPlayerTurnMenu = false;
 	public string enterPlayerName;
 
 	//Players Pre-Defined Decks
@@ -29,15 +30,17 @@ public class GameManager : Photon.MonoBehaviour {
 	//Whose Turn is it to play
 	public bool player1Turn;
 	public bool player2Turn; //this is first set in the network manager spawnMyPlayer function
-
+	public string playersNameTurn;
 
 
 	// Use this for initialization
 	void Start () {
 		this.networkManager = GameObject.FindObjectsOfType<NetworkManager>();
-		this.player = GameObject.FindObjectsOfType<Player>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+		this.player = GameObject.FindObjectsOfType<Player>();
+
+
 
 		Generate_Red_WhiteDeck();
 		GenerateRedDeck();
@@ -47,8 +50,9 @@ public class GameManager : Photon.MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
+		ManageTurns();
 	}
 	
 	void OnGUI()
@@ -58,8 +62,8 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.Label("Connection State: "+PhotonNetwork.connectionStateDetailed.ToString());
 			GUILayout.Label("Ping: " + PhotonNetwork.GetPing());
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
-			//GUILayout.Label ("Player Name:" + player[0].getPlayerName());
-			GUILayout.Label ("Player Name:" + PhotonNetwork.player.ID);
+			GUILayout.Label ("Player Name:" + player[0].getPlayerName());
+			GUILayout.Label ("Player ID:" + PhotonNetwork.player.ID);
 //			GUILayout.Label ("Game Name:" +PhotonNetwork.room.name);
 
 		}
@@ -77,6 +81,8 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.EndArea();
 		}
 
+
+
 		//BACK TO MAIN MENU
 		if(Input.GetKey(KeyCode.Escape))
 		{
@@ -85,6 +91,43 @@ public class GameManager : Photon.MonoBehaviour {
 		}
 		
 	}
+
+	public void ManageTurns()
+	{
+
+
+			if(player[0].myTurn == true) //player 1 stuff
+			{
+				this.playersNameTurn = player[0].playerName; //Set the global name of whose turn it is to the first players name
+
+				//Set player 2 to false
+				this.player[1].myTurn = false; // set player 2 stuff off
+			}
+			else
+			{
+				this.player[1].myTurn = true; //players 2 turn
+				this.playersNameTurn = player[1].playerName;
+				
+				//Set player 1 to true
+				this.player[0].myTurn = false; // //Set the global name of whose turn it is to the first players name
+			}
+	}
+		
+	public void switchTurns(int i)
+	{
+		if(i == 0)
+		{
+			//0 off , 1 on
+			player[0].myTurn = false;
+			player[1].myTurn = true;
+		}
+		else
+		{
+			player[0].myTurn = true;
+			player[1].myTurn = false;
+		}
+	}
+
 
 	public void Generate_Red_WhiteDeck()
 	{
@@ -174,6 +217,9 @@ public class GameManager : Photon.MonoBehaviour {
 			deck_Red_White[j] = deck_Red_White[i];
 			deck_Red_White[i] = temp;
 		}
-	}
+	}	
+
+
+
 
 }
