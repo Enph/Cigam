@@ -144,6 +144,7 @@ public class Creature_Oreskosswiftclaw : MonoBehaviour,I_Creature {
 	public bool isVigilance(){
 		return vigilance;
 	}
+	[RPC]
 	public void Die(){
 		Destroy(gameObject);
 	}

@@ -144,6 +144,7 @@ public class Creature_Monasteryswiftspear : MonoBehaviour,I_Creature {
 	public bool isVigilance(){
 		return vigilance;
 	}
+	[RPC]
 	public void Die(){
 		Destroy(gameObject);
 	}

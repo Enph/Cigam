@@ -43,7 +43,6 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 		
 	}
 	
-	[RPC]
 	void OnGUI(){
 		int targets = 1;
 		//Gets all the creature cards on the board
@@ -76,8 +75,16 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 									gameManager[0].BattleSpawn[i].card_name = "";
 									gameManager[0].BattleSpawn[thisCardPosition].spawnInUse = false;
 									gameManager[0].BattleSpawn[thisCardPosition].card_name = "";
-									temp.Die();
-									this.Die();
+									PhotonView pv = target[j].GetComponent<PhotonView>();
+									if(pv==null){
+										Debug.Log("Problem its empty");
+									}
+									else{
+										target[j].GetComponent<PhotonView>().RPC("Die",PhotonTargets.All,null);
+										this.GetComponent<PhotonView>().RPC("Die",PhotonTargets.All,null);
+									}
+									//temp.Die();
+									//this.Die();
 								}
 								else{
 									//remove lightning strike
@@ -155,6 +162,7 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 	void OnMouseExit(){
 		currentText = null;
 	}
+	[RPC]
 	public void Die(){
 		Destroy(gameObject);
 	}
