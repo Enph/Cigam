@@ -17,9 +17,10 @@ public class GameManager : Photon.MonoBehaviour {
 	public LandSpawnCoordScript[] LandSpawn;
 	public BattleCardSpawnScript[] BattleSpawn;
 
-	//If statements when to display menus
+	//If statements when to display GUImenus
 	public bool showConnectionState = false;
 	public bool showEnterPlayerName = false;
+	public bool showPlayerTurnMenu = false;
 	public string enterPlayerName;
 
 	//Players Pre-Defined Decks
@@ -29,15 +30,18 @@ public class GameManager : Photon.MonoBehaviour {
 	//Whose Turn is it to play
 	public bool player1Turn;
 	public bool player2Turn; //this is first set in the network manager spawnMyPlayer function
-
+	public string playersNameTurn;
 
 
 	// Use this for initialization
 	void Start () {
 		this.networkManager = GameObject.FindObjectsOfType<NetworkManager>();
-		this.player = GameObject.FindObjectsOfType<Player>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+		deck_Red_White = new string[60];
+		deck_Red = new string[60];
+
+
 
 		Generate_Red_WhiteDeck();
 		GenerateRedDeck();
@@ -47,7 +51,9 @@ public class GameManager : Photon.MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		this.player = GameObject.FindObjectsOfType<Player>();
 
 	}
 	
@@ -58,16 +64,17 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.Label("Connection State: "+PhotonNetwork.connectionStateDetailed.ToString());
 			GUILayout.Label("Ping: " + PhotonNetwork.GetPing());
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
-			//GUILayout.Label ("Player Name:" + player[0].getPlayerName());
-			GUILayout.Label ("Player Name:" + PhotonNetwork.player.ID);
-//			GUILayout.Label ("Game Name:" +PhotonNetwork.room.name);
+			GUILayout.Label ("Player Name:" + player[0].getPlayerName());
+			GUILayout.Label ("Player ID:" + PhotonNetwork.player.ID);
+			GUILayout.Label ("Players Turn:" +this.playersNameTurn);
 
 		}
 		if(showEnterPlayerName == true)
 		{
 			GUILayout.BeginArea (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
 			GUILayout.Label("Enter Player Name:");
-			enterPlayerName = GUI.TextField(new Rect(10, 20, 200, 20), enterPlayerName, 25);
+			//enterPlayerName = GUI.TextField(new Rect(10, 20, 200, 20), enterPlayerName, 25);
+			enterPlayerName = "player1";
 			if (GUI.Button (new Rect (10,50,200,50), "OK"))
 			{
 				player[0].setPlayerName(enterPlayerName);
@@ -77,6 +84,8 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.EndArea();
 		}
 
+
+
 		//BACK TO MAIN MENU
 		if(Input.GetKey(KeyCode.Escape))
 		{
@@ -85,6 +94,8 @@ public class GameManager : Photon.MonoBehaviour {
 		}
 		
 	}
+
+
 
 	public void Generate_Red_WhiteDeck()
 	{
@@ -174,6 +185,9 @@ public class GameManager : Photon.MonoBehaviour {
 			deck_Red_White[j] = deck_Red_White[i];
 			deck_Red_White[i] = temp;
 		}
-	}
+	}	
+
+
+
 
 }

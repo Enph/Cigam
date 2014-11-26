@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Player : Photon.MonoBehaviour
 {
 	public GameManager[] gameManager;
+	public Player[] player;
 
-
-	public string playerName;
 	public int playerHealth;
-	int opponentsHealth;
+	public int opponentsHealth;
+	public string playerName;
 	public int teamId;
 	public int deckSize;
 	public bool showPlayersHandCard;
@@ -44,54 +45,74 @@ public class Player : Photon.MonoBehaviour
 	public string[] playerCardHand;
 	public Texture[] MyHandOfCardsTextures;
 	public Texture[] currentZoom;
-	public bool myTurn;
-
 	public string[] phaseNames;
 	public bool showInitialGamephase;
-	public string gamePhase ;
-	
+	public string gamePhase;
+	public bool showPlayerTurnMenu;
+	public bool showPlayersHealth;
+
+
+	//Turns
+	public bool myTurn;
+	public bool opponentsTurn;
+
+
+	//GUI styles
+	GUIStyle style;
+	GUIStyle healthStyle;
+
+
 	void start()
 	{
-
-		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
-		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
-		gameManager = GameObject.FindObjectsOfType<GameManager>();
-
+		//BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+		//LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
+		//gameManager = GameObject.FindObjectsOfType<GameManager>();
 
 	}
 
 	void Awake()
 	{
 		Debug.Log("PlayerScript Start");
-		this.playerName = "Default_Player# "+Random.Range(0,10);
-		this.playerHealth = 20;
-		this.opponentsHealth = 20;
-		this.showInitialGamephase = true;
+		this.playerName = "n:"+PhotonNetwork.player.ID;
 		this.deckSize = playerDeck.Length;
-		//this.showPlayersHandCard = false;
 		this.playerDeck = new string[60];
 		this.playerCardHand = new string[7];
 		this.MyHandOfCardsTextures = new Texture[60];
 		this.teamId = PhotonNetwork.player.ID;
+		
 		Debug.Log("Awake Team id = "+this.teamId);
 		
-
-		this.handZoom = new Texture[7];
+		style = new GUIStyle ();
+		healthStyle = new GUIStyle ();
+		style.richText = true;
+		style.fontSize = 25;
+		healthStyle.richText = true;
+		healthStyle.fontSize = 20;
+		
 		this.phaseNames = new string[7]{"Untap","UpKeep","Draw","Main1","Battle","Main2","End"};
-
-
-		if(PhotonNetwork.player.ID == 1)
-			this.myTurn = true;
-		else
-			this.myTurn = false;
-
+		this.handZoom = new Texture[7];
+		
 		gameManager = GameObject.FindObjectsOfType<GameManager>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
-		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		player = GameObject.FindObjectsOfType<Player>();
+		
+		//showPlayersHealth = true;
+		
+		
+		if(teamId == 1) // make player 1 start first
+		{
+			Debug.Log("Showing player1 Menu");
+			//this.showPlayerTurnMenu = true;
+			this.myTurn = true;
+		}
+		
+		DealInitialCardsInHand();
+		showPlayersHandCard = true;
+		
+		
 		PhotonNetwork.sendRate = 20; //send rate: 20 times per second 
 		PhotonNetwork.sendRateOnSerialize = 10; //10 time per second
-
 	}
 
 	void Update()
@@ -188,12 +209,10 @@ public class Player : Photon.MonoBehaviour
 			currentZoom[currentPos] = handZoom[i];
 			currentPos++; 
 		}
-
-
-
 	}
 
-	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	//Syncs Variables across the network
+	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if(stream.isWriting == true)
 		{
@@ -205,10 +224,9 @@ public class Player : Photon.MonoBehaviour
 		}
 	}
 
-
 	public string getPlayerName()
 	{
-		return this.playerName;
+		return playerName;
 	}
 
 	public void setPlayerName(string name)
@@ -219,24 +237,29 @@ public class Player : Photon.MonoBehaviour
 	void OnGUI(){
 
 		DisplayZoomCard();
-		displayCardsInHand ();
+		//displayCardsInHand ();
+
 		if(showPlayersHandCard == true)
 		{
 			displayCardsInHand();
-			ChoosePhases();
+		}
+		if(showPlayerTurnMenu == true && this.myTurn == true)
+		{
+			ShowPlayersTurnMenu();
 		}
 
-		GUIStyle style = new GUIStyle ();
-		style.richText = true;
-		style.fontSize = 30;
-		GUI.Label(new Rect(Screen.width * 0.65f,Screen.height * 0.02f,200,100),"<color=white>"+gamePhase.ToString()+"</color>",style);
+		if(gamePhase != null)
+		{
+			GUI.Label(new Rect(Screen.width * 0.65f,Screen.height * 0.02f,200,100),"<color=white>"+gamePhase.ToString()+"</color>",style);
+		}
 
+
+			DisplayPlayer1Health();
+			DisplayPlayer2Health();
 
 	}
-	
 
-
-	void DisplayZoomCard(){
+	public void DisplayZoomCard(){
 
 		for(int i = 0; i < currentZoom.Length; i++){
 			if(currentZoom[i] != null){ //if the current texture is not null, display on screen. the only not null texture will be the one hovered over.
@@ -245,6 +268,29 @@ public class Player : Photon.MonoBehaviour
 		}
 
 	}
+
+
+	[RPC]
+	public void TakeDamage(int damageAmount)
+	{
+		if(playerHealth == null || opponentsHealth == null) // set to 20 
+		{
+			playerHealth = 20;
+			opponentsHealth = 20;
+
+		}
+		playerHealth = playerHealth - damageAmount;
+	}
+
+	public void TakeOpponentsDamageLocal(int damageAmount)
+	{
+		if(playerHealth == null) // set to 20 
+		{
+			this.opponentsHealth = 20;
+		}
+		opponentsHealth = opponentsHealth - damageAmount;
+	}
+
 
 	public void DealInitialCardsInHand()
 	{
@@ -319,6 +365,14 @@ public class Player : Photon.MonoBehaviour
 									myBattleCards = BattleSpawn[j];
 									
 									PhotonNetwork.Instantiate(BattleSpawn[j].card_name, myBattleCards.transform.position, myBattleCards.transform.rotation, 0); 
+									
+									GameObject[] target;
+									target = GameObject.FindGameObjectsWithTag("Instant");
+									I_Instant temp = target[0].GetComponent(typeof(I_Instant)) as I_Instant;
+									//if(temp.getPlayer() == -1){
+										temp.setPlayer(1);
+									//}
+									
 									Debug.Log("Play a "+BattleSpawn[j].card_name);
 									break;
 								}
@@ -361,6 +415,14 @@ public class Player : Photon.MonoBehaviour
 									myBattleCards = BattleSpawn[j];
 									
 									PhotonNetwork.Instantiate(BattleSpawn[j].card_name, myBattleCards.transform.position, myBattleCards.transform.rotation, 0); 
+									
+									GameObject[] target;
+									target = GameObject.FindGameObjectsWithTag("Instant");
+									I_Instant temp = target[0].GetComponent(typeof(I_Instant)) as I_Instant;
+									//if(temp.getPlayer() == -1){
+										temp.setPlayer(2);
+									//}
+									
 									Debug.Log("Play a "+BattleSpawn[j].card_name);
 									break;
 								}
@@ -379,42 +441,89 @@ public class Player : Photon.MonoBehaviour
 			}
 		}
 	}	
-	
-	
-	
-	
 
-	
-	public void displayPhases()
+	public void ShowPlayersTurnMenu()
 	{
-		/*
-		if(showInitialGamephase) //this only needs to be called once to show the game state when the game first gets initalized
+		if(GUI.Button(new Rect(Screen.width * 0.85f,Screen.height * 0.10f,100,50),phaseNames[0]))//Untap button
 		{
-			this.gameState ="Player: "+PhotonNetwork.player.ID+" Phase: "+phaseNames[0].ToString();
-			showInitialGamephase = false;
+			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[0];
+			Debug.Log(gamePhase);
 		}
-*/
+		if(GUI.Button(new Rect(Screen.width * 0.85f,Screen.height * 0.10f+(1*50),100,50),phaseNames[1]))//upKeep button
+		{
+			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[1];
+			Debug.Log(gamePhase);
+		}
+		if(GUI.Button(new Rect(Screen.width * 0.85f,Screen.height * 0.10f+(2*50),100,50),phaseNames[2]))//Draw button
+		{
+			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[2];
+			Debug.Log(gamePhase);
+		}
+		if(GUI.Button(new Rect(Screen.width * 0.85f,Screen.height * 0.10f+(3*50),100,50),phaseNames[3]))// Main phase 1 phase
+		{
+			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[3];
+			Debug.Log(gamePhase);
+		}
+		if(GUI.Button(new Rect(Screen.width * 0.85f,Screen.height * 0.10f+(4*50),100,50),phaseNames[4]))// Battle Button
+		{
+			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[4];
+			Debug.Log(gamePhase);
+		}
+		if(GUI.Button(new Rect(Screen.width * 0.85f,Screen.height * 0.10f+(5*50),100,50),phaseNames[5]))//Main Phase 2 button
+		{
+			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[5];
+			Debug.Log(gamePhase);
+		}
+		if(GUI.Button(new Rect(Screen.width * 0.85f,Screen.height * 0.10f+(6*50),100,50),phaseNames[6])) // End Button
+		{
+			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[6];
 
+			PhotonView pv = player[0].GetComponent<PhotonView>();
+			if(pv == null)
+				Debug.Log("Take Damage pv error");
+			else{
+				this.myTurn = false;
+				player[0].GetComponent<PhotonView>().RPC("ToggleOpponentsTurn",PhotonTargets.Others,null );
+			}
+
+			Debug.Log(gamePhase);
+		}
 	}
 
+	//my turn
+	public void ToggleMyTurn()
+	{
+		if(this.myTurn == true)
+			this.myTurn = false;
+		else
+			this.myTurn = true;
+	}
 
 	[RPC]
-	public void ChoosePhases()
+	public void ToggleOpponentsTurn()
 	{
-		for(int i = 0; i<this.phaseNames.Length; i++)
-		{
-			if(GUI.Button(new Rect(Screen.width * 0.80f,Screen.height * 0.10f+(i*50),100,50),phaseNames[i]))
-			{
-				gamePhase = "Player: "+PhotonNetwork.player.ID+" Phase: "+phaseNames[i];
-				Debug.Log(gamePhase);
+		if(this.myTurn == true)
+			this.myTurn = false;
+		else
+			this.myTurn = true;	}
 
-			}
-		}
-
+	public void setPlayersHealth(int hp)
+	{
+		this.playerHealth = hp;
+		this.opponentsHealth = hp;
 	}
 
-	public void setPhaseMessage(string phaseName)
+	[RPC]
+	public void DisplayPlayer1Health()
 	{
-		this.gamePhase = phaseName;
+		if(PhotonNetwork.playerList.Length > 1)
+				GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.01f,200,100),"<color=white>"+"Life:"+playerHealth.ToString()+"</color>",healthStyle);
+	}
+
+	[RPC]
+	public void DisplayPlayer2Health()
+	{
+		if(PhotonNetwork.playerList.Length > 1)
+			GUI.Label(new Rect(Screen.width * 0.45f,Screen.height * 0.01f,200,100),"<color=white>"+"Opponents:"+opponentsHealth.ToString()+"</color>",healthStyle);
 	}
 }

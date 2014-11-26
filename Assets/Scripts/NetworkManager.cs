@@ -14,7 +14,9 @@ public class NetworkManager : MonoBehaviour {
 	public Player[] player;
 		
 	public static int playerWhoIsIt;
-	GameObject myPlayer;
+	public GameObject players;
+	public GameObject player1;
+	public GameObject player2;
 
 
 	// Use this for initialization
@@ -32,6 +34,8 @@ public class NetworkManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		player = GameObject.FindObjectsOfType<Player>();
+
 	}
 
 
@@ -112,7 +116,7 @@ public class NetworkManager : MonoBehaviour {
 	void OnJoinedRoom()
 	{
 		this.NetworkMenu = false;
-		gameManager[0].showEnterPlayerName = true;
+		//gameManager[0].showEnterPlayerName = true;
 		debugDev[0].showDebugMenu = true;
 		playerWhoIsIt = PhotonNetwork.player.ID;
 
@@ -142,15 +146,22 @@ public class NetworkManager : MonoBehaviour {
 		}
 
 		//myPlayer = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
-		PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
+		GameObject go = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
+		//Player temp = GameObject.FindGameObjectsWithTag("Player");
 
 		Debug.Log("Player 1 Room Entered");
+		if(PhotonNetwork.player.ID == 1)
+		{
+			player[0].teamId = 1;
 
+
+		}
+		else
+		{
+			player[0].teamId = 2;
+		}
 		player[0].DealInitialCardsInHand();
 		player[0].showPlayersHandCard = true;
-
-		gameManager[0].player1Turn = true;
-		gameManager[0].player2Turn = false;
 	}
 
 	
