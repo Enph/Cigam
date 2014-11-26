@@ -12,7 +12,7 @@ public class Player : Photon.MonoBehaviour
 	public int teamId;
 	public int deckSize;
 	public bool showPlayersHandCard;
-	public string lastTooltip = " ";
+
 	public Texture[] islandZoom;
 	public Texture[] handZoom;
 	public Land_Island[] myIsland;
