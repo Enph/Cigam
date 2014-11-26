@@ -116,7 +116,7 @@ public class NetworkManager : MonoBehaviour {
 	void OnJoinedRoom()
 	{
 		this.NetworkMenu = false;
-		gameManager[0].showEnterPlayerName = true;
+		//gameManager[0].showEnterPlayerName = true;
 		debugDev[0].showDebugMenu = true;
 		playerWhoIsIt = PhotonNetwork.player.ID;
 
@@ -153,17 +153,14 @@ public class NetworkManager : MonoBehaviour {
 		if(PhotonNetwork.player.ID == 1)
 		{
 			player[0].teamId = 1;
-			player[0].DealInitialCardsInHand();
-			player[0].showPlayersHandCard = true;
+
 		}
 		else
 		{
-			player[1].teamId = 2;
-			player[1].DealInitialCardsInHand();
-			player[1].showPlayersHandCard = true;
+			player[0].teamId = 2;
 		}
-
-
+		player[0].DealInitialCardsInHand();
+		player[0].showPlayersHandCard = true;
 	}
 
 	

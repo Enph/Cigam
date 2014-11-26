@@ -38,7 +38,8 @@ public class GameManager : Photon.MonoBehaviour {
 		this.networkManager = GameObject.FindObjectsOfType<NetworkManager>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
-
+		deck_Red_White = new string[60];
+		deck_Red = new string[60];
 
 
 
@@ -92,24 +93,6 @@ public class GameManager : Photon.MonoBehaviour {
 			Application.LoadLevel("MainMenu");
 		}
 		
-	}
-
-
-		
-
-	[RPC]
-	public void toggleTurn()
-	{
-		if(this.player1Turn == true) //turn off player 1 and turn on player 2
-		{
-			this.player1Turn = false;
-			this.player2Turn = true;
-		}
-		else
-		{
-			this.player1Turn = true; // turn off player 2 and turn on player 1
-			this.player2Turn = false;
-		}
 	}
 
 

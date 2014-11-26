@@ -43,22 +43,22 @@ public class DebugDev : Photon.MonoBehaviour {
 				if(pv == null)
 					Debug.Log("Take Damage pv error");
 				else
-					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.All,1 );
+					player[0].TakeDamage(1);
 
 
 				Debug.Log (player[0].teamId);
-				Debug.Log (player[1].teamId);
+				Debug.Log (player[0].teamId);
 
 			}
 
 			if (GUI.Button (new Rect (10,350,200,50), "reduce HP Op")) 
 			{
-				PhotonView pv = player[1].GetComponent<PhotonView>();
+				PhotonView pv = player[0].GetComponent<PhotonView>();
 				if(pv == null)
-					Debug.Log("Take Damage pv error OP");
+					Debug.Log("Take Damage pv error");
 				else
-					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.All, 1);
-				//Debug.Log (player[0].playerHealth);
+					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.Others,1 );
+
 			}
 		}
 	}
