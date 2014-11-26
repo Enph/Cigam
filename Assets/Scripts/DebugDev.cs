@@ -37,8 +37,6 @@ public class DebugDev : Photon.MonoBehaviour {
 			
 			if (GUI.Button (new Rect (10,300,200,50), "reduce HP")) 
 			{
-
-
 				PhotonView pv = player[0].GetComponent<PhotonView>();
 				if(pv == null)
 					Debug.Log("Take Damage pv error");
@@ -57,7 +55,11 @@ public class DebugDev : Photon.MonoBehaviour {
 				if(pv == null)
 					Debug.Log("Take Damage pv error");
 				else
+				{
+					//Both functions below must be called to deal damage to an opponent
 					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.Others,1 );
+					player[0].TakeOpponentsDamageLocal(1);
+				}
 
 			}
 		}

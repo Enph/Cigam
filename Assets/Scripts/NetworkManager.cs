@@ -147,12 +147,13 @@ public class NetworkManager : MonoBehaviour {
 
 		//myPlayer = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
 		GameObject go = PhotonNetwork.Instantiate("PlayerController", spawnPosition, spawnRotation, 0);
-		//go.GetComponent<Player>().enabled = true;
+		//Player temp = GameObject.FindGameObjectsWithTag("Player");
 
 		Debug.Log("Player 1 Room Entered");
 		if(PhotonNetwork.player.ID == 1)
 		{
 			player[0].teamId = 1;
+
 
 		}
 		else

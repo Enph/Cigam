@@ -107,7 +107,16 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour,I_Instant {
 				gameManager[0].BattleSpawn[thisCardPosition].card_name = "";
 				this.GetComponent<PhotonView>().RPC("Die",PhotonTargets.All,null);
 				//damage opponent
-				player[0].TakeDamage(3);
+				//player[0].TakeDamage(3);
+				PhotonView pv = player[0].GetComponent<PhotonView>();
+				if(pv == null)
+					Debug.Log("Take Damage pv error");
+				else
+				{
+					//Both functions below must be called to deal damage to an opponent
+					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.Others,3 );
+					player[0].TakeOpponentsDamageLocal(3);
+				}
 			}
 		}
 	}
