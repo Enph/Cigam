@@ -105,6 +105,7 @@
      <Compile Include="Assets\Scripts\GameLobbyGUI.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\I_Creature.cs" />
+     <Compile Include="Assets\Scripts\I_Instant.cs" />
      <Compile Include="Assets\Scripts\Instant_Divineverdict.cs" />
      <Compile Include="Assets\Scripts\Instant_Inspiredcharge.cs" />
      <Compile Include="Assets\Scripts\Instant_Lightningstrike.cs" />
