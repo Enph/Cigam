@@ -5,6 +5,10 @@ Direct3D:
     Renderer: Intel(R) HD Graphics (ID=0x46)
     Vendor:   Intel
     VRAM:     128 MB
+Default GameObject Tag: Player already registered
+ 
+(Filename:  Line: 66)
+
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\Yannis\Documents\GitHub\Cigam\CigamTest_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Yannis\Documents\GitHub\Cigam\CigamTest_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -12,7 +16,7 @@ Platform assembly: C:\Users\Yannis\Documents\GitHub\Cigam\CigamTest_Data\Managed
 Loading C:\Users\Yannis\Documents\GitHub\Cigam\CigamTest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Yannis\Documents\GitHub\Cigam\CigamTest_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Yannis\Documents\GitHub\Cigam\CigamTest_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.202 seconds
+- Completed reload, in  0.126 seconds
 desktop: 1366x768 59Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -30,7 +34,7 @@ Can't execute Disconnect() while not connected. Nothing changed. State: PeerCrea
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-UnloadTime: 0.385408 ms
+UnloadTime: 0.395825 ms
 PlayerScript Start
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -39,20 +43,76 @@ Awake Team id = -1
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 PlayerScript Start
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Awake Team id = -1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 481.
-Total: 1.029416 ms (FindLiveObjects: 0.041212 ms CreateObjectMapping: 0.016304 ms MarkObjects: 0.304794 ms  DeleteObjects: 0.076085 ms)
+Total: 1.141733 ms (FindLiveObjects: 0.065216 ms CreateObjectMapping: 0.017209 ms MarkObjects: 0.408053 ms  DeleteObjects: 0.082425 ms)
 
-UnloadTime: 2.026678 ms
+UnloadTime: 2.222779 ms
 PlayerScript Start
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -61,18 +121,74 @@ Awake Team id = -1
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 PlayerScript Start
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Awake Team id = -1
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Null
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 477.
-Total: 0.878604 ms (FindLiveObjects: 0.022191 ms CreateObjectMapping: 0.016304 ms MarkObjects: 0.310229 ms  DeleteObjects: 0.006340 ms)
+Total: 0.900343 ms (FindLiveObjects: 0.033060 ms CreateObjectMapping: 0.017209 ms MarkObjects: 0.309323 ms  DeleteObjects: 0.010416 ms)
 
 Generate Red White Decks
  
@@ -106,18 +222,38 @@ Awake Team id = 2
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Land_Plains (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Instant_Raisethealarm (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Creature_Soulmender (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Land_Plains (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Instant_Inspiredcharge (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Instant_Lightningstrike (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Land_Plains (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 Player 1 Room Entered
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Instant_Raisethealarm (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
 Land_Plains (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -126,7 +262,7 @@ Instant_Raisethealarm (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Land_Mountain (UnityEngine.Texture2D)
+Creature_Soulmender (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -134,7 +270,15 @@ Land_Plains (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Instant_Raisethealarm (UnityEngine.Texture2D)
+Instant_Inspiredcharge (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Instant_Lightningstrike (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Land_Plains (UnityEngine.Texture2D)
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -158,7 +302,93 @@ Awake Team id = 2
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-OnDestroy for PhotonView View (0)1002 on Instant_Lightningstrike(Clone)  but GO is still in instantiatedObjects. instantiationId: 1002. Use PhotonNetwork.Destroy().  Identical with this: True PN.Destroyed called for this PV: True
+Land_Plains (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Instant_Raisethealarm (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Creature_Soulmender (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Land_Plains (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Instant_Inspiredcharge (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Instant_Lightningstrike (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Land_Plains (UnityEngine.Texture2D)
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card Pressed
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Team id = 2
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Team id = 2
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+IndexOutOfRangeException: Array index is out of range.
+  at Player.displayCardsInHand () [0x00000] in <filename unknown>:0 
+  at Player.OnGUI () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+OnDestroy for PhotonView View (0)1002 on Creature_Thunderinggiant(Clone)  but GO is still in instantiatedObjects. instantiationId: 1002. Use PhotonNetwork.Destroy().  Identical with this: True PN.Destroyed called for this PV: True
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+OnDestroy for PhotonView View (0)1003 on Instant_Lightningstrike(Clone)  but GO is still in instantiatedObjects. instantiationId: 1003. Use PhotonNetwork.Destroy().  Identical with this: True PN.Destroyed called for this PV: True
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Card Pressed
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Team id = 2
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Team id = 2
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+All Creature card spots in use
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+All Creature card spots in use
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Play a Creature_Soulmender
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+I am selected
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+OnDestroy for PhotonView View (0)2002 on Creature_Soulmender(Clone)  but GO is still in instantiatedObjects. instantiationId: 2002. Use PhotonNetwork.Destroy().  Identical with this: True PN.Destroyed called for this PV: True
+ 
+(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+OnDestroy for PhotonView View (0)1005 on Instant_Lightningstrike(Clone)  but GO is still in instantiatedObjects. instantiationId: 1005. Use PhotonNetwork.Destroy().  Identical with this: True PN.Destroyed called for this PV: True
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -170,2727 +400,11 @@ Failed to 'network-remove' GameObject because it's null.
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
+Failed to 'network-remove' GameObject because it's null.
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.836486 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 246.
-Total: 1.066100 ms (FindLiveObjects: 0.012680 ms CreateObjectMapping: 0.017209 ms MarkObjects: 0.366387 ms  DeleteObjects: 0.028532 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.321551 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.866376 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.015851 ms MarkObjects: 0.338308 ms  DeleteObjects: 0.004528 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.325174 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.872264 ms (FindLiveObjects: 0.010869 ms CreateObjectMapping: 0.015851 ms MarkObjects: 0.339213 ms  DeleteObjects: 0.004528 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.318833 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.993638 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.016756 ms MarkObjects: 0.460135 ms  DeleteObjects: 0.004981 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.344648 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 0.992732 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.019474 ms MarkObjects: 0.405788 ms  DeleteObjects: 0.038042 ms)
-
-UnloadTime: 0.832410 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 0.966012 ms (FindLiveObjects: 0.027173 ms CreateObjectMapping: 0.019474 ms MarkObjects: 0.401259 ms  DeleteObjects: 0.006340 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Sungracepegasus (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sorcery_Lavaaxe (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.992732 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.091915 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.018115 ms MarkObjects: 0.494554 ms  DeleteObjects: 0.033513 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.322909 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.083763 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.017209 ms MarkObjects: 0.447907 ms  DeleteObjects: 0.003623 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.330156 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.059760 ms (FindLiveObjects: 0.010869 ms CreateObjectMapping: 0.018115 ms MarkObjects: 0.518558 ms  DeleteObjects: 0.005887 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.323815 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.911212 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.018115 ms MarkObjects: 0.379521 ms  DeleteObjects: 0.004528 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.343742 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 517.
-Total: 1.014018 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.019474 ms MarkObjects: 0.429791 ms  DeleteObjects: 0.038042 ms)
-
-UnloadTime: 0.849619 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 0.970088 ms (FindLiveObjects: 0.025814 ms CreateObjectMapping: 0.019927 ms MarkObjects: 0.418469 ms  DeleteObjects: 0.005434 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Sungracepegasus (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Krenkosenforcer (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Geistofthemoors (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.842826 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.026246 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.019474 ms MarkObjects: 0.375897 ms  DeleteObjects: 0.031249 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.317928 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.205590 ms (FindLiveObjects: 0.009510 ms CreateObjectMapping: 0.019021 ms MarkObjects: 0.386767 ms  DeleteObjects: 0.004076 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.317928 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.951972 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.019021 ms MarkObjects: 0.427527 ms  DeleteObjects: 0.004981 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.300265 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.922082 ms (FindLiveObjects: 0.010869 ms CreateObjectMapping: 0.019021 ms MarkObjects: 0.387673 ms  DeleteObjects: 0.004076 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.337855 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 517.
-Total: 1.188833 ms (FindLiveObjects: 0.026720 ms CreateObjectMapping: 0.021738 ms MarkObjects: 0.547995 ms  DeleteObjects: 0.040760 ms)
-
-UnloadTime: 0.850072 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.266277 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.023097 ms MarkObjects: 0.594190 ms  DeleteObjects: 0.009510 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Thunderinggiant (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sorcery_Lavaaxe (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Lightningstrike (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Lightningstrike (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (Scripts) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.970541 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.115013 ms (FindLiveObjects: 0.012228 ms CreateObjectMapping: 0.020380 ms MarkObjects: 0.554789 ms  DeleteObjects: 0.037136 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.314305 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.038474 ms (FindLiveObjects: 0.009510 ms CreateObjectMapping: 0.019927 ms MarkObjects: 0.506782 ms  DeleteObjects: 0.004528 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.322004 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.955596 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.020380 ms MarkObjects: 0.422545 ms  DeleteObjects: 0.004528 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.336043 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.083763 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.020832 ms MarkObjects: 0.545731 ms  DeleteObjects: 0.005434 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.331967 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.117730 ms (FindLiveObjects: 0.027173 ms CreateObjectMapping: 0.024003 ms MarkObjects: 0.493649 ms  DeleteObjects: 0.040760 ms)
-
-UnloadTime: 0.835127 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.185663 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.023097 ms MarkObjects: 0.605965 ms  DeleteObjects: 0.009057 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Inspiredcharge (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sorcery_Lavaaxe (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Serraangel (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.835580 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.002696 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.022644 ms MarkObjects: 0.429338 ms  DeleteObjects: 0.032155 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.327891 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.122712 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.021738 ms MarkObjects: 0.457870 ms  DeleteObjects: 0.005434 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.326985 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.039380 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.027173 ms MarkObjects: 0.495460 ms  DeleteObjects: 0.005434 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.327438 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.982316 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.021285 ms MarkObjects: 0.455606 ms  DeleteObjects: 0.004981 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.311587 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.260843 ms (FindLiveObjects: 0.028532 ms CreateObjectMapping: 0.024908 ms MarkObjects: 0.595549 ms  DeleteObjects: 0.041665 ms)
-
-UnloadTime: 0.850525 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.194268 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.024456 ms MarkObjects: 0.545278 ms  DeleteObjects: 0.005434 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Soulmender (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Thunderinggiant (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.842826 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.023982 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.023550 ms MarkObjects: 0.460588 ms  DeleteObjects: 0.029890 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.329250 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.036663 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.024003 ms MarkObjects: 0.490931 ms  DeleteObjects: 0.005434 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.322004 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.010395 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.023550 ms MarkObjects: 0.461494 ms  DeleteObjects: 0.004076 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.319739 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 0.998167 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.023550 ms MarkObjects: 0.459682 ms  DeleteObjects: 0.004528 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.331967 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.647157 ms (FindLiveObjects: 0.034872 ms CreateObjectMapping: 0.044836 ms MarkObjects: 0.781686 ms  DeleteObjects: 0.051176 ms)
-
-UnloadTime: 1.124976 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.298433 ms (FindLiveObjects: 0.026720 ms CreateObjectMapping: 0.076991 ms MarkObjects: 0.555694 ms  DeleteObjects: 0.008604 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Raisethealarm (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sorcery_Lavaaxe (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Raisethealarm (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.840109 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.077423 ms (FindLiveObjects: 0.012680 ms CreateObjectMapping: 0.027173 ms MarkObjects: 0.498630 ms  DeleteObjects: 0.033513 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.317928 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.164830 ms (FindLiveObjects: 0.009510 ms CreateObjectMapping: 0.024456 ms MarkObjects: 0.541655 ms  DeleteObjects: 0.005434 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.324268 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.037116 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.024456 ms MarkObjects: 0.499989 ms  DeleteObjects: 0.004528 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.322457 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.027605 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.024456 ms MarkObjects: 0.489120 ms  DeleteObjects: 0.004076 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.319739 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.214195 ms (FindLiveObjects: 0.027173 ms CreateObjectMapping: 0.028532 ms MarkObjects: 0.554336 ms  DeleteObjects: 0.043477 ms)
-
-UnloadTime: 0.942462 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.123165 ms (FindLiveObjects: 0.025814 ms CreateObjectMapping: 0.028079 ms MarkObjects: 0.546637 ms  DeleteObjects: 0.005887 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Krenkosenforcer (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Raisethealarm (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Lightningstrike (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (Scripts) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.845543 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.169359 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.026720 ms MarkObjects: 0.596002 ms  DeleteObjects: 0.031249 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.328797 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.143545 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.025361 ms MarkObjects: 0.604606 ms  DeleteObjects: 0.004076 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.323362 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.214195 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.025814 ms MarkObjects: 0.515387 ms  DeleteObjects: 0.004076 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.319739 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.417090 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.025814 ms MarkObjects: 0.619099 ms  DeleteObjects: 0.004528 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.345101 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.267183 ms (FindLiveObjects: 0.026720 ms CreateObjectMapping: 0.031702 ms MarkObjects: 0.670275 ms  DeleteObjects: 0.040307 ms)
-
-UnloadTime: 0.851884 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.215101 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.029437 ms MarkObjects: 0.634044 ms  DeleteObjects: 0.005887 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sorcery_Lavaaxe (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Serraangel (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Soulmender (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Geistofthemoors (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Lightningstrike (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (Scripts) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.851884 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.204232 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.032155 ms MarkObjects: 0.630421 ms  DeleteObjects: 0.030796 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.310681 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.175247 ms (FindLiveObjects: 0.009510 ms CreateObjectMapping: 0.027173 ms MarkObjects: 0.583321 ms  DeleteObjects: 0.004076 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.322909 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.098708 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.027173 ms MarkObjects: 0.546184 ms  DeleteObjects: 0.005887 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.328797 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.187928 ms (FindLiveObjects: 0.010869 ms CreateObjectMapping: 0.027626 ms MarkObjects: 0.586944 ms  DeleteObjects: 0.004528 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.337402 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.201514 ms (FindLiveObjects: 0.027173 ms CreateObjectMapping: 0.030343 ms MarkObjects: 0.610494 ms  DeleteObjects: 0.036231 ms)
-
-UnloadTime: 0.851884 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.174341 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.029890 ms MarkObjects: 0.597360 ms  DeleteObjects: 0.005434 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Geistofthemoors (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Sungracepegasus (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Sorcery_Lavaaxe (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.877246 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 2.202399 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.028984 ms MarkObjects: 0.559770 ms  DeleteObjects: 0.034872 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.312493 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.163925 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.028079 ms MarkObjects: 0.616382 ms  DeleteObjects: 0.005434 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.308417 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.152149 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.030796 ms MarkObjects: 0.562035 ms  DeleteObjects: 0.004076 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.318381 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.309302 ms (FindLiveObjects: 0.010869 ms CreateObjectMapping: 0.028984 ms MarkObjects: 0.672087 ms  DeleteObjects: 0.006793 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.336949 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.387652 ms (FindLiveObjects: 0.026720 ms CreateObjectMapping: 0.079708 ms MarkObjects: 0.633591 ms  DeleteObjects: 0.039854 ms)
-
-UnloadTime: 0.875434 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.206949 ms (FindLiveObjects: 0.026720 ms CreateObjectMapping: 0.032608 ms MarkObjects: 0.623628 ms  DeleteObjects: 0.006340 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Sungracepegasus (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Raisethealarm (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Inspiredcharge (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.838750 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.202420 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.031249 ms MarkObjects: 0.611853 ms  DeleteObjects: 0.033966 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.320645 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.139921 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.029890 ms MarkObjects: 0.595096 ms  DeleteObjects: 0.004981 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.308870 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.201967 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.030343 ms MarkObjects: 0.630874 ms  DeleteObjects: 0.005887 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.309323 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.248162 ms (FindLiveObjects: 0.010869 ms CreateObjectMapping: 0.030343 ms MarkObjects: 0.601436 ms  DeleteObjects: 0.006793 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.315663 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.318360 ms (FindLiveObjects: 0.027173 ms CreateObjectMapping: 0.033060 ms MarkObjects: 0.648990 ms  DeleteObjects: 0.037589 ms)
-
-UnloadTime: 0.844185 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.334211 ms (FindLiveObjects: 0.025814 ms CreateObjectMapping: 0.033060 ms MarkObjects: 0.689297 ms  DeleteObjects: 0.005434 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Monasteryswiftspear (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Sungracepegasus (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Lightningstrike (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Sungracepegasus (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Raisethealarm (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (Scripts) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.900343 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.218271 ms (FindLiveObjects: 0.013133 ms CreateObjectMapping: 0.032608 ms MarkObjects: 0.650348 ms  DeleteObjects: 0.030343 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.337402 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.700598 ms (FindLiveObjects: 0.009510 ms CreateObjectMapping: 0.031702 ms MarkObjects: 0.629062 ms  DeleteObjects: 0.004981 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.307964 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.321983 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.032155 ms MarkObjects: 0.651707 ms  DeleteObjects: 0.005887 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.317022 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.180229 ms (FindLiveObjects: 0.010869 ms CreateObjectMapping: 0.032608 ms MarkObjects: 0.627251 ms  DeleteObjects: 0.004981 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.331514 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 516.
-Total: 1.486834 ms (FindLiveObjects: 0.026720 ms CreateObjectMapping: 0.035778 ms MarkObjects: 0.835127 ms  DeleteObjects: 0.044836 ms)
-
-UnloadTime: 0.909401 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.251785 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.034872 ms MarkObjects: 0.671634 ms  DeleteObjects: 0.005434 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Soulmender (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Raisethealarm (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Inspiredcharge (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Mountain (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Divineverdict (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 1.231858 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 255.
-Total: 1.472795 ms (FindLiveObjects: 0.017662 ms CreateObjectMapping: 0.047100 ms MarkObjects: 0.728245 ms  DeleteObjects: 0.037136 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.348271 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.188833 ms (FindLiveObjects: 0.009510 ms CreateObjectMapping: 0.033060 ms MarkObjects: 0.639932 ms  DeleteObjects: 0.004981 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.316569 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.415731 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.033060 ms MarkObjects: 0.779422 ms  DeleteObjects: 0.006340 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.310229 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.308849 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.033060 ms MarkObjects: 0.754513 ms  DeleteObjects: 0.005887 ms)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-UnloadTime: 0.303435 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 517.
-Total: 1.357308 ms (FindLiveObjects: 0.026720 ms CreateObjectMapping: 0.035778 ms MarkObjects: 0.716470 ms  DeleteObjects: 0.045288 ms)
-
-UnloadTime: 0.837844 ms
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = -1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 512.
-Total: 1.355044 ms (FindLiveObjects: 0.026267 ms CreateObjectMapping: 0.040760 ms MarkObjects: 0.757683 ms  DeleteObjects: 0.007699 ms)
-
-Generate Red White Decks
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Deck Size: 60
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Player 1 Room Entered
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Serraangel (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creature_Oreskosswiftclaw (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Instant_Lightningstrike (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Land_Plains (UnityEngine.Texture2D)
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (Scripts) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The observed monobehaviour (BattleCardSpawn) of this PhotonView does not implement OnPhotonSerializeView()!
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-PlayerScript Start
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Awake Team id = 1
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Showing player1 Menu
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
- 
-(Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.842373 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 253.
-Total: 1.381311 ms (FindLiveObjects: 0.012680 ms CreateObjectMapping: 0.034872 ms MarkObjects: 0.671634 ms  DeleteObjects: 0.029890 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.307511 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.273524 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.033966 ms MarkObjects: 0.716017 ms  DeleteObjects: 0.005434 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.344195 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.319718 ms (FindLiveObjects: 0.009963 ms CreateObjectMapping: 0.035778 ms MarkObjects: 0.718282 ms  DeleteObjects: 0.005434 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.328344 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 217.
-Total: 1.227782 ms (FindLiveObjects: 0.010416 ms CreateObjectMapping: 0.035325 ms MarkObjects: 0.677069 ms  DeleteObjects: 0.004076 ms)
-
-Exiting the Game
+Failed to 'network-remove' GameObject because it's null.
  
 (Filename: C:/BuildAgent/work/aeedb04a1292f85a/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 

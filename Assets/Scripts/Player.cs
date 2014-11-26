@@ -358,7 +358,9 @@ public class Player : Photon.MonoBehaviour
 									GameObject[] target;
 									target = GameObject.FindGameObjectsWithTag("Instant");
 									I_Instant temp = target[0].GetComponent(typeof(I_Instant)) as I_Instant;
-									temp.setPlayer(1);
+									//if(temp.getPlayer() == -1){
+										temp.setPlayer(1);
+									//}
 									
 									Debug.Log("Play a "+BattleSpawn[j].card_name);
 									break;
@@ -406,7 +408,9 @@ public class Player : Photon.MonoBehaviour
 									GameObject[] target;
 									target = GameObject.FindGameObjectsWithTag("Instant");
 									I_Instant temp = target[0].GetComponent(typeof(I_Instant)) as I_Instant;
-									temp.setPlayer(2);
+									//if(temp.getPlayer() == -1){
+										temp.setPlayer(2);
+									//}
 									
 									Debug.Log("Play a "+BattleSpawn[j].card_name);
 									break;

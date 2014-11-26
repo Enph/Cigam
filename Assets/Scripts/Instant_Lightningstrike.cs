@@ -39,6 +39,7 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour,I_Instant {
 		this.player = Player.FindObjectsOfType<Player>();
 		this.cardName = "Instant_Lightningstrike";
 		this.target = GameObject.FindGameObjectsWithTag("Creature");
+		//this.caster = -1;
 	}
 	
 	// Update is called once per frame
@@ -58,12 +59,14 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour,I_Instant {
 		}
 		//if youa re the one that cast the card display buttons with options
 		if(show_options==true && caster==player[0].teamId){
+			//for every spot in battle spawn
 			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
 				//check that the spot on the board is in use and its only a creature
 				if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Instant" && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Sorcery"){
 					//Make the button for each legal card target
 					if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f+(targets*50),100,50), gameManager[0].BattleSpawn[i].card_name))
 					{
+						//for every object that has a tag creature
 						for(int j = 0;j<target.Length;j++){
 							//Cast all the target objects as type I_creature so we can access its variables
 							I_Creature temp = target[j].GetComponent(typeof(I_Creature)) as I_Creature;
