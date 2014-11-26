@@ -38,7 +38,7 @@ public class GameManager : Photon.MonoBehaviour {
 		this.networkManager = GameObject.FindObjectsOfType<NetworkManager>();
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
-		this.player = GameObject.FindObjectsOfType<Player>();
+
 
 
 
@@ -52,7 +52,8 @@ public class GameManager : Photon.MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		ManageTurns();
+		this.player = GameObject.FindObjectsOfType<Player>();
+
 	}
 	
 	void OnGUI()
@@ -64,14 +65,15 @@ public class GameManager : Photon.MonoBehaviour {
 			GUILayout.Label("Count of players: " + PhotonNetwork.countOfPlayersInRooms.ToString());
 			GUILayout.Label ("Player Name:" + player[0].getPlayerName());
 			GUILayout.Label ("Player ID:" + PhotonNetwork.player.ID);
-//			GUILayout.Label ("Game Name:" +PhotonNetwork.room.name);
+			GUILayout.Label ("Players Turn:" +this.playersNameTurn);
 
 		}
 		if(showEnterPlayerName == true)
 		{
 			GUILayout.BeginArea (new Rect (Screen.width /3 , Screen.height /8 , Screen.width * 0.65f , Screen.height /2));
 			GUILayout.Label("Enter Player Name:");
-			enterPlayerName = GUI.TextField(new Rect(10, 20, 200, 20), enterPlayerName, 25);
+			//enterPlayerName = GUI.TextField(new Rect(10, 20, 200, 20), enterPlayerName, 25);
+			enterPlayerName = "player1";
 			if (GUI.Button (new Rect (10,50,200,50), "OK"))
 			{
 				player[0].setPlayerName(enterPlayerName);
@@ -92,41 +94,24 @@ public class GameManager : Photon.MonoBehaviour {
 		
 	}
 
-	public void ManageTurns()
-	{
 
-
-			if(player[0].myTurn == true) //player 1 stuff
-			{
-				this.playersNameTurn = player[0].playerName; //Set the global name of whose turn it is to the first players name
-
-				//Set player 2 to false
-				this.player[1].myTurn = false; // set player 2 stuff off
-			}
-			else
-			{
-				this.player[1].myTurn = true; //players 2 turn
-				this.playersNameTurn = player[1].playerName;
-				
-				//Set player 1 to true
-				this.player[0].myTurn = false; // //Set the global name of whose turn it is to the first players name
-			}
-	}
 		
-	public void switchTurns(int i)
+
+	[RPC]
+	public void toggleTurn()
 	{
-		if(i == 0)
+		if(this.player1Turn == true) //turn off player 1 and turn on player 2
 		{
-			//0 off , 1 on
-			player[0].myTurn = false;
-			player[1].myTurn = true;
+			this.player1Turn = false;
+			this.player2Turn = true;
 		}
 		else
 		{
-			player[0].myTurn = true;
-			player[1].myTurn = false;
+			this.player1Turn = true; // turn off player 2 and turn on player 1
+			this.player2Turn = false;
 		}
 	}
+
 
 
 	public void Generate_Red_WhiteDeck()
