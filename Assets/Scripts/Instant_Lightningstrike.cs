@@ -47,13 +47,17 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 		int targets = 1;
 		//Gets all the creature cards on the board
 		int thisCardPosition = 0;
-		if(show_options==true){
+		for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
+			if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name == "Instant_Lightningstrike"){
+				thisCardPosition = i;
+			}
+		}
+		Debug.Log("Player: "+player[0].teamId);
+		Debug.Log("Player: "+gameManager[0].BattleSpawn[thisCardPosition].teamId);
+		if(show_options==true && gameManager[0].BattleSpawn[thisCardPosition].teamId==player[0].teamId /*&& player[0].myTurn == true*/){
 			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
 				Debug.Log(gameManager[0].BattleSpawn.Length);
 				//check that the spot on the board is in use and its only a creature
-				if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name == "Instant_Lightningstrike"){
-					thisCardPosition = i;
-				}
 				if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Instant" && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Sorcery"){
 					//Make the button for each legal card target
 					if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f+(targets*50),100,50), gameManager[0].BattleSpawn[i].card_name))
