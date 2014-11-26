@@ -41,19 +41,56 @@ public class Instant_Lightningstrike : MonoBehaviour {
 		
 	}
 	
+	[RPC]
 	void OnGUI(){
-		float position = 0;
 		int targets = 1;
+		//Gets all the creature cards on the board
+		GameObject[] target = GameObject.FindGameObjectsWithTag("Creature");
+		int thisCardPosition = 0;
 		if(show_options==true){
 			if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f,100,50), "Opponent"))
 			{
 				Debug.Log("Target Player");
+				//damage player
 			}
 			for(int i = 0;i<gameManager[0].BattleSpawn.Length;i++){
+				//check that the spot on the board is in use and its only a creature
+				if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name == "Instant_Lightningstrike"){
+					thisCardPosition = i;
+				}
 				if(gameManager[0].BattleSpawn[i].spawnInUse == true && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Instant" && gameManager[0].BattleSpawn[i].card_name.Substring(0,7) != "Sorcery"){
+					//Make the button for each legal card target
 					if(GUI.Button(new Rect(Screen.width * 0.60f,Screen.height * 0.10f+(targets*50),100,50), gameManager[0].BattleSpawn[i].card_name))
 					{
-						Debug.Log("Target "+gameManager[0].BattleSpawn[i].card_name);	
+						Debug.Log("Target "+gameManager[0].BattleSpawn[i].card_name);
+						//Gets all the creature cards on the board
+						//GameObject[] target = GameObject.FindGameObjectsWithTag("Creature");
+						for(int j = 0;j<target.Length;j++){
+							//Cast the all as type I_creature so we can access its variables
+							I_Creature temp = target[j].GetComponent(typeof(I_Creature)) as I_Creature;
+							//Make sure its the name of the creature you clicked on
+							if(temp.getName() == gameManager[0].BattleSpawn[i].card_name){
+								//Does it die or Naw
+								if(temp.getToughness() <= 3){
+									//remove target and alightning strike from board
+									Debug.Log("Kills "+gameManager[0].BattleSpawn[i].card_name);
+									Debug.Log(gameManager[0].BattleSpawn[i].card_name + " Toughtness = " + temp.getToughness());
+									gameManager[0].BattleSpawn[i].spawnInUse = false;
+									gameManager[0].BattleSpawn[i].card_name = "";
+									gameManager[0].BattleSpawn[thisCardPosition].spawnInUse = false;
+									gameManager[0].BattleSpawn[thisCardPosition].card_name = "";
+									temp.Die();
+									this.Die();
+								}
+								else{
+									//remove lightning strike
+									Debug.Log("Survives "+gameManager[0].BattleSpawn[i].card_name);
+									gameManager[0].BattleSpawn[thisCardPosition].spawnInUse = false;
+									gameManager[0].BattleSpawn[thisCardPosition].card_name = "";
+									this.Die();
+								}
+							}
+						}
 					}
 					targets++;
 				}
@@ -112,5 +149,8 @@ public class Instant_Lightningstrike : MonoBehaviour {
 	
 	void OnMouseExit(){
 		currentText = null;
+	}
+	public void Die(){
+		Destroy(gameObject);
 	}
 }

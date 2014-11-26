@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Creature_Oreskosswiftclaw : MonoBehaviour {
+public class Creature_Oreskosswiftclaw : MonoBehaviour,I_Creature {
 
 	public int cardNum;
 	public string cardName;	
@@ -95,4 +95,57 @@ public class Creature_Oreskosswiftclaw : MonoBehaviour {
 	void OnMouseExit(){
 		currentText = null;
 	}
+	
+	public string getName(){
+		return cardName;
+	}
+	public int getPower(){
+		return power;
+	}
+	public int getToughness(){
+		return toughness;
+	}
+	public int getCMC(){
+		return no_color_mana+red_mana+white_mana+blue_mana+black_mana+green_mana;
+	}
+	public int getNoColorMana(){
+		return no_color_mana;
+	}
+	public int getRedMana(){
+		return red_mana;
+	}
+	public int getGreenMana(){
+		return green_mana;
+	}
+	public int getBlueMana(){
+		return blue_mana;
+	}
+	public int getBlackMana(){
+		return black_mana;
+	}
+	public int getWhiteMana(){
+		return white_mana;
+	}
+	public bool isSummoningSickness(){
+		return summoning_sickness;
+	}
+	public bool isFlying(){
+		return flying;
+	}
+	public bool isIntimidate(){
+		return intimidate;
+	}
+	public bool isHaste(){
+		return haste;
+	}
+	public bool isLifelink(){
+		return lifelink;
+	}
+	public bool isVigilance(){
+		return vigilance;
+	}
+	public void Die(){
+		Destroy(gameObject);
+	}
+	
 }

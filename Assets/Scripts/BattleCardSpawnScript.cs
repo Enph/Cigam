@@ -20,4 +20,7 @@ public class BattleCardSpawnScript : MonoBehaviour {
 		myCoordinates = transform.position;
 		myRotations = transform.rotation;
 	}
+	
+	
+	
 }
