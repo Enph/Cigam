@@ -111,7 +111,7 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour,I_Instant {
 			}
 		}
 	}
-	
+		
 	public void showBack(){
 		renderer.enabled = true;
 		renderer.material.mainTexture = background;
