@@ -68,9 +68,6 @@ public class Player : Photon.MonoBehaviour
 		//LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		//gameManager = GameObject.FindObjectsOfType<GameManager>();
 
-		
-
-
 	}
 
 	void Awake()
@@ -100,13 +97,13 @@ public class Player : Photon.MonoBehaviour
 		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
 		player = GameObject.FindObjectsOfType<Player>();
 		
-		showPlayersHealth = true;
+		//showPlayersHealth = true;
 		
 		
 		if(teamId == 1) // make player 1 start first
 		{
 			Debug.Log("Showing player1 Menu");
-			this.showPlayerTurnMenu = true;
+			//this.showPlayerTurnMenu = true;
 			this.myTurn = true;
 		}
 		
@@ -214,18 +211,16 @@ public class Player : Photon.MonoBehaviour
 		}
 	}
 
+	//Syncs Variables across the network
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if(stream.isWriting == true)
 		{
 			stream.SendNext(gamePhase);
-			//stream.SendNext(playerHealth); //Send our players health
 		}
 		else
 		{
 			gamePhase = (string)stream.ReceiveNext();
-
-			//tempHP = (int)stream.ReceiveNext();
 		}
 	}
 
@@ -242,7 +237,7 @@ public class Player : Photon.MonoBehaviour
 	void OnGUI(){
 
 		DisplayZoomCard();
-		displayCardsInHand ();
+		//displayCardsInHand ();
 
 		if(showPlayersHandCard == true)
 		{
@@ -257,6 +252,11 @@ public class Player : Photon.MonoBehaviour
 		{
 			GUI.Label(new Rect(Screen.width * 0.65f,Screen.height * 0.02f,200,100),"<color=white>"+gamePhase.ToString()+"</color>",style);
 		}
+
+
+			DisplayPlayer1Health();
+			DisplayPlayer2Health();
+
 	}
 
 	public void DisplayZoomCard(){
@@ -273,11 +273,22 @@ public class Player : Photon.MonoBehaviour
 	[RPC]
 	public void TakeDamage(int damageAmount)
 	{
-		if(playerHealth == null) // set to 20 
+		if(playerHealth == null || opponentsHealth == null) // set to 20 
 		{
 			playerHealth = 20;
+			opponentsHealth = 20;
+
 		}
 		playerHealth = playerHealth - damageAmount;
+	}
+
+	public void TakeOpponentsDamageLocal(int damageAmount)
+	{
+		if(playerHealth == null) // set to 20 
+		{
+			this.opponentsHealth = 20;
+		}
+		opponentsHealth = opponentsHealth - damageAmount;
 	}
 
 
@@ -467,27 +478,34 @@ public class Player : Photon.MonoBehaviour
 		{
 			gamePhase = "Player: "+this.playerName+" Phase: "+phaseNames[6];
 
-			this.myTurn = false; // end turn
 			PhotonView pv = player[0].GetComponent<PhotonView>();
 			if(pv == null)
 				Debug.Log("Take Damage pv error");
-			else
-				player[0].GetComponent<PhotonView>().RPC("ToggleTurn",PhotonTargets.Others,null );
-			Debug.Log (player[0].playerHealth);
-
+			else{
+				this.myTurn = false;
+				player[0].GetComponent<PhotonView>().RPC("ToggleOpponentsTurn",PhotonTargets.Others,null );
+			}
 
 			Debug.Log(gamePhase);
 		}
 	}
 
-	[RPC]
-	public void ToggleTurn()
+	//my turn
+	public void ToggleMyTurn()
 	{
 		if(this.myTurn == true)
 			this.myTurn = false;
 		else
 			this.myTurn = true;
 	}
+
+	[RPC]
+	public void ToggleOpponentsTurn()
+	{
+		if(this.myTurn == true)
+			this.myTurn = false;
+		else
+			this.myTurn = true;	}
 
 	public void setPlayersHealth(int hp)
 	{
@@ -499,17 +517,13 @@ public class Player : Photon.MonoBehaviour
 	public void DisplayPlayer1Health()
 	{
 		if(PhotonNetwork.playerList.Length > 1)
-		{
-				GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.01f,200,100),"<color=white>"+"Player 1:"+opponentsHealth.ToString()+"</color>",healthStyle);
-		}
+				GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.01f,200,100),"<color=white>"+"Life:"+playerHealth.ToString()+"</color>",healthStyle);
 	}
 
 	[RPC]
 	public void DisplayPlayer2Health()
 	{
 		if(PhotonNetwork.playerList.Length > 1)
-		{
-			GUI.Label(new Rect(Screen.width * 0.45f,Screen.height * 0.01f,200,100),"<color=white>"+"Player 2:"+opponentsHealth.ToString()+"</color>",healthStyle);
-		}
+			GUI.Label(new Rect(Screen.width * 0.45f,Screen.height * 0.01f,200,100),"<color=white>"+"Opponents:"+opponentsHealth.ToString()+"</color>",healthStyle);
 	}
 }
