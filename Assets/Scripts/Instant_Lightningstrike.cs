@@ -91,7 +91,8 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 									Debug.Log("Survives "+gameManager[0].BattleSpawn[i].card_name);
 									gameManager[0].BattleSpawn[thisCardPosition].spawnInUse = false;
 									gameManager[0].BattleSpawn[thisCardPosition].card_name = "";
-									this.Die();
+									this.GetComponent<PhotonView>().RPC("Die",PhotonTargets.All,null);
+									//this.Die();
 								}
 							}
 						}
@@ -105,7 +106,8 @@ public class Instant_Lightningstrike : Photon.MonoBehaviour {
 				//damage player
 				gameManager[0].BattleSpawn[thisCardPosition].spawnInUse = false;
 				gameManager[0].BattleSpawn[thisCardPosition].card_name = "";
-				this.Die();
+				this.GetComponent<PhotonView>().RPC("Die",PhotonTargets.All,null);
+				//this.Die();
 			}
 		}
 	}
