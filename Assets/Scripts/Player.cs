@@ -55,8 +55,7 @@ public class Player : Photon.MonoBehaviour
 	//Turns
 	public bool myTurn;
 	public bool opponentsTurn;
-
-
+	
 	//GUI styles
 	GUIStyle style;
 	GUIStyle healthStyle;
@@ -72,6 +71,13 @@ public class Player : Photon.MonoBehaviour
 
 	void Awake()
 	{
+
+		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
+		player = GameObject.FindObjectsOfType<Player>();
+		//player[0].DealInitialCardsInHand();
+		//player[0].showPlayersHandCard = true;
 		Debug.Log("PlayerScript Start");
 		this.playerName = "n:"+PhotonNetwork.player.ID;
 		this.deckSize = playerDeck.Length;
@@ -92,18 +98,12 @@ public class Player : Photon.MonoBehaviour
 		this.phaseNames = new string[7]{"Untap","UpKeep","Draw","Main1","Battle","Main2","End"};
 		this.handZoom = new Texture[7];
 		
-		gameManager = GameObject.FindObjectsOfType<GameManager>();
-		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
-		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
-		player = GameObject.FindObjectsOfType<Player>();
-		
-		//showPlayersHealth = true;
-		
+
 		
 		if(teamId == 1) // make player 1 start first
 		{
 			Debug.Log("Showing player1 Menu");
-			//this.showPlayerTurnMenu = true;
+			this.showPlayerTurnMenu = true;
 			this.myTurn = true;
 		}
 		
@@ -117,6 +117,13 @@ public class Player : Photon.MonoBehaviour
 
 	void Update()
 	{	
+
+		gameManager = GameObject.FindObjectsOfType<GameManager>();
+		BattleSpawn = GameObject.FindObjectsOfType<BattleCardSpawnScript>();
+		LandSpawn = GameObject.FindObjectsOfType<LandSpawnCoordScript>();
+		player = GameObject.FindObjectsOfType<Player>();
+
+
 		//Debug.Log("Update Team id = "+this.teamId);
 		int currentPos = 0; //position of the currentZoom array
 		myIsland = GameObject.FindObjectsOfType<Land_Island>(); //get all the islands
@@ -252,8 +259,6 @@ public class Player : Photon.MonoBehaviour
 		{
 			GUI.Label(new Rect(Screen.width * 0.65f,Screen.height * 0.02f,200,100),"<color=white>"+gamePhase.ToString()+"</color>",style);
 		}
-
-
 			DisplayPlayer1Health();
 			DisplayPlayer2Health();
 
@@ -268,7 +273,6 @@ public class Player : Photon.MonoBehaviour
 		}
 
 	}
-
 
 	[RPC]
 	public void TakeDamage(int damageAmount)
@@ -517,13 +521,13 @@ public class Player : Photon.MonoBehaviour
 	public void DisplayPlayer1Health()
 	{
 		if(PhotonNetwork.playerList.Length > 1)
-				GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.01f,200,100),"<color=white>"+"Life:"+playerHealth.ToString()+"</color>",healthStyle);
+				GUI.Label(new Rect(Screen.width * 0.25f,Screen.height * 0.01f,200f,100f),"<color=white>"+"Life:"+playerHealth.ToString ()+"</color>",healthStyle);
 	}
 
 	[RPC]
 	public void DisplayPlayer2Health()
 	{
 		if(PhotonNetwork.playerList.Length > 1)
-			GUI.Label(new Rect(Screen.width * 0.45f,Screen.height * 0.01f,200,100),"<color=white>"+"Opponents:"+opponentsHealth.ToString()+"</color>",healthStyle);
+			GUI.Label(new Rect(Screen.width * 0.45f,Screen.height * 0.01f,200f,100f),"<color=white>"+"Opponents:"+opponentsHealth.ToString ()+"</color>",healthStyle);
 	}
 }

@@ -128,6 +128,7 @@ public class NetworkManager : MonoBehaviour {
 
 	void SpawnMyPlayer()
 	{
+	
 		if(player == null)
 		{
 			Debug.Log("Spawning Error");
@@ -150,6 +151,7 @@ public class NetworkManager : MonoBehaviour {
 		//Player temp = GameObject.FindGameObjectsWithTag("Player");
 
 		Debug.Log("Player 1 Room Entered");
+
 		if(PhotonNetwork.player.ID == 1)
 		{
 			player[0].teamId = 1;
@@ -162,6 +164,7 @@ public class NetworkManager : MonoBehaviour {
 		}
 		player[0].DealInitialCardsInHand();
 		player[0].showPlayersHandCard = true;
+
 	}
 
 	
