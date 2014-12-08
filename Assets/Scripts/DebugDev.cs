@@ -59,7 +59,11 @@ public class DebugDev : Photon.MonoBehaviour {
 					//Both functions below must be called to deal damage to an opponent
 					player[0].GetComponent<PhotonView>().RPC("TakeDamage",PhotonTargets.Others,1 );
 					player[0].TakeOpponentsDamageLocal(1);
+
+
 				}
+
+				Debug.Log (player.Length);
 
 			}
 		}
